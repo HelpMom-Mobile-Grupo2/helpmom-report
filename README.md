@@ -174,3 +174,25 @@ El desafío principal que enfrentamos es generar confianza en madres y padres pr
 - **Creemos que** fortaleceremos la confianza de las usuarias y reduciremos el riesgo de la IA **si** implementamos el "Triage Inteligente". Al asegurar que el sistema bloquee la conversación y emita un modal de emergencia ante palabras clave críticas, demostraremos que la plataforma prioriza su seguridad física por encima de todo.
 - **Creemos que** aumentaremos la fidelidad y el uso recurrente **si** implementamos el "Sistema de Semáforos" para la lectura IoT en lugar de gráficos complejos. Al traducir la data a mensajes tranquilizadores, reduciremos la ansiedad característica del monitoreo de salud constante.
 - **Creemos que** mejoraremos el bienestar emocional de la gestante **si** activamos las "Píldoras de Autoestima" y las alertas "Pasa la Voz". Con estas microinteracciones, la plataforma pasará de ser una herramienta clínica a un verdadero soporte de acompañamiento diario.
+
+## Segmentos Objetivo
+
+### Segmento objetivo #1: Madres gestantes peruanas de entre 18 a 35 años de edad
+
+- **Descripción:** Este segmento objetivo está compuesto por mujeres embarazadas, especialmente primerizas, que buscan apoyo inmediato, reducción de estrés y un seguimiento amigable de su gestación a través de su smartphone, sin sentirse abrumadas por datos médicos complejos.
+- **Aspectos demográficos:** Sexo: Femenino. Edades: Mayormente entre 18 y 35 años. Nivel socioeconómico: Clases B y C (media-alta y media).
+- **Aspectos geográficos:** Nacionalidad: Peruana. Zona geográfica en la que vive: Urbana. Departamento: Lima y Callao.
+- **Aspectos psicográficos:** Valoran el autocuidado, la conexión emocional con su bebé y la contención. Se sienten abrumadas por la terminología médica y buscan herramientas visualmente cálidas que celebren sus hitos. Desean sentirse acompañadas y validadas frente a los cambios de su cuerpo.
+- **Necesidades:** Requieren respuestas a dudas rutinarias a cualquier hora (madrugadas), monitoreo de salud que no genere pánico, y una forma sencilla de comunicar sus necesidades físicas (antojos, cansancio, dolores) a su pareja sin sentir que son una carga.
+- **Requisitos:** Buscan una plataforma móvil confiable, estéticamente tranquilizadora, que filtre lo urgente de lo normal y que centralice sus registros, lecturas de sensores y conexión con su pareja.
+- **Objetivo:** Vivir un embarazo seguro, validado emocionalmente y con la menor incertidumbre posible, apoyándose en la IA y en la participación activa de su pareja.
+
+### Segmento objetivo #2: Padres y acompañantes peruanos de entre 18 a 40 años de edad
+
+- **Descripción:** Este segmento objetivo está compuesto por las parejas o acompañantes directos de las gestantes, quienes desean involucrarse de forma proactiva en el proceso del embarazo, pero a menudo carecen de conocimientos técnicos, médicos o guía práctica sobre cómo ser de utilidad en el día a día.
+- **Aspectos demográficos:** Sexo: Mayormente masculino (padres), aunque incluye a cualquier acompañante de confianza. Edades: Mayormente entre 18 y 40 años. Nivel socioeconómico: Clases B y C.
+- **Aspectos geográficos:** Nacionalidad: Peruana. Zona geográfica en la que vive: Urbana. Departamento: Lima y Callao.
+- **Aspectos psicográficos:** Quieren ser útiles y brindar apoyo, pero a veces se sienten desorientados o excluidos ante los cambios hormonales y físicos de su pareja. Valoran la información directa, práctica, accionable ("al grano") y sin rodeos médicos.
+- **Necesidades:** Entender el desarrollo del bebé y los síntomas de su pareja semana a semana, recibir sugerencias concretas de cómo ayudar (hacer la cena, dar un masaje, preparar el bolso), y mantener una comunicación rápida para atender las necesidades de la madre.
+- **Requisitos:** Buscan una interfaz adaptada a su rol (Modo Compañero) que no invada la privacidad clínica de la madre, pero que les envíe alertas, tips diarios en notificaciones push y un resumen visual del estado del bebé.
+- **Objetivo:** Convertirse en un soporte activo, informado y empático, fortaleciendo el vínculo de pareja, aliviando la carga de la madre y preparándose adecuadamente para la llegada del bebé.
