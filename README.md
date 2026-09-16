@@ -132,11 +132,11 @@ Utilizando la información recolectada, hemos realizado un análisis de las nece
 
 ### 2.3.1. User Personas
 
-**User Persona 1: Daniela Gomez (Madre Gestante)**[cite: 5]
+**User Persona 1: Daniela Gomez (Madre Gestante)**
 
-![User Persona 1 - Daniela Gomez](assets/user_persona_daniela.png)
+![User Persona 1 - Daniela Gomez](assets/user_persona_daniela.jpeg)
 
-**User Persona 2: Mateo Suarez (Padre / Acompañante)**[cite: 5]
+**User Persona 2: Mateo Suarez (Padre / Acompañante)**
 
-![User Persona 2 - Mateo Suarez](assets/user_persona_mateo.png)
+![User Persona 2 - Mateo Suarez](assets/user_persona_mateo.jpeg)
 
