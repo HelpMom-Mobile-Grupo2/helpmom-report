@@ -16,7 +16,7 @@
 ## Informe del Trabajo Final
 
 **Docente:** Quevedo Velasco, David Gerardo  
-**Equipo:** PregTech  
+**Equipo:** FeluSmart  
 **Proyecto:** HelpMom
 
 <br>
@@ -26,6 +26,10 @@
 | Código | Apellidos, Nombres |
 | :---: | :--- |
 | u202218590 | Stephano Espinoza Cueva |
+| [Código 2] | [Nombres 2] |
+| [Código 3] | [Nombres 3] |
+| [Código 4] | [Nombres 4] |
+| [Código 5] | [Nombres 5] |
 
 <br><br>
 
@@ -33,25 +37,20 @@
 **Setiembre 2026**
 
 </div>
-
-<br>
-
 ---
 
 # Capítulo I: Introducción
 
 ## 1.1. Startup Profile
 
-A continuación, se brindará información sobre a qué se dedica nuestra empresa, PregTech.
+A continuación, se brindará información sobre a qué se dedica nuestra empresa, FeluSmart.
 
 ### 1.1.1. Descripción de la Startup
 
-PregTech es una startup que se dedica principalmente al desarrollo de software. Fue creada por estudiantes de la Universidad Peruana de Ciencias Aplicadas (UPC) con la visión de generar un impacto social positivo. El objetivo de PregTech es ayudar a mujeres gestantes y a sus familias a transitar la etapa del embarazo con tranquilidad y seguridad. Asimismo, PregTech se compromete a ofrecer una aplicación móvil accesible, intuitiva, empática y centrada en brindar paz mental, mejorando significativamente la calidad de vida de los futuros padres mediante autonomía, soporte continuo y conexión compartida.
+FeluSmart es una startup que se dedica principalmente al desarrollo de software. Fue creada por estudiantes de la Universidad Peruana de Ciencias Aplicadas (UPC) con la visión de generar un impacto social positivo. El objetivo de FeluSmart es ayudar a mujeres gestantes y a sus familias a transitar la etapa del embarazo con tranquilidad y seguridad. Asimismo, FeluSmart se compromete a ofrecer una aplicación móvil accesible, intuitiva, empática y centrada en brindar paz mental, mejorando significativamente la calidad de vida de los futuros padres mediante autonomía, soporte continuo y conexión compartida.
 
 **Misión:** Desarrollar soluciones tecnológicas móviles accesibles y eficientes que acompañen a las familias durante la gestación, integrando inteligencia artificial y monitoreo inteligente de forma intuitiva y sin generar estrés.
 
-**Visión:** En un futuro cercano, PregTech se destacará como una empresa líder en el desarrollo de soluciones de salud materno-infantil digital. Asimismo, se le reconocerá por su compromiso con la accesibilidad, la innovación social, la reducción de la ansiedad prenatal y la mejora continua de la dinámica familiar durante el embarazo.
+**Visión:** En un futuro cercano, FeluSmart se destacará como una empresa líder en el desarrollo de soluciones de salud materno-infantil digital. Asimismo, se le reconocerá por su compromiso con la accesibilidad, la innovación social, la reducción de la ansiedad prenatal y la mejora continua de la dinámica familiar durante el embarazo.
 
-> **Nota:** Cuando tengas los logos de PregTech y HelpMom, debes agregarlos a la carpeta `assets` y ponerlos aquí abajo:
-> 
-> *<div align="center">Aquí irán los logos de la Startup y la App</div>*
+
