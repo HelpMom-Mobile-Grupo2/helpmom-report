@@ -165,3 +165,12 @@ El desafío principal que enfrentamos es generar confianza en madres y padres pr
 - Alertas Rápidas ("Pasa la Voz") predefinidas.
 - Notificaciones de "Píldoras de Autoestima" e "Hitos del bebé".
 - Guía diaria ("Tips para Papá") con acciones concretas de apoyo.
+
+
+#### 1.2.2.3. Lean UX Hypothesis Statements
+
+- **Creemos que** lograremos una mayor adopción inicial y retención de nuevas usuarias **si** ofrecemos una prueba gratuita de 14 días con acceso parcial al Asistente IA. Al permitir que las madres experimenten la tranquilidad de obtener respuestas inmediatas a sus dudas rutinarias, se aumentará la conversión a planes pagos.
+- **Creemos que** aumentaremos la satisfacción de los padres/acompañantes y su participación activa **si** implementamos el "Modo Compañero" con la "Guía diaria". Al recibir tips accionables y sin tecnicismos, se facilitará su involucramiento y se reducirá la fricción en la comunicación de la pareja.
+- **Creemos que** fortaleceremos la confianza de las usuarias y reduciremos el riesgo de la IA **si** implementamos el "Triage Inteligente". Al asegurar que el sistema bloquee la conversación y emita un modal de emergencia ante palabras clave críticas, demostraremos que la plataforma prioriza su seguridad física por encima de todo.
+- **Creemos que** aumentaremos la fidelidad y el uso recurrente **si** implementamos el "Sistema de Semáforos" para la lectura IoT en lugar de gráficos complejos. Al traducir la data a mensajes tranquilizadores, reduciremos la ansiedad característica del monitoreo de salud constante.
+- **Creemos que** mejoraremos el bienestar emocional de la gestante **si** activamos las "Píldoras de Autoestima" y las alertas "Pasa la Voz". Con estas microinteracciones, la plataforma pasará de ser una herramienta clínica a un verdadero soporte de acompañamiento diario.
