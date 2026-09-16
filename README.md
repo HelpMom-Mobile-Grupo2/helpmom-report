@@ -166,3 +166,15 @@ En esta sección se presenta la matriz de tareas, la cual muestra las actividade
 | Revisar "Tips diarios" y desarrollo semanal (Hitos) | Alta | Alta |
 | Activar Triage de Emergencia (Alerta crítica) | Rara vez | Alta |
 
+### 2.3.3. User Journey Mapping
+
+El User Journey Mapping nos permitirá conocer el recorrido de nuestros usuarios interactuando con las nuevas funciones tecnológicas de HelpMom.
+
+**Segmento #1 - Madre Gestante**
+
+![User Journey Map - Madre Gestante](assets/user_journey_madre.jpeg)
+
+**Segmento #2 - Padre / Acompañante**
+
+![User Journey Map - Padre](assets/user_journey_padre.jpeg)
+
