@@ -94,5 +94,7 @@ HelpMom funciona mediante un modelo de suscripción mensual o anual. Se ofrecen 
 | **How (Cómo)** | Mediante una app móvil con navegación por Bottom Bar, un bot conversacional con bloqueos de emergencia, interpretación de datos IoT mediante un sistema de diseño de estado (semáforo) y vinculación de cuentas (madre-acompañante) por código QR. |
 | **How Much (Cuánto)** | La plataforma es accesible a través de una suscripción mensual o anual, dependiendo de las características tecnológicas (IA e IoT) habilitadas en cada plan. |
 
+### 1.2.2. Lean UX Process
 
+El proceso Lean UX que adoptamos está orientado a maximizar la eficiencia en el desarrollo de nuestro producto, enfocándose en principios fundamentales como la validación continua, el pensamiento crítico y la acción rápida. A partir de esta filosofía, hemos estructurado nuestro propio enfoque Lean UX, basado en cuatro componentes esenciales: definición de problemas, formulación de suposiciones, creación de hipótesis y desarrollo de un lienzo estratégico.
 
