@@ -128,7 +128,7 @@ A partir de las entrevistas realizadas, se han identificado patrones claros de c
 
 ## 2.3. Needfinding
 
-Utilizando la información recolectada, hemos realizado un análisis de las necesidades de los usuarios, que nos permitirá identificar y priorizar las funcionalidades que se incluirán en la plataforma orientada a dispositivos móviles[cite: 5].
+Utilizando la información recolectada, hemos realizado un análisis de las necesidades de los usuarios, que nos permitirá identificar y priorizar las funcionalidades que se incluirán en la plataforma orientada a dispositivos móviles.
 
 ### 2.3.1. User Personas
 
@@ -177,4 +177,17 @@ El User Journey Mapping nos permitirá conocer el recorrido de nuestros usuarios
 **Segmento #2 - Padre / Acompañante**
 
 ![User Journey Map - Padre](assets/user_journey_padre.jpeg)
+
+### 2.3.4. Empathy Mapping
+
+El Empathy Mapping nos ayudará a crear perfiles detallados comprendiendo mejor los pensamientos, emociones y comportamientos de nuestros segmentos ante la etapa del embarazo.
+
+**Segmento Objetivo 1:**
+
+![Empathy Map - Madre Gestante](assets/empathy_map_segmento1.jpeg)
+
+**Segmento Objetivo 2:**
+
+![Empathy Map - Padre o Acompañante](assets/empathy_map_segmento2.jpeg)
+
 
