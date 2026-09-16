@@ -107,3 +107,61 @@ HelpMom es una innovadora startup que combina tecnología móvil, sensores intel
 El desafío principal que enfrentamos es generar confianza en madres y padres primerizos para que integren nuestra tecnología IA e IoT como una herramienta aliada en su día a día. A pesar de la precisión de nuestra solución, mostrar datos crudos o depender de un bot puede generar dudas iniciales sobre la fiabilidad en temas delicados. Esto puede dificultar la adopción inicial de la plataforma.
 
 > **¿Cómo podríamos lograr que madres y padres confíen en HelpMom como una solución cálida, intuitiva y segura que traduzca el complejo monitoreo de salud en paz mental, mientras educa y empodera al padre para ser un soporte activo diario?**
+
+#### 1.2.2.2. Lean UX Assumptions
+
+**Business Assumptions**
+
+- **Creemos que nuestras usuarias tienen la necesidad de:** recibir respuestas rápidas a dudas de rutina 24/7, monitorear su embarazo sin estrés y poder comunicar sus necesidades físicas a su pareja de forma sencilla.
+- **Estas necesidades se pueden satisfacer con:** una app móvil dividida en módulos claros (Inicio, Mi Cuerpo, Aprendizaje, Chat IA) que traduzca la data médica de IoT a íconos de estado y que cuente con un Modo Compañero sincronizado.
+- **Nuestros usuarios iniciales son (o serán):** mujeres gestantes primerizas y sus parejas, con acceso a smartphones, que buscan reducir la ansiedad del embarazo mediante tecnología amigable.
+- **El valor principal que un usuario quiere obtener de nuestro servicio es:** paz mental, validación emocional y respuestas inmediatas en cualquier momento del día.
+- **Los usuarios también pueden obtener estos beneficios adicionales:** empoderamiento del padre/acompañante, celebración de hitos del bebé, educación contextualizada y alertas tempranas de emergencia.
+- **Adquiriremos a la mayoría de nuestros usuarios a través de:** estrategias de marketing digital enfocadas en comunidades de futuros padres, redes sociales y campañas centradas en el apoyo emocional y de pareja.
+- **Ganaremos dinero mediante:** planes de suscripción mensual o anual para habilitar el uso avanzado de la IA y el monitoreo de datos IoT.
+- **Nuestra competencia principal en el mercado será:** aplicaciones genéricas de seguimiento de embarazo que solo muestran el tamaño del bebé, pero carecen de soporte IA, lectura IoT en tiempo real o funciones de involucramiento para el padre.
+- **Les superaremos debido a:** nuestra propuesta centrada en el soporte conversacional 24/7, la interfaz "sin estrés" (sistema de semáforo) y la inclusión activa del acompañante.
+- **El mayor riesgo para nuestro producto es:** la desconfianza inicial hacia las respuestas generadas por Inteligencia Artificial y el temor a que el triage automático no detecte una emergencia a tiempo.
+
+**User Assumptions (Madre Gestante)**
+
+- **¿Quién es la usuaria?** Mujeres embarazadas, especialmente primerizas, que buscan contención emocional, respuestas rápidas y un seguimiento de su embarazo que no genere ansiedad.
+- **¿Dónde encaja nuestro producto en su vida?** En su día a día como un centro de control amigable que consulta para resolver dudas de rutina, registrar sus síntomas y enviar notificaciones rápidas a su pareja.
+- **¿Qué problemas resuelve nuestro producto?** La ansiedad por falta de información a deshoras, el estrés de interpretar datos médicos complejos y la dificultad de pedir pequeños favores o expresar malestares a su acompañante sin sentirse una carga.
+- **¿Cuándo y cómo se utiliza nuestro producto?** De forma recurrente mediante una navegación por "Bottom Bar", usando el chatbot ante dudas, leyendo las píldoras de autoestima diarias y registrando datos en "Mi Cuerpo".
+- **¿Qué características son importantes?** Asistente IA 24/7, Triage inteligente de seguridad, alertas "Pasa la Voz", sistema de semáforo para IoT, e hitos del bebé.
+- **¿Cómo debería verse y comportarse nuestro producto?** Debe ser visualmente cálido, tranquilizador, con ilustraciones empáticas y un sistema de notificaciones celebratorio y validador.
+
+**User Assumptions (Padre / Acompañante)**
+
+- **¿Quién es el usuario?** Parejas o acompañantes de las gestantes que desean involucrarse proactivamente pero no saben exactamente cómo ayudar.
+- **¿Dónde encaja nuestro producto en su vida?** Como una guía diaria en su smartphone que revisan por las mañanas o cuando reciben una alerta de su pareja.
+- **¿Qué problemas resuelve nuestro producto?** La desinformación sobre los cambios físicos y hormonales de la madre, y la sensación de ser un "espectador" durante el embarazo.
+- **¿Cuándo y cómo se utiliza nuestro producto?** A través del "Modo Compañero", recibiendo tips diarios y reaccionando a las alertas de la madre.
+- **¿Qué características son importantes?** Tips accionables ("¿Cómo ayudar hoy?"), traducción de cambios hormonales, resumen del estado del bebé y recepción de notificaciones de la madre.
+
+**User Outcomes**
+
+- **Reducción drástica de la ansiedad:** Al recibir respuestas 24/7 del asistente IA y ver el estado de salud traducido a colores amigables, las madres sentirán mayor paz mental.
+- **Fortalecimiento del vínculo de pareja:** Los acompañantes sabrán exactamente cómo apoyar día a día gracias a los microconsejos prácticos.
+- **Prevención y seguridad:** El Triage Inteligente detectará palabras clave de riesgo y derivará a las madres a emergencias reales de manera oportuna.
+- **Soporte emocional continuo:** Las píldoras de autoestima y los hitos del bebé mantendrán a la madre motivada y validada durante los cambios corporales.
+
+**Business Outcomes**
+
+- **Conversión de prueba gratuita a planes pagos:** Se espera que al menos un 35% de los usuarios que prueben el chat de IA pasen al Plan Cuidado Integral.
+- **Retención mensual mayor al 60%:** El contenido dinámico semanal y las notificaciones de hitos asegurarán el uso recurrente a lo largo de los 9 meses.
+- **Recomendación (Boca a boca):** Que el 80% de las parejas usuarias afirmen que HelpMom mejoró su comunicación y tranquilidad durante el proceso.
+- **Alianzas tecnológicas:** Establecer convenios con proveedores de hardware IoT (pulseras/monitores) en los primeros seis meses.
+
+**Features Assumptions**
+
+- Flujo de Autenticación unificado con redirección automática por roles (Madre/Acompañante).
+- Arquitectura de navegación "Bottom Bar" (Inicio, Mi Cuerpo, Aprendizaje, Asistente IA).
+- Asistente IA (Chatbot 24/7) para dudas de rutina.
+- Triage Inteligente con modal de emergencia (pantalla roja y botón de llamada directa).
+- Interpretación IoT mediante Sistema de Semáforo (tarjetas de estado con íconos y colores).
+- Modo Compañero mediante sincronización por código QR.
+- Alertas Rápidas ("Pasa la Voz") predefinidas.
+- Notificaciones de "Píldoras de Autoestima" e "Hitos del bebé".
+- Guía diaria ("Tips para Papá") con acciones concretas de apoyo.
