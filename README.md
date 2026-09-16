@@ -98,3 +98,12 @@ HelpMom funciona mediante un modelo de suscripción mensual o anual. Se ofrecen 
 
 El proceso Lean UX que adoptamos está orientado a maximizar la eficiencia en el desarrollo de nuestro producto, enfocándose en principios fundamentales como la validación continua, el pensamiento crítico y la acción rápida. A partir de esta filosofía, hemos estructurado nuestro propio enfoque Lean UX, basado en cuatro componentes esenciales: definición de problemas, formulación de suposiciones, creación de hipótesis y desarrollo de un lienzo estratégico.
 
+#### 1.2.2.1. Lean UX Problem Statements
+
+Nuestra aplicación móvil está diseñada con la finalidad de proporcionar tranquilidad, contención emocional e información confiable a madres y padres que desean vivir la etapa del embarazo de forma segura y conectada. En esta etapa, muchas familias enfrentan ansiedad, dudas constantes de madrugada y la necesidad de tomar decisiones informadas sobre su salud, pero los sistemas tradicionales no brindan respuestas inmediatas ni integran al acompañante de manera activa.
+
+HelpMom es una innovadora startup que combina tecnología móvil, sensores inteligentes (IoT) traducidos a un lenguaje amigable, y un Asistente IA 24/7 con triage de emergencias, sumado a un entorno dual que empodera tanto a la madre como a su pareja.
+
+El desafío principal que enfrentamos es generar confianza en madres y padres primerizos para que integren nuestra tecnología IA e IoT como una herramienta aliada en su día a día. A pesar de la precisión de nuestra solución, mostrar datos crudos o depender de un bot puede generar dudas iniciales sobre la fiabilidad en temas delicados. Esto puede dificultar la adopción inicial de la plataforma.
+
+> **¿Cómo podríamos lograr que madres y padres confíen en HelpMom como una solución cálida, intuitiva y segura que traduzca el complejo monitoreo de salud en paz mental, mientras educa y empodera al padre para ser un soporte activo diario?**
