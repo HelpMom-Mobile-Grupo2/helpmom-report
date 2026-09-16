@@ -140,3 +140,29 @@ Utilizando la información recolectada, hemos realizado un análisis de las nece
 
 ![User Persona 2 - Mateo Suarez](assets/user_persona_mateo.jpeg)
 
+### 2.3.2. User Task Matrix
+
+En esta sección se presenta la matriz de tareas, la cual muestra las actividades principales que realizan la madre gestante y el acompañante en la plataforma, evaluando su frecuencia de uso e importancia.
+
+**Segmento 1: Madre Gestante**
+
+| Actividad | Frecuencia | Importancia |
+| :--- | :--- | :--- |
+| Registrar síntomas y datos de salud (Vista "Mi Cuerpo") | Alta | Alta |
+| Revisar estado del bebé (Sistema de Semáforo IoT) | Alta | Alta |
+| Consultar dudas de rutina (Asistente IA 24/7) | Alta | Alta |
+| Enviar/Recibir alertas de apoyo ("Pasa la Voz") | Media | Alta |
+| Revisar "Tips diarios" y desarrollo semanal (Hitos) | Baja | Media |
+| Activar Triage de Emergencia (Alerta crítica) | Rara vez | Alta |
+
+**Segmento 2: Padre / Acompañante**
+
+| Actividad | Frecuencia | Importancia |
+| :--- | :--- | :--- |
+| Registrar síntomas y datos de salud (Vista "Mi Cuerpo") | Nunca | Baja |
+| Revisar estado del bebé (Sistema de Semáforo IoT) | Media | Alta |
+| Consultar dudas de rutina (Asistente IA 24/7) | Baja | Media |
+| Enviar/Recibir alertas de apoyo ("Pasa la Voz") | Media | Alta |
+| Revisar "Tips diarios" y desarrollo semanal (Hitos) | Alta | Alta |
+| Activar Triage de Emergencia (Alerta crítica) | Rara vez | Alta |
+
