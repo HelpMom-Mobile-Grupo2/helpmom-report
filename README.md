@@ -196,19 +196,19 @@ El Empathy Mapping nos ayudará a crear perfiles detallados comprendiendo mejor 
 
 El Diagrama de Contexto presenta la visión global de HelpMom, destacando cómo el sistema central interactúa directamente con sus dos actores principales (la Madre Gestante y el Padre/Acompañante) y cómo se integra con servicios externos esenciales; estos incluyen el hardware IoT para la telemetría de salud, un proveedor de Inteligencia Artificial para procesar las consultas del chat y un servicio en la nube para gestionar las notificaciones push de emergencia.
 
-![Diagrama de Contexto de la Arquitectura de Software](dcontexto.jpeg)
+![Diagrama de Contexto de la Arquitectura de Software](./assets/dcontexto.jpeg)
 
 ## 2.5.3.2. Software Architecture Container Level Diagrams
 
 El Diagrama de Contenedores detalla la arquitectura interna del sistema basada en microservicios, donde la aplicación móvil multiplataforma se comunica mediante un API Gateway con tres servicios backend especializados (Identidad/Sincronización, Telemetría IoT y Triage IA), utilizando un enfoque de persistencia de datos políglota que separa la información estructurada de usuarios en una base de datos relacional (PostgreSQL) y el registro flexible de conversaciones en una base documental (MongoDB).
 
-![Diagrama de Contenedores de la Arquitectura de Software](dcontenedores.jpeg)
+![Diagrama de Contenedores de la Arquitectura de Software](./assets/dcontenedores.jpeg)
 
 ## 2.5.3.3. Software Architecture Deployment Diagrams
 
 El Diagrama de Despliegue ilustra la distribución de la infraestructura en producción, ubicando la ejecución de la aplicación y la conexión del sensor Bluetooth directamente en los dispositivos móviles de los clientes, mientras que toda la lógica de negocio, el enrutamiento y las bases de datos administradas se alojan de forma segura y escalable en un entorno Cloud orquestado mediante clústeres de Kubernetes.
 
-![Diagrama de Despliegue de la Arquitectura de Software](archi.jpeg)
+![Diagrama de Despliegue de la Arquitectura de Software](./assets/archi.jpeg)
 
 ## 2.5.3.4. Software Architecture Domain Message Flow Modelling Diagrams
 
@@ -218,19 +218,19 @@ Esta sección utilizará el Domain Message Flow Modelling, una técnica que ilus
 
 Este flujo modela el momento en que la madre se une a la plataforma y el sistema crea su perfil de identidad y automáticamente inicializa su expediente de embarazo.
 
-![Scenario 01: Madre Gestante se registra e inicializa su seguimiento](scen01.jpeg)
+![Scenario 01: Madre Gestante se registra e inicializa su seguimiento](./assets/scen01.jpeg)
 
 ### Scenario 02: El Sensor IoT detecta anomalía (Alerta Roja) y dispara Triage
 
 Este es el flujo más crítico de la aplicación. Muestra cómo una lectura del hardware IoT se procesa y, al detectar peligro, cruza hacia el contexto de IA para lanzar la emergencia.
 
-![Scenario 02: El Sensor IoT detecta anomalía (Alerta Roja) y dispara Triage](escen02.jpeg)
+![Scenario 02: El Sensor IoT detecta anomalía (Alerta Roja) y dispara Triage](./assets/escen02.jpeg)
 
 ### Scenario 03: Madre envía alerta "Pasa la Voz" al Acompañante
 
 Refleja la funcionalidad de Modo Compañero, donde una alerta no médica necesita consultar la base de datos de identidad para saber a quién enviarle el Push.
 
-![Scenario 03: Madre envía alerta "Pasa la Voz" al Acompañante](escen03.jepg)
+![Scenario 03: Madre envía alerta "Pasa la Voz" al Acompañante](./assets/escen03.jepg)
 
 ## 2.6. Tactical-Level Domain-Driven Design
 
