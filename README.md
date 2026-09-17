@@ -16,7 +16,7 @@
 ## Informe del Trabajo Final
 
 **Docente:** Quevedo Velasco, David Gerardo  
-**Equipo:** FeluSmart  
+**Equipo:** FetuSmart  
 **Proyecto:** HelpMom
 
 <br>
@@ -25,11 +25,11 @@
 
 | Código | Apellidos, Nombres |
 | :---: | :--- |
-| u202218590 | Stephano Espinoza Cueva |
+| u202218590 | Espinoza Cueva, Stephano jose |
 | u202223279 | Rivera Ayala, Gabriel Alejandro |
-| [Código 3] | [Nombres 3] |
-| [Código 4] | [Nombres 4] |
-| [Código 5] | [Nombres 5] |
+| u202216163| Paredes Davila, Jose Adrian |
+| U20211G499 | Moscoso Bejar, Angelo Stephano |
+| U20221C726 | Hancco Poma, Keyner Ivan |
 
 <br><br>
 
@@ -39,6 +39,82 @@
 </div>
 ---
 
+## Registro de Versiones del Informe
+
+| Version | Fecha | Autor | Descripcion de Modificacion |
+| :---: | :---: | :--- | :--- |
+| 0.1 | 10/09/2026 | Stephano Jose Espinoza Cueva | Se agregó la información base del informe, incluyendo la portada institucional, datos del curso, nombre de la startup, producto IoBuild e integrantes del equipo. También se incorporaron las primeras imágenes de presentación y la descripción general del perfil de la startup, dejando preparada la estructura inicial del documento para el desarrollo de los capítulos posteriores. |
+| 0.2 | 15/04/2026 | Stephano Jose Espinoza Cueva | Se realizó el primer avance del Capítulo I, desarrollando los antecedentes, la problemática y el contexto del proyecto. Además, se avanzó con el enfoque Lean UX mediante la elaboración del Problem Statement, el registro de supuestos principales, la formulación de Hypothesis Statements y la construcción inicial del Lean UX Canvas para orientar la propuesta de solución. |
+| 0.3 | 14/09/2026 | Keyner Hannco Poma | Se revisó y editó el Capítulo I para mejorar la coherencia de la redacción, la conexión entre la problemática y la solución propuesta, y la presentación del Lean UX Process. Asimismo, se integraron los aportes realizados por los integrantes en esta primera etapa y se organizó el contenido para mantener una estructura clara dentro del informe. |
+| 0.4 | 16/09/2026 | Keyner Hannco Poma | Se avanzó en el Capítulo II con el análisis competitivo, identificando soluciones similares, sus características, fortalezas y debilidades. También se incorporó el diseño de entrevistas, el registro de entrevistas realizadas y el análisis inicial de los hallazgos obtenidos. Finalmente, se documentó el progreso del needfinding como base para comprender mejor a los usuarios objetivo. |
+| 0.5 | 15/09/2026 | Angelo Moscoso Bejar | Se continuó el desarrollo del Capítulo II mediante la finalización del needfinding, incluyendo User Personas, User Task Matrix, User Journey Mapping y Empathy Mapping. Además, se trabajó el Big Picture EventStorming para identificar eventos relevantes del dominio y se inició la definición del Ubiquitous Language, permitiendo alinear la terminología del equipo con el contexto del producto. |
+| 0.6 | 14/09/2026 | Angelo Moscoso Bejar | Se complementó el Capítulo II con la identificación de épicas, user stories y technical stories. También se registraron criterios de aceptación, prioridades y dependencias entre historias, además de incorporar el Impact Mapping para relacionar objetivos del negocio, actores principales, impactos esperados y funcionalidades necesarias para IoBuild. |
+| 0.7 | 15/09/2026 | Jose Paredes Davila | Se integró el avance del Product Backlog en el Capítulo II, organizando las historias de usuario según su prioridad, estimación y relación con los objetivos del producto. Asimismo, se documentó el trabajo realizado en Trello junto con el equipo, dejando evidencia de la planificación colaborativa y de la gestión inicial de tareas para los siguientes sprints. |
+| 0.8 | 19/09/2026 | Jose Paredes Davila | Se avanzó en el diseño del producto dentro del Capítulo II, incorporando lineamientos visuales iniciales, arquitectura de información y propuestas UI/UX preliminares. Se documentaron guías de estilo, organización de contenido, primeras ideas de wireframes, mock-ups y flujos de interacción, buscando asegurar consistencia, usabilidad y coherencia con la propuesta de valor de IoBuild. |
+| 0.9 | 14/09/2026 | Gabriel Rivera Ayala  | Se consolidó el Capítulo II con artefactos de diseño y arquitectura, incluyendo prototipos, diagramas orientados a objetos, diseño de base de datos y elementos de arquitectura de software. Esta actualización permitió conectar los requisitos levantados con una propuesta técnica más estructurada, preparando la base para la implementación y documentación posterior del producto. |
+| 1.0 | 15/09/2026 | Gabriel Rivera Ayala  | Se culminó el Capítulo II mediante la revisión final de requisitos, diseño y arquitectura. También se añadió información sobre la configuración del entorno de desarrollo, la gestión del código fuente y la preparación del despliegue de la solución tecnológica. |
+
+
+## Student Outcome
+
+| Criterio Específico | Acciones Realizadas | Conclusiones |
+| :--- | :--- | :--- |
+|Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y, en especial, para su proyecto en soluciones de software. |**Stephano Jose Espinoza Cueva:** **AV1:** Desarrollo: Capítulo I: Presentación. 1.1. Startup Profile (1.1.1. Descripción, 1.1.2. Perfiles del equipo). 1.2. Solution Profile (1.2.1. Antecedentes y problemática). 1.2.2. Lean UX Process (1.2.2.1. Problem Statements, 1.2.2.2. Assumptions, 1.2.2.3. Hypothesis Statements, 1.2.2.4. Lean UX Canvas). 1.3. Segmentos objetivo. Capítulo II (Inicio): 2.1. Competidores (2.1.1. Análisis competitivo, 2.1.2. Estrategias y tácticas). Además, ayudó en la mejora de los diagramas.<br><br>**Keyner Ivan Hancco Poma:** **AV1:** Desarrollo: Capítulo II: Requirements Development. 2.2. Entrevistas (2.2.1. Diseño, 2.2.2. Registro, 2.2.3. Análisis). 2.3. Needfinding (Parte UX). 2.3.1. User Personas. 2.3.2. User Task Matrix. 2.3.3. User Journey Mapping. 2.3.4. Empathy Mapping. Además, ayudó en la mejora de los diagramas.<br><br>**Angelo Stephano Moscoso Bejar:** **AV1:** Desarrollo: Capítulo II: Requirements Development. 2.3.5. Big Picture EventStorming. 2.3.6. Ubiquitous Language. 2.4. Requirements specification (2.4.1. User Stories, 2.4.2. Impact Mapping, 2.4.3. Product Backlog). 2.5.1. EventStorming Estratégico (2.5.1.1. Candidate Context Discovery, 2.5.1.2. Domain Message Flows Modeling). Además, ayudó en la mejora de los diagramas.<br><br>**Jose Adrian Paredes Davila:** **AV1:** Desarrollo: Capítulo II: Requirements Development. 2.5.1.3. Bounded Context Canvases. 2.5.2. Context Mapping. 2.5.3. Software Architecture (Modelo C4). 2.5.3.1. Context Level Diagrams. 2.5.3.2. Container Level Diagrams. 2.5.3.3. Deployment Diagrams. Además, ayudó en la mejora de los diagramas.<br><br>**Gabriel Alejandro Rivera Ayala:** **AV1:** Desarrollo: Capítulo II: Requirements Development. 2.6. Tactical-Level Domain-Driven Design (Completo). 2.6.x.1 al 2.6.x.4 (Domain, Interface, Application e Infrastructure Layers). 2.6.x.5. Component Level Diagrams. 2.6.x.6. Code Level Diagrams (2.6.x.6.1. Class Diagrams, 2.6.x.6.2. Database Design Diagram). Además, ayudó en la mejora de los diagramas. | En AV1, el equipo evidenció actualización de conocimientos al aplicar DDD estratégico y táctico, integrando modelado de dominio y arquitectura de software en entregables concretos del proyecto.|
+| Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software.| **Stephano Jose Espinoza Cueva:** **AV1:** Investigó de forma autónoma nuevas tendencias en metodologías Lean UX y estrategias de análisis competitivo para startups, aplicando estos conocimientos modernos en la definición de la propuesta de valor del proyecto.<br><br>**Keyner Ivan Hancco Poma:** **AV1:** Revisó documentación especializada y buenas prácticas recientes sobre técnicas de Needfinding y mapeo de empatía, mejorando significativamente la comprensión de la psicología del usuario al elaborar los perfiles.<br><br>**Angelo Stephano Moscoso Bejar:** **AV1:** Profundizó de manera autodidacta en técnicas de EventStorming y Domain-Driven Design (DDD), logrando facilitar la definición del lenguaje ubicuo y aplicando estándares actuales de la industria.<br><br>**Jose Adrian Paredes Davila:** **AV1:** Se capacitó proactivamente en la estandarización de diagramas utilizando el Modelo C4 y estudió alternativas modernas de despliegue continuo, asegurando que el diseño cumpla con expectativas profesionales.<br><br>**Gabriel Alejandro Rivera Ayala:** **AV1:** Investigó e implementó patrones de diseño táctico avanzados para el desarrollo de software y técnicas optimizadas de modelado de bases de datos, demostrando interés en mantenerse actualizado con las herramientas de la industria. | En AV1, el grupo demostró aprendizaje permanente al investigar y adoptar nuevas técnicas de DDD y arquitectura, transfiriendo conocimiento entre integrantes y elevando la calidad técnica del trabajo colaborativo. |
+
+
+
+## Objetivos SMART
+
+Esta sección presenta el plan de crecimiento profesional postgrado de cada integrante, con dos objetivos SMART por persona.
+
+### 1. Stephano Jose Espinoza Cueva (U202218590)
+
+#### 1.1. Evolución a Full Stack con Énfasis en Arquitectura Móvil y Backend
+- **Specific:** Consolidar mi perfil como desarrollador Full Stack, integrando competencias avanzadas en la creación de interfaces móviles nativas (Kotlin) y la estructuración de servicios backend robustos (Spring Boot).
+- **Measurable:** Desarrollar e implementar una solución integral (cliente y servidor) que abarque al menos 5 módulos o flujos de negocio principales completamente operativos.
+- **Achievable:** Asignar un bloque de estudio y desarrollo activo de 12 horas por semana, focalizado en la intercomunicación efectiva y el consumo de APIs entre el frontend y el backend.
+- **Relevant:** Adquirir un entendimiento holístico del ciclo de vida del software, incrementando mi adaptabilidad técnica y mi valor competitivo en la industria tecnológica.
+- **Time-bound:** Tener la aplicación desarrollada y lista para despliegue en un plazo máximo de 6 meses.
+
+#### 1.2. Acreditación Profesional en Desarrollo Avanzado con Kotlin
+- **Specific:** Alcanzar un nivel de maestría en las características avanzadas del lenguaje Kotlin, aplicables tanto para el ecosistema móvil como para la lógica del lado del servidor.
+- **Measurable:** Conseguir la acreditación oficial "Kotlin Certified Developer" respaldada por JetBrains.
+- **Achievable:** Completar el itinerario formativo oficial de la tecnología y resolver laboratorios o proyectos prácticos de alta complejidad.
+- **Relevant:** Validar técnicamente mis habilidades en el lenguaje core empleado en el proyecto Centralis, respaldando mi nivel de expertise ante el equipo.
+- **Time-bound:** Superar la evaluación oficial dentro de un margen de 5 meses posteriores a la culminación de mis estudios.
+
+### 2. Angelo Stephano Moscoso Bejar (U20211G499)
+
+#### 2.1. Integración de Inteligencia Artificial en Arquitecturas de Software
+- **Specific:** Implementar flujos de trabajo avanzados y características basadas en Inteligencia Artificial dentro del ciclo de vida de desarrollo de software y aplicaciones web.
+- **Measurable:** Integrar con éxito herramientas de IA generativa y APIs de modelos de lenguaje en al menos 2 proyectos clave de ingeniería de software, como el desarrollo del repositorio HydroSmart.
+- **Achievable:** Aprovechar el manejo activo de herramientas como GitHub Copilot y flujos de investigación con Perplexity Pro para profundizar en la construcción de soluciones tecnológicas impulsadas por IA.
+- **Relevant:** Para mantener una ventaja competitiva en el mercado de la ingeniería de software moderno, optimizar tiempos de programación y ofrecer productos innovadores.
+- **Time-bound:** Diseñar la arquitectura de integración en los próximos 3 meses y lograr desplegar los proyectos con las funciones de IA completamente operativas en un plazo de 8 meses.
+
+#### 2.2. Dominio en Despliegue Continuo (CI/CD) y Trabajo Colaborativo Ágil
+- **Specific:** Especializarse en la gestión avanzada de repositorios, automatización de pruebas y despliegue de aplicaciones para asegurar entregas continuas en entornos de desarrollo ágiles.
+- **Measurable:** Configurar pipelines automatizados (ej. GitHub Actions) para el despliegue en la nube en al menos 3 repositorios colaborativos o simulaciones de entorno real.
+- **Achievable:** Extender la experiencia en administración de repositorios en GitHub hacia flujos más complejos, aplicando las mejores prácticas aprendidas en cohortes de desarrollo y hackathons como los de No Country.
+- **Relevant:** Para garantizar que los productos de software sean escalables, mantenibles y cumplan con los estándares profesionales exigidos para el pase a producción en equipo.
+- **Time-bound:** Implementar el primer pipeline automatizado en los próximos 2 meses y alcanzar un dominio técnico intermedio-avanzado en herramientas de despliegue dentro de 6 meses.
+
+### 3. Keyner Hancco (U20221C726)
+
+#### 3.1. Especialización en Desarrollo de Aplicaciones Móviles Multiplataforma
+- **Specific:** Alcanzar un dominio sólido del desarrollo de aplicaciones móviles con Flutter y Kotlin, integrándolas con servicios backend propios construidos en Laravel y Spring Boot bajo arquitecturas limpias.
+- **Measurable:** Publicar al menos 2 aplicaciones propias en Google Play Store con usuarios activos reales y obtener una certificación oficial en desarrollo móvil (Associate Android Developer o equivalente en Flutter).
+- **Achievable:** Destinar 8 horas semanales al estudio y práctica, apoyándome en la documentación oficial de Android Developers, Flutter Docs y Kotlin Docs, y reutilizando como base los productos que ya he desplegado, llevándolos a una versión móvil nativa.
+- **Relevant:** Para acceder a posiciones de Mobile Developer en startups y empresas tecnológicas de Perú y Latinoamérica, y para ampliar el alcance de las soluciones que desarrollo hacia el canal donde realmente está el usuario final.
+- **Time-bound:** Conseguir la certificación y publicar la primera aplicación durante los primeros 6 meses tras graduarme, y la segunda antes de cumplir 12 meses.
+
+#### 3.2. Liderazgo Técnico en Equipos de Desarrollo Móvil
+- **Specific:** Desarrollar las competencias de liderazgo técnico necesarias para dirigir equipos de desarrollo móvil, definiendo la arquitectura, los estándares de código y la estrategia de release de los productos.
+- **Measurable:** Coordinar un equipo de 3 a 5 desarrolladores móviles y alcanzar un puesto de Tech Lead o Mobile Development Manager en un plazo de 5 años.
+- **Achievable:** Apoyarme en la certificación Scrum ya obtenida, buscar mentoría de líderes técnicos con experiencia en productos móviles, tomar cursos de gestión ágil y asumir progresivamente la responsabilidad de módulos completos dentro de la empresa donde trabaje.
+- **Relevant:** Para dirigir la construcción de productos móviles de alto impacto en el mercado peruano y guiar la formación de desarrolladores junior dentro del equipo.
+- **Time-bound:** Ocupar un puesto de liderazgo intermedio a los 3 años de graduarme y uno senior a los 5 años.
 # Capítulo I: Introducción
 
 ## 1.1. Startup Profile
@@ -52,6 +128,16 @@ FeluSmart es una startup que se dedica principalmente al desarrollo de software.
 **Misión:** Desarrollar soluciones tecnológicas móviles accesibles y eficientes que acompañen a las familias durante la gestación, integrando inteligencia artificial y monitoreo inteligente de forma intuitiva y sin generar estrés.
 
 **Visión:** En un futuro cercano, FeluSmart se destacará como una empresa líder en el desarrollo de soluciones de salud materno-infantil digital. Asimismo, se le reconocerá por su compromiso con la accesibilidad, la innovación social, la reducción de la ansiedad prenatal y la mejora continua de la dinámica familiar durante el embarazo.
+
+### 1.1.2. Perfiles de integrantes del equipo
+
+| Miembros del equipo | Codigo Estudiante | Carrera | Descripción |
+| :--- | :---: | :---: | :--- |
+| **Stephano Jose Espinoza Cueva**<br><br><img src="assets/Stephano.png" width="100"> | U202218590 | Ingeniería de Software | Hola, soy Stephano Jose Espinoza Cueva, tengo 21 años y soy estudiante de 7mo ciclo de Ingeniería de Software en la UPC, enfocado en crear soluciones tecnológicas escalables con un fuerte énfasis en buenas prácticas. Mis habilidades principales se centran en el diseño y estructuración de proyectos utilizando Domain-Driven Design (DDD), Clean Architecture, microservicios y modelado C4, además de tener gran experiencia en el trabajo colaborativo para el desarrollo de startups y plataformas integrales. A nivel técnico, domino el desarrollo frontend con tecnologías como React, Next.js, Vue.js, Flutter y Tailwind CSS, y cuento con un sólido manejo del backend y bases de datos empleando .NET, C#, Node.js, Python, MySQL y PostgreSQL. Mis expectativas del equipo son integrarme a un entorno dinámico y comunicativo donde podamos aportar ideas, aplicar arquitecturas limpias y construir juntos productos de alto impacto que resuelvan problemas reales. |
+| **[Nombres y Apellidos]**<br><br><img src="ruta/a/tu/foto2.jpg" width="100"> | [U20...] | Ingeniería de Software | [Escribe aquí tu presentación, edad, ciclo, habilidades, tecnologías que dominas y tus expectativas del equipo] |
+| **[Nombres y Apellidos]**<br><br><img src="ruta/a/tu/foto3.jpg" width="100"> | [U20...] | Ingeniería de Software | [Escribe aquí tu presentación, edad, ciclo, habilidades, tecnologías que dominas y tus expectativas del equipo] |
+| **[Nombres y Apellidos]**<br><br><img src="ruta/a/tu/foto4.jpg" width="100"> | [U20...] | Ingeniería de Software | [Escribe aquí tu presentación, edad, ciclo, habilidades, tecnologías que dominas y tus expectativas del equipo] |
+| **[Nombres y Apellidos]**<br><br><img src="ruta/a/tu/foto5.jpg" width="100"> | [U20...] | Ingeniería de Software | [Escribe aquí tu presentación, edad, ciclo, habilidades, tecnologías que dominas y tus expectativas del equipo] |
 
 ## 1.2. Solution Profile
 
