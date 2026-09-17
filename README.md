@@ -2155,7 +2155,7 @@ En esta sección, el Bounded Context Canvas permitirá definir y delimitar las d
 
 ## 2.5.2 Context Mapping
 
-![Mapa Contextual](./assets/context_mapping.jpeg)
+![Mapa Contextual](./assets/context_mapping.png)
 
 ## 2.5.3.1. Software Architecture Context Level Diagrams
 
