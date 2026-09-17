@@ -310,8 +310,91 @@ El séptimo mural modela la experiencia del acompañante, dividida en dos flujos
 - **External Systems:** Firebase Cloud Messaging, CMS de contenidos (tips del acompañante).
 - **Hotspots:** ¿Qué ocurre si el acompañante ignora sistemáticamente las alertas? ¿Debe la madre ver si su pareja leyó el tip del día? ¿La racha de apoyo puede generar presión o culpa en la pareja? ¿Se permiten alertas rápidas personalizadas además de las predefinidas?
 ---
- 
 
+## 2.3.6. Ubiquitous Language
+ 
+A continuación, se define el lenguaje ubicuo (*Ubiquitous Language*) del proyecto **HelpMom**. Este vocabulario compartido garantiza un entendimiento común entre los miembros del equipo de desarrollo, los expertos del dominio materno-infantil y los usuarios finales, evitando ambigüedades en un contexto donde la precisión terminológica tiene implicancias directas sobre la seguridad de la usuaria. Los términos se presentan en inglés (nomenclatura técnica utilizada en el código y los diagramas) acompañados de su equivalente en español y su definición funcional dentro del dominio.
+ 
+### 1. Stakeholders y Roles
+ 
+- **User Account (Cuenta de Usuario):** Entidad que representa la cuenta, credenciales y perfil de acceso de una persona registrada en la plataforma, independientemente de su rol.
+- **Role (Rol):** Nivel de autorización dentro de la aplicación que determina la interfaz y los datos accesibles. Existen dos principales: `PREGNANT_MOTHER` y `COMPANION`.
+- **Pregnant Mother (Madre Gestante):** Usuaria principal del sistema. Es la titular de la gestación, la única propietaria de los registros clínicos privados y la generadora del vínculo con su acompañante.
+- **Companion (Acompañante):** Pareja, familiar o persona de confianza vinculada a la cuenta de la madre. Accede a una interfaz adaptada con información resumida, sin visibilidad sobre el expediente clínico privado.
+- **Trusted Contact (Contacto de Confianza):** Persona designada por la madre para ser notificada automáticamente ante una alerta de emergencia. Puede coincidir o no con el acompañante.
+- **Content Team (Equipo de Contenido):** Rol interno de WebExpert responsable de curar, validar y publicar el material educativo y los tips del acompañante.
+### 2. Gestación y Cronología
+ 
+- **Gestational Week (Semana Gestacional):** Unidad temporal central del dominio. Determina dinámicamente el contenido desbloqueado, los tips del acompañante y los hitos celebrados.
+- **LMP – Last Menstrual Period (FUM – Fecha de Última Menstruación):** Dato base declarado por la madre en el registro, a partir del cual el sistema calcula toda la cronología del embarazo.
+- **EDD – Estimated Due Date (FPP – Fecha Probable de Parto):** Fecha estimada de nacimiento calculada automáticamente a partir de la FUM.
+- **Trimester (Trimestre):** Agrupación de tres meses gestacionales que condiciona el tipo de contenido, la frecuencia de monitoreo y la prioridad de las alertas.
+- **Growth Milestone (Hito del Bebé):** Logro relevante del desarrollo fetal asociado a una semana específica, que dispara una notificación celebratoria hacia la madre y el acompañante.
+- **Postpartum (Posparto):** Etapa posterior al nacimiento en la que la plataforma continúa brindando contenido y soporte adaptado.
+### 3. Monitoreo IoT y Estado de Salud
+ 
+- **IoT Sensor (Sensor IoT):** Dispositivo físico de monitoreo que captura la frecuencia cardíaca fetal y la transmite a la plataforma mediante conexión inalámbrica.
+- **Pairing (Emparejamiento):** Proceso de vinculación del sensor físico con la cuenta de la madre para habilitar la captura de mediciones.
+- **Reading (Lectura):** Registro individual de datos crudos recibido desde el sensor en un momento determinado.
+- **Signal Quality (Calidad de Señal):** Indicador interno que evalúa la confiabilidad de una lectura antes de clasificarla; una calidad insuficiente impide emitir un estado verde o rojo.
+- **Traffic Light System (Sistema de Semáforo):** Mecanismo de diseño que traduce los datos médicos crudos en tres estados visuales comprensibles —verde, amarillo y rojo— con el fin de reducir la ansiedad de la usuaria.
+- **Status Card (Tarjeta de Estado):** Componente de interfaz que comunica el resultado del semáforo mediante un ícono, un color y un mensaje en lenguaje cálido, nunca mediante valores numéricos.
+- **Green State (Estado Verde):** Clasificación que indica que los parámetros monitoreados se encuentran dentro del rango esperado.
+- **Yellow State (Estado Amarillo):** Clasificación que indica una lectura poco confiable o un parámetro fuera de rango leve; instruye reposo y reposicionamiento del sensor.
+- **Red Alert (Alerta Roja):** Clasificación crítica que dispara el protocolo de emergencia y la derivación inmediata a un centro de salud.
+- **Summarized Status (Estado Resumido):** Versión reducida del estado del bebé —únicamente color y mensaje— que se sincroniza hacia la vista del acompañante preservando la privacidad clínica.
+### 4. Asistente IA y Seguridad
+ 
+- **AI Assistant (Asistente IA):** Bot conversacional disponible 24/7 que resuelve dudas de rutina contextualizadas a la semana gestacional de la usuaria.
+- **Routine Query (Consulta de Rutina):** Pregunta de baja criticidad que el asistente puede responder de forma autónoma sin activar mecanismos de emergencia.
+- **Intelligent Triage (Triage Inteligente):** Proceso de análisis que evalúa todo mensaje entrante antes de generar una respuesta, con el fin de detectar indicios de riesgo obstétrico.
+- **Critical Keyword (Palabra Clave Crítica):** Término o patrón lingüístico asociado a una situación de riesgo (ej. sangrado abundante, ausencia de movimiento fetal) que activa el bloqueo de seguridad.
+- **Safety Block (Bloqueo de Seguridad):** Política que interrumpe la conversación normal del asistente cuando se detecta un patrón crítico, impidiendo que el bot continúe respondiendo.
+- **Emergency Modal (Modal de Emergencia):** Pantalla completa de color rojo que instruye acudir al centro de emergencias más cercano y habilita la llamada directa a emergencias o al contacto de confianza.
+- **Confidence Threshold (Umbral de Confianza):** Nivel mínimo de certeza bajo el cual el asistente deriva a consulta médica presencial en lugar de emitir una respuesta.
+- **Emergency Episode (Episodio de Emergencia):** Registro histórico de una activación del triage, conservado para trazabilidad y para su posterior consulta médica.
+### 5. Expediente Personal de la Madre
+ 
+- **My Body (Mi Cuerpo):** Módulo privado donde la madre registra y visualiza su peso, síntomas y horas de sueño a lo largo de la gestación.
+- **Symptom Log (Registro de Síntomas):** Anotación fechada de una molestia o manifestación física experimentada por la madre.
+- **Sleep Log (Registro de Sueño):** Anotación de las horas y calidad de descanso, utilizada para detectar patrones de fatiga.
+- **Recurring Pattern (Patrón Recurrente):** Repetición de un mismo síntoma dentro de un periodo definido, que genera una sugerencia de consulta sin constituir un diagnóstico.
+- **Monthly Summary (Resumen Mensual):** Documento generado automáticamente que consolida los registros del mes para ser presentado en el control obstétrico.
+- **Clinical Privacy (Privacidad Clínica):** Regla transversal del dominio que impide que cualquier dato del módulo Mi Cuerpo se propague hacia la vista del acompañante.
+### 6. Modo Compañero y Vinculación
+ 
+- **Companion Mode (Modo Compañero):** Experiencia diferenciada del acompañante, compuesta por el estado resumido del bebé, la guía diaria y la recepción de alertas rápidas.
+- **Pairing Code / QR Invitation (Código de Vinculación):** Código único y temporal generado por la madre para que el acompañante se enlace a su cuenta.
+- **Partner Link (Vínculo de Pareja):** Relación establecida entre la cuenta de la madre y la del acompañante, revocable en cualquier momento por la madre.
+- **Quick Alert / "Pasa la Voz" (Alerta Rápida):** Notificación predefinida que la madre envía con un solo toque para comunicar una necesidad cotidiana (antojo, náusea, descanso) sin redactar mensajes.
+- **Non-Medical Notification (Notificación No Médica):** Clasificación que garantiza que una alerta rápida jamás se comunique como evento clínico, evitando alarma innecesaria.
+- **Daily Guide / "Tips para Papá" (Guía Diaria):** Feed de microconsejos prácticos y contextualizados a la semana exacta de gestación, dirigido al acompañante.
+- **Tip of the Day (Tip del Día):** Notificación matutina accionable que traduce los cambios hormonales y físicos de la madre en una acción concreta de apoyo.
+- **Hormonal Translation (Traducción de Cambios Hormonales):** Explicación sin tecnicismos de lo que experimenta la madre, orientada a generar empatía en el acompañante.
+### 7. Contenido y Bienestar Emocional
+ 
+- **Learning Feed (Aprendizaje):** Sección tipo feed con artículos, videos y tips sobre nutrición, ejercicios prenatales y preparación para el parto.
+- **Dynamic Unlocking (Desbloqueo Dinámico):** Mecanismo por el cual el contenido se habilita progresivamente conforme avanza la semana gestacional, evitando la sobreinformación.
+- **Self-Esteem Pill (Píldora de Autoestima):** Notificación push programada con un mensaje cálido y validante enfocado en el cambio corporal y la maternidad.
+- **Notification Preference (Preferencia de Notificación):** Configuración mediante la cual el usuario regula la frecuencia y el tipo de alertas que desea recibir.
+### 8. Suscripciones y Monetización
+ 
+- **Subscription (Suscripción):** Contrato mensual o anual que habilita el acceso a las funcionalidades de la plataforma, con estados `TRIAL`, `ACTIVE`, `GRACE_PERIOD`, `CANCELLED` o `EXPIRED`.
+- **Basic Plan (Plan Básico):** Nivel de servicio orientado a la organización e información confiable: módulo Mi Cuerpo, contenido educativo semanal, píldoras de autoestima y alertas rápidas.
+- **Comprehensive Care Plan (Plan Cuidado Integral):** Nivel superior que añade el Asistente IA ilimitado, el Triage Inteligente, la lectura del sensor IoT y la guía avanzada del acompañante.
+- **Free Trial (Prueba Gratuita):** Periodo inicial de 14 días con acceso parcial al Asistente IA, diseñado para impulsar la conversión a planes pagos.
+- **Grace Period (Periodo de Gracia):** Lapso posterior a un pago rechazado durante el cual la cuenta conserva sus funcionalidades antes de ser degradada.
+- **Downgrade (Degradación):** Transición automática al Plan Básico al expirar la suscripción, preservando siempre los registros históricos de la madre.
+- **Gifted Subscription (Suscripción Regalada):** Modalidad en la que el acompañante adquiere el plan premium en nombre de la madre.
+### 9. Conceptos Transversales del Sistema
+ 
+- **Bottom Bar Navigation (Navegación por Barra Inferior):** Arquitectura de navegación principal de la app, compuesta por cuatro vistas: Inicio, Mi Cuerpo, Aprendizaje y Asistente IA.
+- **Home / "Tu Embarazo" (Inicio):** Vista central que muestra la semana gestacional, la ilustración comparativa del tamaño del bebé y el estado resumido del sensor.
+- **Push Notification (Notificación Push):** Mensaje emitido por el sistema hacia el dispositivo del usuario para comunicar hitos, tips, píldoras o alertas.
+- **Policy (Política de Dominio):** Regla de negocio que conecta automáticamente un evento con un comando, sin intervención del usuario.
+- **Hotspot (Punto Crítico):** Punto de incertidumbre identificado durante el EventStorming que debe resolverse antes del diseño técnico definitivo.
+---
+ 
 # Software Architecture
 
 ## 2.5.3.1. Software Architecture Context Level Diagrams
