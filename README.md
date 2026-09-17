@@ -2041,6 +2041,93 @@ Entonces coloca la suscripción en estado GRACE_PERIOD y programa la degradació
  
 ---
 
+
+
+#### 2.4.1.4. Spike Stories
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| SP01 | Desarrollador | Alta | EP07 |
+ 
+**Title:** Investigar estrategias de detección de riesgo obstétrico
+ 
+**Description:** Como desarrollador, quiero evaluar enfoques de detección (diccionario de palabras clave, clasificación semántica o modelo híbrido) considerando variantes coloquiales peruanas, para definir la arquitectura del Triage Inteligente.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que se realiza la investigación,
+Cuando se comparan los enfoques evaluados,
+Entonces se documenta una recomendación con métricas de falsos negativos y falsos positivos.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| SP02 | Desarrollador | Alta | EP05 |
+ 
+**Title:** Evaluar hardware IoT compatible
+ 
+**Description:** Como desarrollador, quiero comparar dispositivos de monitoreo fetal doméstico disponibles en el mercado, para seleccionar el que ofrezca mejor relación entre precisión, costo y facilidad de integración.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que se evalúan al menos tres dispositivos candidatos,
+Cuando se contrastan sus protocolos, SDK y costos,
+Entonces se documenta una matriz comparativa con la opción recomendada.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| SP03 | Desarrollador | Media | EP05 |
+ 
+**Title:** Definir los umbrales del Sistema de Semáforo
+ 
+**Description:** Como desarrollador, quiero establecer con respaldo bibliográfico y validación profesional los rangos que determinan cada color del semáforo, para que la clasificación sea clínicamente defendible.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que se consultan fuentes clínicas y, de ser posible, un profesional de salud,
+Cuando se definen los rangos,
+Entonces se documentan los umbrales, su fuente y sus limitaciones conocidas.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| SP04 | Desarrollador | Media | EP14 |
+ 
+**Title:** Analizar el marco normativo de datos de salud
+ 
+**Description:** Como desarrollador, quiero revisar la Ley de Protección de Datos Personales del Perú aplicada a datos sensibles de salud, para definir los requisitos de consentimiento, cifrado y retención.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que se realiza el análisis normativo,
+Cuando se identifican las obligaciones aplicables,
+Entonces se documentan los requisitos de cumplimiento que impactan al diseño de la plataforma.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| SP05 | Desarrollador | Media | EP06 |
+ 
+**Title:** Comparar proveedores de modelos de lenguaje
+ 
+**Description:** Como desarrollador, quiero evaluar proveedores de IA generativa considerando costo por consulta, latencia y capacidad de restricción de dominio, para seleccionar el que sostenga el Asistente IA 24/7.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que se evalúan al menos tres proveedores,
+Cuando se comparan sus costos, tiempos de respuesta y mecanismos de control de contenido,
+Entonces se documenta la recomendación técnica y su proyección de costo mensual.
+
 # Software Architecture
 
 ## 2.5.3.1. Software Architecture Context Level Diagrams
