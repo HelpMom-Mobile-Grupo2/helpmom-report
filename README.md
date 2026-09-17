@@ -2140,6 +2140,20 @@ Cuando se comparan sus costos, tiempos de respuesta y mecanismos de control de c
 Entonces se documenta la recomendación técnica y su proyección de costo mensual.
 
 # Software Architecture
+## 2.5.1.3 Bounded Context Canvases
+En esta sección, el Bounded Context Canvas permitirá definir y delimitar las diferentes partes que conforman el sistema a desarrollar. Esto facilitará la identificación de las responsabilidades de cada Bounded Context, su interacción con los demás contextos y los elementos que lo integran, como las entidades, agregados y reglas de negocio.
+
+![Bounded Context 1](./assets/canva1.jpeg)
+
+![Bounded Context 2](./assets/canva2.jpeg)
+
+![Bounded Context 3](./assets/canva3.jpeg)
+
+![Bounded Context 4](./assets/canva4.jpeg)
+
+
+
+## 2.5.2 Context Mapping
 
 ## 2.5.3.1. Software Architecture Context Level Diagrams
 
