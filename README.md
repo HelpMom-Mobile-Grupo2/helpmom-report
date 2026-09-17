@@ -2155,6 +2155,8 @@ En esta sección, el Bounded Context Canvas permitirá definir y delimitar las d
 
 ## 2.5.2 Context Mapping
 
+![Mapa Contextual](./assets/context_mapping.jpeg)
+
 ## 2.5.3.1. Software Architecture Context Level Diagrams
 
 El Diagrama de Contexto presenta la visión global de HelpMom, destacando cómo el sistema central interactúa directamente con sus dos actores principales (la Madre Gestante y el Padre/Acompañante) y cómo se integra con servicios externos esenciales; estos incluyen el hardware IoT para la telemetría de salud, un proveedor de Inteligencia Artificial para procesar las consultas del chat y un servicio en la nube para gestionar las notificaciones push de emergencia.
