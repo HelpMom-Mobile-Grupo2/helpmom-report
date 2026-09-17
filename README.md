@@ -109,6 +109,7 @@ El objetivo aquí es validar el nivel de exclusión que sienten con las herramie
 #### Segmento objetivo 2: Padres / Acompañantes
 
 **Entrevista 2**
+
 ![Entrevista 2 - Juan David Saldaña De Souza](assets/segmento2entrevista2.png)
 *   **Nombre:** Juan David Saldaña De Souza
 *   **Edad:** 28 años
@@ -118,6 +119,7 @@ El objetivo aquí es validar el nivel de exclusión que sienten con las herramie
 *   **Resumen:** Juan nos dice que sería muy buena idea la aplicación móvil, ya que al ser un padre primerizo no tiene noción de los cuidados que se tiene que tener con la madre y con el bebé. También le gusta la idea de poder estar al pendiente de su pareja por si ocurre alguna emergencia, le facilitará mucho ya que es un hombre ocupado con sus pendientes. Por último, nos comenta que estaría interesado en adquirir este servicio porque le ayudará mucho a ser un buen padre.
 
 **Entrevista 3**
+
 ![Entrevista 3 - Manuel Alonso Milla Coronad](assets/segmento3entrevista3.png)
 *   **Nombre:** Manuel Alonso Milla Coronado
 *   **Distrito:** Lince
