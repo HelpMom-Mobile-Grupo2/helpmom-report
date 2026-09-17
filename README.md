@@ -25,9 +25,9 @@
 
 | Código | Apellidos, Nombres |
 | :---: | :--- |
-| u202218590 | Stephano Espinoza Cueva |
+| u202218590 | Espinoza Cueva, Stephano José|
 | u202223279 | Rivera Ayala, Gabriel Alejandro |
-| [Código 3] | [Nombres 3] |
+| u20221c726 | Hancco Poma, Keyner Ivan|
 | [Código 4] | [Nombres 4] |
 | [Código 5] | [Nombres 5] |
 
