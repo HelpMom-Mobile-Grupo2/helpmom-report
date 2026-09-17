@@ -26,7 +26,7 @@
 | Código | Apellidos, Nombres |
 | :---: | :--- |
 | u202218590 | Stephano Espinoza Cueva |
-| [Código 2] | [Nombres 2] |
+| u202223279 | Rivera Ayala, Gabriel Alejandro |
 | [Código 3] | [Nombres 3] |
 | [Código 4] | [Nombres 4] |
 | [Código 5] | [Nombres 5] |
