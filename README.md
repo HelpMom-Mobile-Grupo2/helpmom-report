@@ -125,6 +125,15 @@ El objetivo aquí es validar el nivel de exclusión que sienten con las herramie
 *   **Link:** [Ver entrevista en YouTube](https://youtu.be/RirAGLBOhxM)
 *   **Resumen:** En la entrevista realizada a Manuel, un joven de 21 años residente en Lince que asume el rol de padre primerizo, se evidenció una fuerte frustración inicial por sentirse excluido y desorientado ("un espectador") frente a las herramientas tradicionales y el sistema de salud, los cuales se enfocan exclusivamente en la madre. Manuel validó de forma entusiasta las propuestas del "Modo Compañero" de HelpMom, destacando que recibir sugerencias diarias accionables y notificaciones directas sobre las necesidades de su pareja ("Pasa la Voz") mejoraría significativamente su dinámica diaria, evitando malentendidos o la sensación de ser una carga al preguntar constantemente. Asimismo, confirmó que el uso de un semáforo visual para monitorear los latidos del bebé le brindaría gran paz mental sin generarle estrés, mostrándose plenamente dispuesto a adquirir un plan de suscripción que le permita transformar su rol pasivo en uno de soporte logístico y emocional activo durante todo el embarazo.
 
+**Entrevista 5**
+![Entrevista 5 Gabriel Mamani](assets/segmento5entrevista5.png)
+*   **Nombre:** Gabriel Mamani
+*   **Distrito:** Rimac
+*   **Duración:** 4:52
+*   **Link:** [Ver entrevista]([https://drive.google.com/file/d/10w5P_IWZa_NQNIAuoki-12ttmHZwdWOx/view?usp=sharing))
+*   **Resumen:** Gabriel Mamani, de 27 años y futuro padre primerizo cuya pareja tiene seis meses de gestación, señala que su mayor desafío es la inexperiencia frente a los cambios y situaciones propias del embarazo. Al no utilizar aplicaciones especializadas y depender únicamente de internet o de consultas esporádicas con su doctora, a menudo se siente desorientado. Por ello, Gabriel considera que sería de gran utilidad contar con una plataforma que involucre activamente al padre, proporcionándole consejos diarios, guías para trámites o preparativos clínicos, e indicadores inmediatos sobre la salud del bebé (como los latidos). Además, enfatiza que una herramienta tecnológica de este tipo le brindaría mucha tranquilidad, mostrándose abierto a pagar una suscripción premium a cambio de recibir orientación constante y estructurada en su camino hacia la paternidad.
+
+
 ---
 
 ### 2.2.3. Análisis de entrevistas
