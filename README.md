@@ -96,6 +96,16 @@ El objetivo aquí es validar el nivel de exclusión que sienten con las herramie
 *   **Duración:** 5:26
 *   **Link:** [Ver entrevista](https://drive.google.com/file/d/1rVtir8Wdmz3F_0g1PKRu2hoFadW2FNCq/view?usp=sharing)
 *   **Resumen:** Aixa, una joven de 25 años con cinco meses de embarazo, expresa que su mayor ansiedad diaria es el bienestar de su bebé, por lo que valoraría enormemente una aplicación integral y accesible que le brinde control y tranquilidad mediante el uso de un sensor doméstico de latidos. Esta herramienta ideal debería incluir un asistente de inteligencia artificial para orientación de madrugada, un botón de alerta rápida para notificar a su pareja sin dar explicaciones, y una función para registrar síntomas en tiempo real que facilite sus consultas médicas. Además, Aixa enfatiza la necesidad de mantener su historial clínico en estricto privado y prefiere recibir apoyo emocional y consejos a través de videos cortos y notificaciones que estén completamente personalizados a su semana exacta de gestación, evitando sentirse acompañada por mensajes genéricos o automatizados
+
+* **Entrevista 4**
+![Entrevista 4 - Sofia Ortega](assets/entrevista4.jpeg)
+*   **Nombre:** Sofia Ortega
+*   **Edad:** 20 años
+*   **Distrito:** Pueblo Libre
+*   **Duración:** 6:17
+*   **Link:** [Ver entrevista](https://youtu.be/ey49uMcuNAU)
+*   **Resumen:** Sofia, una joven de 20 años residente de Pueblo Libre, expresa que su mayor ansiedad diaria es la ausencia temporal de movimientos del bebé y la incertidumbre sobre su parto, por lo que valoraría enormemente una aplicación integral que le brinde paz mental mediante un monitoreo fetal casero con un sistema de semáforo visual. Esta herramienta ideal, por la cual está totalmente dispuesta a pagar, debería incluir un asistente de inteligencia artificial 24/7 seguro y capaz de derivar emergencias, botones de alerta rápida muy útiles dado que vive temporalmente lejos de su pareja, y una función para registrar síntomas al instante para no olvidarlos en la clínica. Además, Sofia enfatiza la importancia de mantener en estricto privado sus registros de peso y síntomas, y prefiere recibir información y apoyo emocional a través de videos cortos, tips diarios y notificaciones sorpresa que validen su esfuerzo frente a los cambios físicos del embarazo.
+
 #### Segmento objetivo 2: Padres / Acompañantes
 
 **Entrevista 2**
