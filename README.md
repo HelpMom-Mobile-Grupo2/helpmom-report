@@ -230,7 +230,7 @@ Este es el flujo más crítico de la aplicación. Muestra cómo una lectura del 
 
 Refleja la funcionalidad de Modo Compañero, donde una alerta no médica necesita consultar la base de datos de identidad para saber a quién enviarle el Push.
 
-![Scenario 03: Madre envía alerta "Pasa la Voz" al Acompañante](./assets/escen03.jepg)
+![Scenario 03: Madre envía alerta "Pasa la Voz" al Acompañante](/assets/escen03.jepg)
 
 ## 2.6. Tactical-Level Domain-Driven Design
 
