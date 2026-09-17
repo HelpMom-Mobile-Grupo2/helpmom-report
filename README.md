@@ -1715,6 +1715,322 @@ Entonces la interfaz completa se ajusta sin romper el diseño.
 ---
 
 
+
+#### 2.4.1.3. Technical Stories
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| TS01 | Desarrollador | Alta | EP02 |
+ 
+**Title:** Registrar usuario y emitir token
+ 
+**Description:** Como desarrollador, quiero exponer un endpoint de registro que persista al usuario y emita un token, para habilitar el acceso a las rutas protegidas.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que se recibe una solicitud POST con un payload válido (email único, password, rol),
+Cuando la API persiste el usuario y encripta la contraseña,
+Entonces responde con **201 Created** y devuelve el token de acceso.
+ 
+**Escenario 2:**
+Dado que el email ya se encuentra registrado,
+Cuando la API valida la unicidad,
+Entonces responde con **409 Conflict**.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| TS02 | Desarrollador | Alta | EP02 |
+ 
+**Title:** Validar token de sesión por rol
+ 
+**Description:** Como desarrollador, quiero validar el token y el rol en cada solicitud, para proteger los recursos según el perfil del usuario.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que se recibe una petición con un header Authorization válido,
+Cuando la API verifica la firma y la vigencia,
+Entonces permite el acceso y devuelve el recurso.
+ 
+**Escenario 2:**
+Dado que el token está caducado o el rol no corresponde al recurso,
+Cuando la API lo evalúa,
+Entonces responde con **401 Unauthorized** o **403 Forbidden**.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| TS03 | Desarrollador | Alta | EP02 |
+ 
+**Title:** Calcular cronología gestacional
+ 
+**Description:** Como desarrollador, quiero exponer un servicio que calcule la semana gestacional y la fecha probable de parto a partir de la FUM, para alimentar todos los módulos dependientes del tiempo.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que se recibe una FUM válida,
+Cuando el servicio ejecuta el cálculo,
+Entonces responde con **200 OK** devolviendo la semana gestacional, el día y la FPP.
+ 
+**Escenario 2:**
+Dado que se recibe una fecha inválida o futura,
+Cuando la validación falla,
+Entonces responde con **400 Bad Request** detallando el error.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| TS04 | Desarrollador | Alta | EP03 |
+ 
+**Title:** Generar y validar código de vinculación
+ 
+**Description:** Como desarrollador, quiero generar códigos de vinculación con expiración y validarlos, para implementar el enlace seguro entre madre y acompañante.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que se recibe una solicitud POST de generación desde una cuenta con rol de madre,
+Cuando la API crea el código,
+Entonces responde con **201 Created** devolviendo el código y su fecha de expiración.
+ 
+**Escenario 2:**
+Dado que se recibe un código expirado o inexistente en la validación,
+Cuando la API lo evalúa,
+Entonces responde con **410 Gone** o **404 Not Found** según corresponda.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| TS05 | Desarrollador | Alta | EP05 |
+ 
+**Title:** Ingestar lecturas del sensor IoT
+ 
+**Description:** Como desarrollador, quiero exponer un endpoint de ingesta de lecturas del sensor, para persistir la telemetría recibida desde el dispositivo.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que se recibe una lectura con un identificador de sensor válido y emparejado,
+Cuando la API la persiste,
+Entonces responde con **201 Created**.
+ 
+**Escenario 2:**
+Dado que el sensor no está emparejado a ninguna cuenta,
+Cuando la API valida el origen,
+Entonces responde con **403 Forbidden**.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| TS06 | Desarrollador | Alta | EP05 |
+ 
+**Title:** Clasificar lecturas en el Sistema de Semáforo
+ 
+**Description:** Como desarrollador, quiero implementar el servicio de clasificación que traduce una lectura a un estado verde, amarillo o rojo, para alimentar la tarjeta de estado de la interfaz.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que se procesa una lectura con calidad de señal suficiente,
+Cuando el servicio aplica los umbrales configurados,
+Entonces devuelve el estado clasificado junto con su mensaje asociado.
+ 
+**Escenario 2:**
+Dado que la calidad de señal es insuficiente,
+Cuando el servicio la evalúa,
+Entonces devuelve obligatoriamente el estado amarillo, sin clasificar en verde ni en rojo.
+ 
+**Escenario 3:**
+Dado que la clasificación resulta en estado rojo,
+Cuando se emite el resultado,
+Entonces el servicio publica el evento que dispara el protocolo de emergencia.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| TS07 | Desarrollador | Alta | EP05 |
+ 
+**Title:** Exponer el estado resumido para el acompañante
+ 
+**Description:** Como desarrollador, quiero exponer un endpoint que devuelva únicamente el color y el mensaje de estado, para alimentar la vista del acompañante sin filtrar datos clínicos.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que un acompañante autenticado y vinculado solicita el estado,
+Cuando la API procesa la solicitud,
+Entonces responde con **200 OK** devolviendo solo el color y el mensaje.
+ 
+**Escenario 2:**
+Dado que el solicitante no tiene un vínculo activo,
+Cuando la API valida la relación,
+Entonces responde con **403 Forbidden**.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| TS08 | Desarrollador | Alta | EP07 |
+ 
+**Title:** Implementar el pipeline de triage previo a la respuesta
+ 
+**Description:** Como desarrollador, quiero que todo mensaje entrante pase por el servicio de triage antes de ser enviado al modelo de lenguaje, para garantizar que ninguna consulta crítica reciba una respuesta conversacional.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que se recibe un mensaje del usuario,
+Cuando el pipeline lo procesa,
+Entonces la invocación al modelo solo ocurre si el triage clasificó la consulta como rutina.
+ 
+**Escenario 2:**
+Dado que el triage detecta un patrón crítico,
+Cuando la API responde,
+Entonces devuelve **200 OK** con una respuesta de tipo EMERGENCY y ningún contenido conversacional.
+ 
+**Escenario 3:**
+Dado que el servicio de triage no está disponible,
+Cuando la API procesa el mensaje,
+Entonces bloquea la respuesta del asistente y devuelve un mensaje de derivación médica en lugar de omitir la validación.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| TS09 | Desarrollador | Alta | EP07 |
+ 
+**Title:** Registrar episodios de emergencia
+ 
+**Description:** Como desarrollador, quiero persistir cada activación del triage con su marca temporal, para asegurar la trazabilidad de los eventos críticos.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que se dispara un modal de emergencia,
+Cuando el sistema registra el evento,
+Entonces persiste el episodio con fecha, hora, disparador y notificaciones emitidas.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| TS10 | Desarrollador | Alta | EP08 |
+ 
+**Title:** Gestionar los registros de Mi Cuerpo
+ 
+**Description:** Como desarrollador, quiero exponer endpoints CRUD para los registros de peso, síntomas y sueño, para soportar el módulo Mi Cuerpo.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que se recibe una solicitud de creación con datos válidos,
+Cuando la API persiste el registro,
+Entonces responde con **201 Created** devolviendo el recurso con su identificador.
+ 
+**Escenario 2:**
+Dado que se solicita un registro perteneciente a otra cuenta,
+Cuando la API valida la propiedad del recurso,
+Entonces responde con **403 Forbidden**.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| TS11 | Desarrollador | Media | EP08 |
+ 
+**Title:** Generar el resumen mensual en PDF
+ 
+**Description:** Como desarrollador, quiero generar un documento consolidado de los registros del periodo, para que la madre lo presente en su control obstétrico.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que se solicita el resumen de un periodo con registros disponibles,
+Cuando el servicio genera el documento,
+Entonces responde con **200 OK** y la URL de descarga del archivo.
+ 
+**Escenario 2:**
+Dado que el periodo solicitado no contiene registros,
+Cuando la API lo evalúa,
+Entonces responde con **204 No Content**.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| TS12 | Desarrollador | Alta | EP09 |
+ 
+**Title:** Servir contenido filtrado por semana gestacional
+ 
+**Description:** Como desarrollador, quiero exponer un endpoint que devuelva el contenido educativo correspondiente a una semana, para implementar el desbloqueo dinámico del feed.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que se recibe una solicitud con la semana gestacional del usuario,
+Cuando la API consulta el CMS,
+Entonces responde con **200 OK** y el arreglo de contenidos de esa semana.
+ 
+**Escenario 2:**
+Dado que no existe contenido publicado para esa semana,
+Cuando la API procesa la solicitud,
+Entonces responde con **200 OK** y un arreglo vacío.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| TS13 | Desarrollador | Alta | EP12 |
+ 
+**Title:** Enviar notificaciones push segmentadas por tipo
+ 
+**Description:** Como desarrollador, quiero implementar un servicio de notificaciones que distinga entre alertas críticas, alertas rápidas y contenido informativo, para respetar las preferencias del usuario sin bloquear las emergencias.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que se solicita el envío de una notificación de tipo informativo,
+Cuando el usuario tiene esa categoría desactivada,
+Entonces el servicio omite el envío y responde con **200 OK** indicando la omisión.
+ 
+**Escenario 2:**
+Dado que se solicita el envío de una notificación de tipo crítico,
+Cuando el usuario tiene las notificaciones desactivadas,
+Entonces el servicio realiza el envío de todas formas.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| TS14 | Desarrollador | Alta | EP13 |
+ 
+**Title:** Procesar transacciones y actualizar el estado de la suscripción
+ 
+**Description:** Como desarrollador, quiero integrar la pasarela de pagos y reflejar el resultado en el estado de la suscripción, para habilitar o degradar funcionalidades automáticamente.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que la pasarela confirma un pago exitoso,
+Cuando la API recibe el webhook,
+Entonces actualiza la suscripción a estado ACTIVE y responde con **200 OK**.
+ 
+**Escenario 2:**
+Dado que la pasarela reporta un pago rechazado,
+Cuando la API procesa el evento,
+Entonces coloca la suscripción en estado GRACE_PERIOD y programa la degradación.
+ 
+---
+
 # Software Architecture
 
 ## 2.5.3.1. Software Architecture Context Level Diagrams
