@@ -190,6 +190,128 @@ El Empathy Mapping nos ayudará a crear perfiles detallados comprendiendo mejor 
 
 ![Empathy Map - Padre o Acompañante](assets/empathy_map_segmento2.jpeg)
 
+## 2.3.5. Big Picture EventStorming
+ 
+Para esta sección se aplicó la técnica de Big Picture EventStorming utilizando la herramienta Miro, con el objetivo de mapear de forma colaborativa el dominio completo de HelpMom: el acompañamiento de la gestante y su pareja durante el embarazo mediante monitoreo IoT simplificado, asistencia conversacional con IA y sincronización familiar. La sesión permitió visualizar de manera integral cómo interactúan la madre gestante, el acompañante, el sistema de sensores y los servicios externos, identificando los puntos críticos donde la plataforma debe intervenir para reducir la ansiedad prenatal y activar al acompañante.
+ 
+El trabajo se desarrolló siguiendo el orden clásico de la técnica: primero el reconocimiento de los *domain events* en línea temporal, luego la incorporación de los *actores* que los desencadenan, la definición de los *commands* que impulsan dichos eventos, la identificación de las *policies* o reglas automáticas del negocio, el mapeo de los *external systems* involucrados y, finalmente, el levantamiento de *hotspots* con las dudas que el equipo debe resolver antes del diseño técnico. Este ejercicio resultó especialmente relevante en HelpMom por tratarse de un dominio sensible, donde una regla mal definida (por ejemplo, el umbral de disparo del triage de emergencia) tiene consecuencias directas sobre la seguridad de la usuaria.
+ 
+### Leyenda de elementos utilizados
+ 
+| Elemento | Color | Descripción |
+| --- | --- | --- |
+| **Domain Event** | Naranja | Hecho del negocio que ya ocurrió y no puede cambiarse. Se redacta en pasado (ej. "Semana gestacional actualizada"). |
+| **Command** | Azul | Expresa la intención de un actor de realizar una acción sobre el sistema. |
+| **Actor** | Amarillo pequeño | Persona, rol u organización que interactúa con el sistema o provoca eventos. |
+| **Policy** | Lila | Regla de negocio que conecta automáticamente un evento con un comando ("cada vez que… entonces…"). |
+| **External System** | Rosado | Servicio o plataforma externa que interactúa con HelpMom sin estar bajo nuestro control. |
+| **Hotspot / Question** | Rojo (rotado 45°) | Punto de incertidumbre, duda o posible conflicto que el equipo debe resolver. |
+| **Definition** | Blanco | Explicación breve de un concepto clave del dominio. |
+| **Comment** | Blanco | Nota, aclaración o hipótesis que documenta el contexto sin alterar el flujo. |
+ 
+Se identificaron siete dominios: **IAM y Vinculación de Cuentas**, **Suscripciones y Pagos**, **Monitoreo IoT y Semáforo de Estado**, **Asistente IA y Triage de Emergencias**, **Mi Cuerpo (Registro Clínico)**, **Aprendizaje y Bienestar Emocional**, y **Modo Compañero**.
+ 
+---
+ 
+### Big Picture EventStorming 1 — IAM y Vinculación de Cuentas
+ 
+![Big Picture EventStorming - IAM y Vinculación de Cuentas](assets/bpe_iam.jpg)
+ 
+En este primer mural se mapean los domain events relacionados con el registro, la autenticación y la redirección automática por roles. El actor principal es la madre gestante, quien se registra, declara su fecha de última menstruación (FUM) y genera un código QR de invitación; el acompañante ejecuta el flujo espejo escaneando dicho código. El sistema interviene calculando la semana gestacional inicial, validando la vigencia del código QR y aplicando la política de segregación de datos, que garantiza que el acompañante nunca acceda a los registros clínicos privados de la madre. Finalmente se plantean hotspots sobre la gestión del vínculo, como qué ocurre si la madre desea revocar el acceso o si el mismo acompañante debe poder vincularse a más de una gestante.
+ 
+- **Actores:** Madre Gestante, Acompañante.
+- **Commands:** Registrar cuenta, Iniciar sesión, Ingresar FUM, Generar código QR de vinculación, Escanear código QR, Revocar vínculo.
+- **Domain Events:** Cuenta creada, Rol asignado (Madre / Acompañante), Fecha probable de parto calculada, Semana gestacional inicializada, Código de vinculación generado, Código de vinculación escaneado, Vínculo de pareja confirmado, Perfil de acompañante activado, Vínculo revocado.
+- **Policies:** Cuando una cuenta es creada con rol Madre, entonces se inicializa el contador de semana gestacional. Cuando un código QR supera las 24 horas, entonces queda invalidado automáticamente. Cuando un vínculo es confirmado, entonces se aplica el filtro de privacidad clínica sobre la vista del acompañante.
+- **External Systems:** Proveedor de autenticación (Google / Apple Sign In), Servicio de correo transaccional.
+- **Hotspots:** ¿Puede un acompañante estar vinculado a más de una gestante? ¿Qué sucede con el historial compartido si la madre revoca el vínculo? ¿Se permite editar la FUM luego del registro y cómo se recalcula el contenido ya desbloqueado?
+---
+ 
+### Big Picture EventStorming 2 — Suscripciones y Pagos
+ 
+![Big Picture EventStorming - Suscripciones y Pagos](assets/bpe_suscripciones.jpg)
+ 
+El segundo mural recoge los domain events del modelo de monetización: el inicio de la prueba gratuita de 14 días, la selección de plan (Básico o Cuidado Integral), la confirmación o el rechazo del pago y la habilitación progresiva de funcionalidades. El actor principal puede ser tanto la madre como el acompañante, ya que el modelo contempla que la suscripción premium pueda ser adquirida o regalada por la pareja. El sistema valida la transacción a través de una pasarela externa, actualiza el estado de la cuenta y aplica la política de degradación de plan, que desactiva el Asistente IA y la lectura IoT sin eliminar los registros históricos de la madre. Los hotspots apuntan al manejo de casos límite, particularmente qué ocurre con el triage de emergencia si la suscripción vence en pleno tercer trimestre.
+ 
+- **Actores:** Madre Gestante, Acompañante (como comprador o regalante).
+- **Commands:** Iniciar prueba gratuita, Consultar planes, Seleccionar plan, Registrar medio de pago, Confirmar suscripción, Cancelar suscripción, Regalar suscripción.
+- **Domain Events:** Prueba gratuita iniciada, Prueba gratuita expirada, Plan seleccionado, Pago procesado, Pago rechazado, Suscripción activada, Funcionalidades premium habilitadas, Suscripción renovada, Suscripción cancelada, Cuenta degradada a Plan Básico.
+- **Policies:** Cuando la prueba gratuita expira sin conversión, entonces la cuenta se degrada al Plan Básico. Cuando un pago es rechazado, entonces se otorga un periodo de gracia de 3 días antes de degradar. Cuando una suscripción Cuidado Integral es activada, entonces se habilita el emparejamiento del sensor IoT.
+- **External Systems:** Pasarela de pagos (Culqi / Niubiz / Stripe), Servicio de notificaciones push (Firebase Cloud Messaging).
+- **Hotspots:** ¿El triage de emergencia debe seguir activo aunque la suscripción esté vencida, por responsabilidad ética? ¿Qué pasa con el sensor IoT físico si la usuaria cancela? ¿La suscripción es por cuenta de madre o por vínculo de pareja?
+---
+ 
+### Big Picture EventStorming 3 — Monitoreo IoT y Sistema de Semáforo
+ 
+![Big Picture EventStorming - Monitoreo IoT y Sistema de Semáforo](assets/bpe_monitoreoiot.jpg)
+ 
+El tercer mural representa el núcleo diferenciador de la propuesta: la traducción de datos médicos crudos a un lenguaje visual tranquilizador. El flujo inicia con el emparejamiento del sensor y continúa con la captura periódica de la frecuencia cardíaca fetal, su procesamiento en el backend y la publicación de una tarjeta de estado con código de color. La política central del dominio establece que la interfaz nunca expone ondas ni valores crudos a la madre: el sistema clasifica la lectura en verde (regular), amarillo (lectura poco confiable, requiere reposicionar el sensor) o rojo (derivación inmediata). Los hotspots concentran las decisiones médicas y legales más delicadas del proyecto, como quién valida clínicamente los umbrales del semáforo.
+ 
+- **Actores:** Madre Gestante, Acompañante (solo lectura del estado resumido).
+- **Commands:** Emparejar sensor, Iniciar medición, Reposicionar sensor, Consultar estado del bebé, Repetir lectura.
+- **Domain Events:** Sensor emparejado, Medición iniciada, Lectura de frecuencia cardíaca fetal recibida, Lectura procesada, Lectura clasificada, Tarjeta de estado verde publicada, Tarjeta de estado amarilla publicada, Alerta roja emitida, Lectura descartada por baja calidad de señal, Historial de mediciones actualizado, Batería del sensor baja notificada.
+- **Policies:** Cuando una lectura es recibida, entonces se procesa y se traduce al sistema de semáforo antes de mostrarse. Cuando la señal es de baja calidad, entonces se muestra estado amarillo con instrucción de reposo y reposicionamiento, nunca un valor numérico. Cuando una lectura es clasificada en rojo, entonces se dispara el modal de emergencia del dominio de Triage. Cuando se publica un estado, entonces se sincroniza el resumen a la vista del acompañante.
+- **External Systems:** Dispositivo sensor IoT (Bluetooth Low Energy), Servicio de procesamiento de señal en la nube, Firebase Cloud Messaging.
+- **Hotspots:** ¿Quién valida clínicamente los umbrales verde/amarillo/rojo? ¿Qué se muestra si no hay lectura en 48 horas? ¿Se debe permitir a la madre exportar la data cruda para su obstetra? ¿Cómo se evita que una falla del sensor se interprete como emergencia fetal?
+---
+ 
+### Big Picture EventStorming 4 — Asistente IA y Triage Inteligente de Emergencias
+ 
+![Big Picture EventStorming - Asistente IA y Triage Inteligente](assets/bpe_asistenteia.jpg)
+ 
+El cuarto mural modela el flujo conversacional y su mecanismo de seguridad. La madre formula una consulta de rutina y el asistente responde contextualizado a su semana gestacional; sin embargo, antes de generar cualquier respuesta, el sistema ejecuta el análisis de triage sobre el mensaje entrante. Si se detectan patrones críticos (sangrado abundante, contracciones regulares pretérmino, ausencia de movimiento fetal), la política de bloqueo de seguridad interrumpe la conversación normal y despliega el modal rojo a pantalla completa con acceso directo a llamada de emergencia y al contacto de confianza. Este dominio concentra el mayor riesgo del producto, por lo que los hotspots levantados son de naturaleza crítica y deben cerrarse antes del desarrollo.
+ 
+- **Actores:** Madre Gestante, Contacto de Confianza / Acompañante.
+- **Commands:** Enviar consulta al asistente, Confirmar comprensión de la alerta, Llamar a emergencias, Notificar al contacto de confianza, Descartar alerta.
+- **Domain Events:** Consulta enviada, Mensaje analizado por triage, Consulta clasificada como rutina, Respuesta generada, Respuesta entregada, Patrón crítico detectado, Conversación bloqueada, Modal de emergencia desplegado, Llamada a emergencias iniciada, Contacto de confianza notificado, Episodio de emergencia registrado en historial.
+- **Policies:** Cuando un mensaje es recibido, entonces se analiza por el triage antes de generar cualquier respuesta. Cuando se detecta un patrón crítico, entonces se bloquea la conversación y se despliega el modal de emergencia sin excepción. Cuando el modal de emergencia es desplegado, entonces se notifica automáticamente al acompañante vinculado. Cuando el asistente no alcanza un umbral de confianza, entonces deriva a consulta médica presencial en lugar de responder.
+- **External Systems:** Proveedor de modelo de lenguaje (API de IA generativa), Servicio de telefonía del dispositivo, Directorio de centros de emergencia / SAMU, Firebase Cloud Messaging.
+- **Hotspots:** ¿Quién es responsable legalmente si el triage no detecta una emergencia real? ¿El diccionario de palabras clave cubre variantes coloquiales peruanas? ¿Debe el asistente funcionar sin conexión para el triage? ¿Se guarda el historial de chat y por cuánto tiempo?
+---
+ 
+### Big Picture EventStorming 5 — Mi Cuerpo (Registro Clínico y Seguimiento)
+ 
+![Big Picture EventStorming - Mi Cuerpo](assets/bpe_micuerpo.jpg)
+ 
+El quinto mural aborda el reemplazo digital del expediente en papel. La madre registra peso, síntomas y horas de sueño, y el sistema consolida esa información en gráficos amigables y en un resumen mensual exportable para el control obstétrico. La política de privacidad clínica es transversal a este dominio: ningún registro de esta sección se sincroniza con la vista del acompañante. Además, el sistema detecta patrones recurrentes de síntomas y sugiere consultarlos en el próximo control, sin emitir diagnósticos. Los hotspots giran en torno al límite entre sugerencia y diagnóstico, y al manejo de registros que podrían indicar riesgo.
+ 
+- **Actores:** Madre Gestante, Profesional de salud (receptor externo del resumen).
+- **Commands:** Registrar peso, Registrar síntoma, Registrar horas de sueño, Consultar progreso, Generar resumen para el control médico, Exportar historial.
+- **Domain Events:** Registro de peso guardado, Síntoma registrado, Horas de sueño registradas, Gráfico de progreso actualizado, Hito de seguimiento alcanzado, Patrón de síntoma recurrente detectado, Sugerencia de consulta médica emitida, Resumen mensual generado, Historial exportado.
+- **Policies:** Cuando se guarda un registro en Mi Cuerpo, entonces no se propaga a la vista del acompañante. Cuando un síntoma se repite más de N veces en una semana, entonces se sugiere incluirlo en el próximo control médico. Cuando se completa un mes gestacional, entonces se genera automáticamente el resumen descargable. Cuando se registra un avance, entonces se celebra visualmente el hito en lugar de compararlo con un estándar clínico.
+- **External Systems:** Servicio de generación de PDF, Almacenamiento en la nube.
+- **Hotspots:** ¿Dónde está el límite entre sugerir y diagnosticar? ¿Qué hacer si el patrón de peso sugiere un riesgo clínico? ¿El formato del resumen es compatible con el carné perinatal del MINSA? ¿Se debe permitir compartir el resumen directamente con el obstetra desde la app?
+---
+ 
+### Big Picture EventStorming 6 — Aprendizaje y Bienestar Emocional
+ 
+![Big Picture EventStorming - Aprendizaje y Bienestar Emocional](assets/bpe_aprendizajeybienestar.jpg)
+ 
+El sexto mural cubre el contenido educativo dinámico y el sistema de soporte emocional. El disparador central de este dominio no es un comando de usuario sino el paso del tiempo: cada cambio de semana gestacional desbloquea automáticamente un nuevo lote de artículos, videos y tips, y activa las alertas de hitos del bebé. En paralelo, el programador de notificaciones emite las "píldoras de autoestima" a lo largo del día. La política de personalización asegura que el contenido mostrado corresponda exactamente a la semana en curso, evitando la sobreinformación que genera ansiedad. Los hotspots se concentran en la curaduría y la frecuencia.
+ 
+- **Actores:** Madre Gestante, Acompañante, Equipo de contenido de WebExpert.
+- **Commands:** Consultar feed de aprendizaje, Abrir artículo o video, Marcar contenido como favorito, Configurar frecuencia de notificaciones, Publicar contenido semanal.
+- **Domain Events:** Semana gestacional actualizada, Contenido semanal desbloqueado, Feed de aprendizaje actualizado, Artículo visualizado, Contenido marcado como favorito, Píldora de autoestima programada, Píldora de autoestima entregada, Hito del bebé alcanzado, Notificación de hito enviada, Preferencias de notificación actualizadas.
+- **Policies:** Cuando la semana gestacional cambia, entonces se desbloquea el contenido correspondiente y se archiva el anterior. Cuando se alcanza un hito de desarrollo fetal, entonces se emite una notificación celebratoria a la madre y al acompañante. Cuando la usuaria reduce la frecuencia de notificaciones, entonces se priorizan únicamente hitos y recordatorios de autocuidado. Cuando se entrega una píldora de autoestima, entonces no se repite el mismo mensaje en los siguientes 30 días.
+- **External Systems:** CMS de contenidos, Firebase Cloud Messaging, Servicio de streaming de video.
+- **Hotspots:** ¿Quién valida médicamente el contenido publicado? ¿Cuántas notificaciones diarias son aceptables antes de resultar invasivas? ¿El contenido se adapta también al posparto? ¿Se muestran hitos si la gestación presenta complicaciones?
+---
+ 
+### Big Picture EventStorming 7 — Modo Compañero (Alertas Rápidas y Guía Diaria)
+ 
+![Big Picture EventStorming - Modo Compañero](assets/bpe_modocompanero.jpg)
+ 
+El séptimo mural modela la experiencia del acompañante, dividida en dos flujos complementarios. El primero es reactivo: la madre pulsa un botón de "Pasa la Voz" (antojo, náuseas, necesidad de descanso) y el sistema entrega una notificación push predefinida al acompañante, quien puede acusar recibo sin necesidad de intercambiar mensajes largos. El segundo es proactivo: cada mañana el sistema genera el "Tip del Día" contextualizado a la semana exacta de gestación, traduciendo los cambios hormonales y físicos de la madre en acciones concretas de apoyo. La política de no alarma médica es clave: ninguna alerta rápida se comunica como evento clínico, para evitar falsos positivos de emergencia.
+ 
+- **Actores:** Madre Gestante, Acompañante.
+- **Commands:** Enviar alerta rápida, Confirmar recepción de alerta, Consultar guía diaria, Marcar tip como realizado, Consultar estado resumido del bebé.
+- **Domain Events:** Alerta rápida enviada, Notificación entregada al acompañante, Alerta confirmada por el acompañante, Tip diario generado, Tip diario entregado, Tip marcado como realizado, Guía de preparación desbloqueada, Estado resumido del bebé sincronizado, Racha de apoyo registrada.
+- **Policies:** Cuando la madre envía una alerta rápida, entonces se entrega como notificación de apoyo y nunca como alerta médica. Cuando cambia la semana gestacional, entonces se regenera el set de tips del acompañante. Cuando se publica un estado IoT, entonces se sincroniza únicamente el resumen (color y mensaje) hacia el acompañante. Cuando el acompañante no confirma una alerta en un lapso definido, entonces se reenvía el recordatorio una sola vez.
+- **External Systems:** Firebase Cloud Messaging, CMS de contenidos (tips del acompañante).
+- **Hotspots:** ¿Qué ocurre si el acompañante ignora sistemáticamente las alertas? ¿Debe la madre ver si su pareja leyó el tip del día? ¿La racha de apoyo puede generar presión o culpa en la pareja? ¿Se permiten alertas rápidas personalizadas además de las predefinidas?
+---
+ 
+
 # Software Architecture
 
 ## 2.5.3.1. Software Architecture Context Level Diagrams
