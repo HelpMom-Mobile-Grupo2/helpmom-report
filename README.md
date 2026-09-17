@@ -1,4 +1,3 @@
----
 
 # Capítulo II
 
@@ -132,7 +131,7 @@ El objetivo aquí es validar el nivel de exclusión que sienten con las herramie
 *   **Nombre:** Gabriel Mamani
 *   **Distrito:** Rimac
 *   **Duración:** 4:52
-*   **Link:** [Ver entrevista]([https://drive.google.com/file/d/10w5P_IWZa_NQNIAuoki-12ttmHZwdWOx/view?usp=sharing))
+*   **Link:** [Ver entrevista](https://drive.google.com/file/d/10w5P_IWZa_NQNIAuoki-12ttmHZwdWOx/view?usp=sharing)
 *   **Resumen:** Gabriel Mamani, de 27 años y futuro padre primerizo cuya pareja tiene seis meses de gestación, señala que su mayor desafío es la inexperiencia frente a los cambios y situaciones propias del embarazo. Al no utilizar aplicaciones especializadas y depender únicamente de internet o de consultas esporádicas con su doctora, a menudo se siente desorientado. Por ello, Gabriel considera que sería de gran utilidad contar con una plataforma que involucre activamente al padre, proporcionándole consejos diarios, guías para trámites o preparativos clínicos, e indicadores inmediatos sobre la salud del bebé (como los latidos). Además, enfatiza que una herramienta tecnológica de este tipo le brindaría mucha tranquilidad, mostrándose abierto a pagar una suscripción premium a cambio de recibir orientación constante y estructurada en su camino hacia la paternidad.
 
 
@@ -2195,7 +2194,7 @@ Este es el flujo más crítico de la aplicación. Muestra cómo una lectura del 
 
 Refleja la funcionalidad de Modo Compañero, donde una alerta no médica necesita consultar la base de datos de identidad para saber a quién enviarle el Push.
 
-![Scenario 03: Madre envía alerta "Pasa la Voz" al Acompañante](/assets/escen03.jpeg)
+![Scenario 03: Madre envía alerta "Pasa la Voz" al Acompañante](./assets/escen03.jpeg)
 
 ## 2.6. Tactical-Level Domain-Driven Design
 
