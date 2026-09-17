@@ -54,6 +54,12 @@
 | 0.9 | 14/09/2026 | Gabriel Rivera Ayala  | Se consolidó el Capítulo II con artefactos de diseño y arquitectura, incluyendo prototipos, diagramas orientados a objetos, diseño de base de datos y elementos de arquitectura de software. Esta actualización permitió conectar los requisitos levantados con una propuesta técnica más estructurada, preparando la base para la implementación y documentación posterior del producto. |
 | 1.0 | 15/09/2026 | Gabriel Rivera Ayala  | Se culminó el Capítulo II mediante la revisión final de requisitos, diseño y arquitectura. También se añadió información sobre la configuración del entorno de desarrollo, la gestión del código fuente y la preparación del despliegue de la solución tecnológica. |
 
+## Project Report Collaboration Insights
+Enlace del repositorio: https://github.com/HelpMom-Mobile-Grupo2/helpmom-report 
+
+<div align="center">
+  <img src="assets/InsightsAV1.jpeg" alt="Insights AV1" width="500" />
+</div>
 
 ## Student Outcome
 
