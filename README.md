@@ -394,7 +394,1327 @@ A continuación, se define el lenguaje ubicuo (*Ubiquitous Language*) del proyec
 - **Policy (Política de Dominio):** Regla de negocio que conecta automáticamente un evento con un comando, sin intervención del usuario.
 - **Hotspot (Punto Crítico):** Punto de incertidumbre identificado durante el EventStorming que debe resolverse antes del diseño técnico definitivo.
 ---
+
+
+## 2.4. Requirements Specification
  
+En esta sección se presenta la especificación de requerimientos de **HelpMom**, elaborada a partir de los hallazgos de las entrevistas a los dos segmentos objetivo (madres gestantes y padres/acompañantes) y de los eventos, comandos y políticas identificados durante la sesión de Big Picture EventStorming. Los requerimientos se expresan mediante **Epics**, **User Stories**, **Technical Stories** y **Spike Stories**, siguiendo el formato "Como \<rol\>, quiero \<funcionalidad\>, para \<beneficio\>" y con criterios de aceptación redactados en notación Gherkin (Dado / Cuando / Entonces).
+ 
+La priorización responde a dos criterios: el impacto sobre la propuesta de valor central —reducir la ansiedad prenatal e involucrar activamente al acompañante— y el nivel de riesgo asociado. Por ello, las historias vinculadas al Triage Inteligente, a la traducción de datos IoT mediante el Sistema de Semáforo y a la privacidad clínica de la madre reciben prioridad Alta, ya que constituyen los puntos donde una falla funcional tendría consecuencias directas sobre la seguridad y la confianza de la usuaria.
+ 
+### 2.4.1. User Stories
+ 
+#### 2.4.1.1. Epics
+ 
+| Epic ID | Título | Descripción |
+| --- | --- | --- |
+| EP01 | Landing page informativa | Como visitante, quiero acceder a un sitio web informativo, para conocer la propuesta de valor de HelpMom antes de registrarme. |
+| EP02 | Gestión de cuentas y acceso | Como usuario, quiero registrarme y autenticarme según mi rol, para acceder a la experiencia que me corresponde. |
+| EP03 | Vinculación de pareja | Como madre gestante, quiero enlazar la cuenta de mi acompañante, para compartir con él la información que yo decida. |
+| EP04 | Seguimiento gestacional (Inicio) | Como madre gestante, quiero visualizar el avance de mi embarazo semana a semana, para sentirme acompañada y orientada. |
+| EP05 | Monitoreo IoT y Sistema de Semáforo | Como madre gestante, quiero conocer el estado de mi bebé mediante indicadores visuales simples, para obtener paz mental sin interpretar datos médicos. |
+| EP06 | Asistente IA conversacional | Como madre gestante, quiero consultar mis dudas de rutina a un asistente disponible 24/7, para obtener respuestas inmediatas a cualquier hora. |
+| EP07 | Triage Inteligente y emergencias | Como madre gestante, quiero que el sistema detecte señales de riesgo y me derive a emergencias, para estar protegida ante una complicación. |
+| EP08 | Mi Cuerpo (registro clínico) | Como madre gestante, quiero registrar mi peso, síntomas y sueño, para llevar un seguimiento ordenado y compartirlo en mis controles. |
+| EP09 | Aprendizaje y contenido educativo | Como usuaria, quiero acceder a contenido educativo pertinente a mi semana gestacional, para informarme sin sobreinformarme. |
+| EP10 | Bienestar emocional y notificaciones | Como madre gestante, quiero recibir mensajes de validación e hitos del bebé, para sostener mi ánimo durante los cambios corporales. |
+| EP11 | Guía diaria del acompañante | Como acompañante, quiero recibir consejos diarios accionables, para saber exactamente cómo apoyar a mi pareja. |
+| EP12 | Alertas rápidas "Pasa la Voz" | Como madre gestante, quiero avisar mis necesidades con un toque, para comunicarme sin esfuerzo ni alarma innecesaria. |
+| EP13 | Suscripciones y pagos | Como usuario, quiero contratar y administrar un plan, para habilitar las funcionalidades de IA e IoT. |
+| EP14 | Perfil, configuración y privacidad | Como usuario, quiero administrar mis datos, preferencias y seguridad, para mantener el control sobre mi información. |
+| EP15 | Internacionalización y accesibilidad | Como usuario, quiero usar la app en mi idioma y con ajustes de accesibilidad, para una experiencia cómoda y personalizada. |
+ 
+#### 2.4.1.2. User Stories
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US01 | Visitante | Alta | EP01 |
+ 
+**Title:** Conocer la propuesta de valor de HelpMom
+ 
+**Description:** Como visitante del sitio, quiero conocer qué ofrece HelpMom, para evaluar si la aplicación resuelve mis necesidades durante el embarazo.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que el visitante accede a la landing page,
+Cuando visualiza la sección principal,
+Entonces observa una descripción clara de la app, sus beneficios y un llamado a la acción para registrarse.
+ 
+**Escenario 2:**
+Dado que el visitante desea profundizar en una funcionalidad,
+Cuando selecciona la opción "Conocer más",
+Entonces el sistema despliega una explicación ampliada de esa funcionalidad.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US02 | Visitante | Alta | EP01 |
+ 
+**Title:** Comparar los planes disponibles
+ 
+**Description:** Como visitante del sitio, quiero comparar el Plan Básico y el Plan Cuidado Integral, para decidir cuál se ajusta a mis necesidades y presupuesto.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que el visitante accede a la sección de planes,
+Cuando visualiza las tarjetas comparativas,
+Entonces observa el precio, la periodicidad y la lista de beneficios de cada plan.
+ 
+**Escenario 2:**
+Dado que el visitante selecciona un plan,
+Cuando confirma su elección,
+Entonces el sistema lo redirige al formulario de registro con el plan preseleccionado.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US03 | Visitante | Media | EP01 |
+ 
+**Title:** Consultar testimonios de otras familias
+ 
+**Description:** Como visitante del sitio, quiero leer testimonios de otras madres y acompañantes, para generar confianza en la plataforma.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que el visitante accede a la landing page,
+Cuando navega a la sección de testimonios,
+Entonces visualiza opiniones de usuarios reales con su nombre y etapa gestacional.
+ 
+**Escenario 2:**
+Dado que existen múltiples testimonios,
+Cuando el visitante navega el carrusel,
+Entonces el sistema muestra testimonios adicionales sin recargar la página.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US04 | Visitante | Media | EP01 |
+ 
+**Title:** Consultar preguntas frecuentes sobre seguridad
+ 
+**Description:** Como visitante del sitio, quiero resolver dudas sobre la confiabilidad del asistente IA y el sensor IoT, para reducir mi desconfianza inicial hacia la tecnología.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que el visitante accede a la sección de preguntas frecuentes,
+Cuando selecciona una pregunta,
+Entonces el sistema despliega la respuesta correspondiente de forma expandible.
+ 
+**Escenario 2:**
+Dado que el visitante consulta sobre el manejo de emergencias,
+Cuando lee la respuesta,
+Entonces se le explica que el asistente deriva automáticamente a un centro de emergencias ante señales de riesgo.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US05 | Usuario | Alta | EP02 |
+ 
+**Title:** Registrarse en la plataforma
+ 
+**Description:** Como usuario, quiero crear una cuenta con mis datos básicos, para acceder a las funcionalidades de HelpMom.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que el usuario completa el formulario con un correo válido y una contraseña segura,
+Cuando envía el registro,
+Entonces el sistema crea la cuenta e inicia sesión automáticamente.
+ 
+**Escenario 2:**
+Dado que el usuario ingresa un correo ya registrado,
+Cuando envía el formulario,
+Entonces el sistema rechaza el registro y muestra un mensaje indicando que el correo ya está en uso.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US06 | Usuario | Alta | EP02 |
+ 
+**Title:** Seleccionar rol al registrarse
+ 
+**Description:** Como usuario, quiero indicar si soy madre gestante o acompañante, para acceder a la interfaz adecuada a mi rol.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que el usuario se encuentra en el flujo de registro,
+Cuando selecciona el rol "Madre gestante",
+Entonces el sistema lo dirige al formulario de datos gestacionales.
+ 
+**Escenario 2:**
+Dado que el usuario selecciona el rol "Acompañante",
+Cuando continúa el registro,
+Entonces el sistema le solicita el código de vinculación generado por la madre.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US07 | Madre gestante | Alta | EP02 |
+ 
+**Title:** Registrar la fecha de última menstruación
+ 
+**Description:** Como madre gestante, quiero ingresar mi FUM o mi semana gestacional actual, para que la app calcule automáticamente mi cronología de embarazo.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que la madre ingresa una FUM válida,
+Cuando confirma el dato,
+Entonces el sistema calcula y muestra su semana gestacional actual y su fecha probable de parto.
+ 
+**Escenario 2:**
+Dado que la madre ingresa una fecha futura o inconsistente,
+Cuando intenta continuar,
+Entonces el sistema rechaza el dato y solicita una corrección.
+ 
+**Escenario 3:**
+Dado que la madre desconoce su FUM,
+Cuando selecciona la opción alternativa,
+Entonces el sistema le permite ingresar directamente su semana gestacional indicada por su médico.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US08 | Usuario | Alta | EP02 |
+ 
+**Title:** Iniciar sesión con redirección por rol
+ 
+**Description:** Como usuario, quiero iniciar sesión con mis credenciales, para acceder directamente a la vista correspondiente a mi rol.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que el usuario ingresa credenciales válidas,
+Cuando inicia sesión,
+Entonces el sistema lo redirige a la vista Inicio si es madre, o al Modo Compañero si es acompañante.
+ 
+**Escenario 2:**
+Dado que el usuario ingresa credenciales incorrectas,
+Cuando intenta iniciar sesión,
+Entonces el sistema deniega el acceso con un mensaje genérico de error.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US09 | Usuario | Media | EP02 |
+ 
+**Title:** Recuperar contraseña
+ 
+**Description:** Como usuario, quiero restablecer mi contraseña, para recuperar el acceso a mi cuenta si la olvido.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que el usuario ingresa un correo registrado,
+Cuando solicita la recuperación,
+Entonces el sistema envía un enlace de restablecimiento a ese correo.
+ 
+**Escenario 2:**
+Dado que el enlace de restablecimiento ha expirado,
+Cuando el usuario intenta usarlo,
+Entonces el sistema informa que el enlace ya no es válido y ofrece generar uno nuevo.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US10 | Usuario | Alta | EP02 |
+ 
+**Title:** Cerrar sesión
+ 
+**Description:** Como usuario, quiero cerrar mi sesión, para proteger mi información en dispositivos compartidos.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que el usuario tiene una sesión activa,
+Cuando selecciona "Cerrar sesión",
+Entonces el sistema invalida el token y lo redirige a la pantalla de acceso.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US11 | Madre gestante | Alta | EP03 |
+ 
+**Title:** Generar código de vinculación QR
+ 
+**Description:** Como madre gestante, quiero generar un código QR de invitación, para enlazar la cuenta de mi acompañante a mi embarazo.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que la madre accede a la sección Modo Compañero,
+Cuando solicita generar la invitación,
+Entonces el sistema muestra un código QR y un código alfanumérico equivalente.
+ 
+**Escenario 2:**
+Dado que el código generado supera su tiempo de vigencia,
+Cuando el acompañante intenta usarlo,
+Entonces el sistema lo rechaza e indica a la madre generar uno nuevo.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US12 | Acompañante | Alta | EP03 |
+ 
+**Title:** Vincularse mediante código QR
+ 
+**Description:** Como acompañante, quiero escanear el código QR de mi pareja, para acceder al Modo Compañero y seguir el embarazo.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que el acompañante escanea un código vigente,
+Cuando el sistema lo valida,
+Entonces se confirma el vínculo y se activa su perfil de acompañante.
+ 
+**Escenario 2:**
+Dado que el acompañante no puede escanear el QR,
+Cuando ingresa el código alfanumérico manualmente,
+Entonces el sistema realiza la misma validación y confirma el vínculo.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US13 | Madre gestante | Alta | EP03 |
+ 
+**Title:** Revocar el vínculo con el acompañante
+ 
+**Description:** Como madre gestante, quiero revocar el acceso de mi acompañante en cualquier momento, para mantener el control sobre quién ve mi información.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que existe un vínculo activo,
+Cuando la madre selecciona revocar el acceso y confirma,
+Entonces el sistema elimina el vínculo y el acompañante deja de visualizar cualquier información.
+ 
+**Escenario 2:**
+Dado que el vínculo fue revocado,
+Cuando el acompañante abre la aplicación,
+Entonces el sistema le informa que ya no tiene una gestación asociada.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US14 | Madre gestante | Alta | EP04 |
+ 
+**Title:** Visualizar mi semana gestacional
+ 
+**Description:** Como madre gestante, quiero ver de forma destacada la semana exacta en la que me encuentro, para ubicarme en el proceso de mi embarazo.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que la madre accede a la vista Inicio,
+Cuando la pantalla carga,
+Entonces visualiza en tamaño destacado su semana gestacional y los días transcurridos.
+ 
+**Escenario 2:**
+Dado que transcurre un cambio de semana gestacional,
+Cuando la madre ingresa a la app,
+Entonces el contador se muestra actualizado automáticamente.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US15 | Madre gestante | Media | EP04 |
+ 
+**Title:** Ver la ilustración del tamaño del bebé
+ 
+**Description:** Como madre gestante, quiero ver una ilustración comparativa del tamaño actual de mi bebé, para conectar emocionalmente con su desarrollo.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que la madre se encuentra en la vista Inicio,
+Cuando visualiza la tarjeta de desarrollo,
+Entonces observa una ilustración y un texto comparativo acorde a su semana.
+ 
+**Escenario 2:**
+Dado que la madre selecciona la ilustración,
+Cuando accede al detalle,
+Entonces visualiza una descripción de los cambios del bebé en esa semana.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US16 | Usuario | Alta | EP04 |
+ 
+**Title:** Navegar mediante la barra inferior
+ 
+**Description:** Como usuario, quiero desplazarme entre las secciones principales desde una barra inferior, para acceder rápidamente a cualquier módulo.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que la madre ha iniciado sesión,
+Cuando visualiza cualquier pantalla,
+Entonces observa una barra inferior con las opciones Inicio, Mi Cuerpo, Aprendizaje y Asistente IA.
+ 
+**Escenario 2:**
+Dado que el usuario tiene rol de acompañante,
+Cuando accede a la aplicación,
+Entonces la barra inferior muestra únicamente las secciones habilitadas para su rol.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US17 | Madre gestante | Alta | EP05 |
+ 
+**Title:** Emparejar el sensor IoT
+ 
+**Description:** Como madre gestante, quiero vincular mi sensor a la aplicación, para comenzar a monitorear los latidos de mi bebé desde casa.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que la madre cuenta con el Plan Cuidado Integral y el sensor encendido,
+Cuando inicia el emparejamiento,
+Entonces el sistema detecta el dispositivo y confirma la vinculación exitosa.
+ 
+**Escenario 2:**
+Dado que el emparejamiento falla,
+Cuando el sistema detecta el error,
+Entonces muestra instrucciones guiadas de solución y permite reintentar.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US18 | Madre gestante | Alta | EP05 |
+ 
+**Title:** Consultar el estado del bebé mediante semáforo
+ 
+**Description:** Como madre gestante, quiero ver el estado de mi bebé mediante un indicador de color y un mensaje claro, para tranquilizarme sin interpretar datos médicos.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que existe una lectura reciente dentro de los parámetros esperados,
+Cuando la madre consulta la tarjeta de estado,
+Entonces visualiza un ícono verde con un mensaje tranquilizador.
+ 
+**Escenario 2:**
+Dado que la lectura presenta baja calidad de señal,
+Cuando el sistema la clasifica,
+Entonces muestra un ícono amarillo indicando reposo y reposicionamiento del sensor.
+ 
+**Escenario 3:**
+Dado que la madre intenta acceder a los valores numéricos,
+Cuando navega la tarjeta de estado,
+Entonces el sistema no expone datos crudos en la interfaz principal.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US19 | Madre gestante | Media | EP05 |
+ 
+**Title:** Repetir una medición
+ 
+**Description:** Como madre gestante, quiero repetir una medición cuando el resultado fue poco confiable, para obtener una lectura válida.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que la última lectura fue clasificada en estado amarillo,
+Cuando la madre selecciona "Repetir medición",
+Entonces el sistema inicia una nueva captura y reemplaza la tarjeta de estado.
+ 
+**Escenario 2:**
+Dado que la nueva lectura vuelve a ser de baja calidad,
+Cuando se repite el resultado por tercera vez consecutiva,
+Entonces el sistema sugiere revisar la colocación del sensor o contactar a su médico.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US20 | Madre gestante | Media | EP05 |
+ 
+**Title:** Consultar el historial de mediciones
+ 
+**Description:** Como madre gestante, quiero revisar el historial de estados registrados, para observar la regularidad del bienestar de mi bebé en el tiempo.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que existen mediciones previas,
+Cuando la madre accede al historial,
+Entonces visualiza una línea de tiempo con los estados de semáforo por fecha.
+ 
+**Escenario 2:**
+Dado que no existen mediciones registradas,
+Cuando la madre accede al historial,
+Entonces el sistema muestra un mensaje invitándola a realizar su primera medición.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US21 | Madre gestante | Media | EP05 |
+ 
+**Title:** Recibir aviso de batería baja del sensor
+ 
+**Description:** Como madre gestante, quiero ser notificada cuando la batería del sensor esté baja, para no interrumpir el monitoreo.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que el sensor reporta un nivel de batería bajo,
+Cuando el sistema recibe ese dato,
+Entonces envía una notificación push informativa a la madre.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US22 | Madre gestante | Alta | EP06 |
+ 
+**Title:** Consultar dudas al Asistente IA
+ 
+**Description:** Como madre gestante, quiero preguntar mis dudas de rutina a un asistente disponible las 24 horas, para obtener respuestas inmediatas incluso de madrugada.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que la madre escribe una consulta de rutina,
+Cuando envía el mensaje,
+Entonces el asistente responde con información contextualizada a su semana gestacional.
+ 
+**Escenario 2:**
+Dado que la consulta excede el umbral de confianza del asistente,
+Cuando el sistema lo detecta,
+Entonces recomienda consultar con su obstetra en lugar de emitir una respuesta.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US23 | Madre gestante | Media | EP06 |
+ 
+**Title:** Consultar el historial de conversaciones
+ 
+**Description:** Como madre gestante, quiero revisar mis conversaciones anteriores con el asistente, para recordar recomendaciones que ya recibí.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que existen conversaciones previas,
+Cuando la madre accede al historial del chat,
+Entonces visualiza los mensajes ordenados cronológicamente.
+ 
+**Escenario 2:**
+Dado que la madre desea eliminar una conversación,
+Cuando confirma la acción,
+Entonces el sistema la elimina de su historial.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US24 | Madre gestante | Media | EP06 |
+ 
+**Title:** Consultar mediante preguntas sugeridas
+ 
+**Description:** Como madre gestante, quiero acceder a preguntas frecuentes sugeridas según mi semana, para iniciar la conversación sin tener que redactar.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que la madre abre el Asistente IA,
+Cuando la pantalla carga,
+Entonces visualiza tres sugerencias de consulta relacionadas con su etapa gestacional.
+ 
+**Escenario 2:**
+Dado que la madre selecciona una sugerencia,
+Cuando el sistema la procesa,
+Entonces el asistente responde como si hubiera sido escrita manualmente.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US25 | Madre gestante | Alta | EP07 |
+ 
+**Title:** Activación del bloqueo de seguridad ante señales de riesgo
+ 
+**Description:** Como madre gestante, quiero que el asistente detenga la conversación si detecta un síntoma grave, para no recibir respuestas que retrasen mi atención médica.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que la madre describe un síntoma asociado a una palabra clave crítica,
+Cuando el triage analiza el mensaje,
+Entonces el sistema bloquea la conversación normal y despliega el modal de emergencia.
+ 
+**Escenario 2:**
+Dado que el mensaje no contiene indicios de riesgo,
+Cuando el triage lo clasifica como rutina,
+Entonces el asistente responde con normalidad sin activar alertas.
+ 
+**Escenario 3:**
+Dado que el mensaje es ambiguo respecto a su gravedad,
+Cuando el triage no alcanza certeza suficiente,
+Entonces el sistema opta por la alternativa conservadora y recomienda atención médica presencial.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US26 | Madre gestante | Alta | EP07 |
+ 
+**Title:** Llamar a emergencias desde el modal de alerta
+ 
+**Description:** Como madre gestante, quiero llamar a emergencias con un solo toque desde la alerta, para actuar de inmediato ante una complicación.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que el modal de emergencia está desplegado,
+Cuando la madre selecciona el botón de llamada,
+Entonces el sistema abre el marcador telefónico con el número de emergencias precargado.
+ 
+**Escenario 2:**
+Dado que la madre prefiere avisar a su entorno,
+Cuando selecciona "Llamar a mi contacto de confianza",
+Entonces el sistema inicia la llamada al contacto previamente registrado.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US27 | Acompañante | Alta | EP07 |
+ 
+**Title:** Recibir notificación automática de emergencia
+ 
+**Description:** Como acompañante, quiero ser notificado de inmediato cuando se active una alerta de emergencia, para acudir o asistir a mi pareja cuanto antes.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que se despliega un modal de emergencia en la cuenta de la madre,
+Cuando el sistema registra el evento,
+Entonces envía una notificación push prioritaria al acompañante vinculado.
+ 
+**Escenario 2:**
+Dado que el acompañante recibe la notificación,
+Cuando la selecciona,
+Entonces la app abre una pantalla con la indicación de contactar a su pareja y el acceso directo a llamada.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US28 | Madre gestante | Media | EP07 |
+ 
+**Title:** Registrar un contacto de confianza
+ 
+**Description:** Como madre gestante, quiero designar un contacto de confianza, para que sea avisado ante una emergencia.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que la madre accede a la configuración de emergencia,
+Cuando registra un nombre y un número válido,
+Entonces el sistema guarda el contacto y lo muestra en el modal de emergencia.
+ 
+**Escenario 2:**
+Dado que la madre no ha registrado un contacto,
+Cuando se despliega el modal de emergencia,
+Entonces el sistema muestra únicamente el botón de llamada a emergencias.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US29 | Madre gestante | Alta | EP08 |
+ 
+**Title:** Registrar mi peso
+ 
+**Description:** Como madre gestante, quiero registrar mi peso periódicamente, para llevar un seguimiento ordenado de mi evolución.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que la madre ingresa un valor de peso válido,
+Cuando confirma el registro,
+Entonces el sistema lo guarda con la fecha y actualiza el gráfico de progreso.
+ 
+**Escenario 2:**
+Dado que la madre ingresa un valor fuera de rango razonable,
+Cuando intenta guardar,
+Entonces el sistema solicita confirmación antes de registrarlo.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US30 | Madre gestante | Alta | EP08 |
+ 
+**Title:** Registrar síntomas
+ 
+**Description:** Como madre gestante, quiero registrar los síntomas que experimento, para no olvidarlos al momento de mi control médico.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que la madre accede al módulo Mi Cuerpo,
+Cuando selecciona uno o más síntomas de la lista y confirma,
+Entonces el sistema los registra con la fecha correspondiente.
+ 
+**Escenario 2:**
+Dado que el síntoma no figura en la lista,
+Cuando la madre lo ingresa como texto libre,
+Entonces el sistema lo guarda como registro personalizado.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US31 | Madre gestante | Media | EP08 |
+ 
+**Title:** Registrar mis horas de sueño
+ 
+**Description:** Como madre gestante, quiero registrar cuánto dormí, para identificar patrones de descanso durante la gestación.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que la madre ingresa las horas dormidas,
+Cuando confirma el registro,
+Entonces el sistema lo guarda y actualiza el gráfico semanal de sueño.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US32 | Madre gestante | Media | EP08 |
+ 
+**Title:** Visualizar mi progreso en gráficos amigables
+ 
+**Description:** Como madre gestante, quiero ver mi evolución en gráficos comprensibles y positivos, para entender mi progreso sin sentir presión.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que existen registros acumulados,
+Cuando la madre accede a la sección de progreso,
+Entonces visualiza gráficos de peso, síntomas y sueño con un lenguaje celebratorio.
+ 
+**Escenario 2:**
+Dado que la madre alcanza un hito de seguimiento,
+Cuando el sistema lo detecta,
+Entonces muestra un mensaje de reconocimiento dentro de la vista.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US33 | Madre gestante | Alta | EP08 |
+ 
+**Title:** Generar resumen para el control médico
+ 
+**Description:** Como madre gestante, quiero generar un resumen de mis registros, para presentárselo a mi obstetra en el control.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que existen registros del periodo seleccionado,
+Cuando la madre solicita el resumen,
+Entonces el sistema genera un documento descargable con peso, síntomas y sueño consolidados.
+ 
+**Escenario 2:**
+Dado que el resumen fue generado,
+Cuando la madre selecciona compartir,
+Entonces el sistema habilita las opciones de envío del dispositivo.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US34 | Madre gestante | Alta | EP08 |
+ 
+**Title:** Mantener privados mis registros clínicos
+ 
+**Description:** Como madre gestante, quiero que mis registros de Mi Cuerpo permanezcan privados, para compartir con mi pareja solo lo que yo decida.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que la madre registra información en Mi Cuerpo,
+Cuando el acompañante accede a su interfaz,
+Entonces no visualiza ningún dato de peso, síntomas ni sueño.
+ 
+**Escenario 2:**
+Dado que el acompañante intenta acceder al recurso por una vía alterna,
+Cuando el sistema valida los permisos,
+Entonces deniega el acceso y registra el intento.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US35 | Madre gestante | Media | EP08 |
+ 
+**Title:** Recibir sugerencia ante síntomas recurrentes
+ 
+**Description:** Como madre gestante, quiero que la app me avise si un síntoma se repite con frecuencia, para mencionarlo en mi próximo control.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que un mismo síntoma se registra repetidamente en un periodo corto,
+Cuando el sistema detecta el patrón,
+Entonces emite una sugerencia de comentarlo en el próximo control médico.
+ 
+**Escenario 2:**
+Dado que se emite la sugerencia,
+Cuando la madre la visualiza,
+Entonces el mensaje no incluye ningún diagnóstico ni causa probable.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US36 | Madre gestante | Alta | EP09 |
+ 
+**Title:** Acceder al contenido de mi semana
+ 
+**Description:** Como madre gestante, quiero acceder a contenido educativo correspondiente a mi semana actual, para informarme de manera pertinente y sin abrumarme.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que la madre accede a la sección Aprendizaje,
+Cuando la pantalla carga,
+Entonces visualiza un feed con artículos, videos y tips correspondientes a su semana gestacional.
+ 
+**Escenario 2:**
+Dado que cambia la semana gestacional,
+Cuando la madre ingresa nuevamente,
+Entonces el sistema desbloquea y muestra el nuevo contenido correspondiente.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US37 | Usuario | Media | EP09 |
+ 
+**Title:** Guardar contenido como favorito
+ 
+**Description:** Como usuario, quiero guardar artículos que me interesan, para volver a consultarlos cuando lo necesite.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que el usuario visualiza un contenido,
+Cuando selecciona la opción de guardar,
+Entonces el sistema lo agrega a su lista de favoritos.
+ 
+**Escenario 2:**
+Dado que el usuario accede a sus favoritos,
+Cuando consulta la lista,
+Entonces visualiza todos los contenidos guardados, incluso los de semanas anteriores.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US38 | Usuario | Baja | EP09 |
+ 
+**Title:** Buscar contenido por tema
+ 
+**Description:** Como usuario, quiero buscar contenido por palabra clave, para resolver una duda puntual sin navegar todo el feed.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que el usuario ingresa un término de búsqueda,
+Cuando confirma la búsqueda,
+Entonces el sistema muestra los contenidos relacionados disponibles para su etapa.
+ 
+**Escenario 2:**
+Dado que no existen coincidencias,
+Cuando el sistema procesa la búsqueda,
+Entonces muestra un mensaje indicando que no se encontraron resultados y sugiere consultar al Asistente IA.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US39 | Madre gestante | Media | EP10 |
+ 
+**Title:** Recibir píldoras de autoestima
+ 
+**Description:** Como madre gestante, quiero recibir mensajes de validación durante el día, para sentirme acompañada frente a los cambios de mi cuerpo.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que la madre tiene las notificaciones activas,
+Cuando llega el horario programado,
+Entonces el sistema entrega una píldora de autoestima con un mensaje cálido y validante.
+ 
+**Escenario 2:**
+Dado que un mensaje ya fue entregado recientemente,
+Cuando el sistema selecciona el siguiente,
+Entonces no repite el mismo contenido dentro del periodo definido.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US40 | Usuario | Media | EP10 |
+ 
+**Title:** Recibir notificaciones de hitos del bebé
+ 
+**Description:** Como usuario, quiero ser notificado cuando mi bebé alcanza un hito de desarrollo, para celebrar cada etapa del embarazo.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que se alcanza una semana asociada a un hito,
+Cuando el sistema lo detecta,
+Entonces envía una notificación celebratoria a la madre y al acompañante vinculado.
+ 
+**Escenario 2:**
+Dado que el usuario selecciona la notificación,
+Cuando la app se abre,
+Entonces muestra una tarjeta con la descripción del hito alcanzado.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US41 | Usuario | Media | EP10 |
+ 
+**Title:** Configurar la frecuencia de notificaciones
+ 
+**Description:** Como usuario, quiero ajustar cuántas notificaciones recibo, para que la app no resulte invasiva.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que el usuario accede a la configuración de notificaciones,
+Cuando ajusta la frecuencia o desactiva una categoría,
+Entonces el sistema guarda la preferencia y la aplica de inmediato.
+ 
+**Escenario 2:**
+Dado que el usuario desactiva todas las categorías opcionales,
+Cuando ocurre una alerta de emergencia,
+Entonces el sistema la entrega igualmente por ser de carácter crítico.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US42 | Acompañante | Alta | EP11 |
+ 
+**Title:** Recibir el Tip del Día
+ 
+**Description:** Como acompañante, quiero recibir cada mañana un consejo accionable, para saber cómo apoyar concretamente a mi pareja ese día.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que el acompañante tiene un vínculo activo,
+Cuando llega el horario matutino configurado,
+Entonces recibe una notificación con un tip contextualizado a la semana gestacional actual.
+ 
+**Escenario 2:**
+Dado que cambia la semana gestacional,
+Cuando el sistema genera los tips,
+Entonces el contenido entregado corresponde a la nueva semana.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US43 | Acompañante | Alta | EP11 |
+ 
+**Title:** Comprender los cambios de mi pareja
+ 
+**Description:** Como acompañante, quiero entender sin tecnicismos qué le está ocurriendo a mi pareja esta semana, para responder con empatía y no malinterpretar su estado.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que el acompañante accede a la guía diaria,
+Cuando consulta la sección de cambios,
+Entonces visualiza una explicación clara y sin lenguaje médico de los cambios físicos y hormonales de esa semana.
+ 
+**Escenario 2:**
+Dado que el acompañante desea profundizar,
+Cuando selecciona el contenido,
+Entonces accede a una cápsula formativa breve sobre el tema.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US44 | Acompañante | Media | EP11 |
+ 
+**Title:** Marcar un tip como realizado
+ 
+**Description:** Como acompañante, quiero marcar los consejos que ya cumplí, para llevar registro de mi participación en el proceso.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que el acompañante visualiza el tip del día,
+Cuando lo marca como realizado,
+Entonces el sistema registra la acción y actualiza su indicador de apoyo.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US45 | Acompañante | Alta | EP11 |
+ 
+**Title:** Consultar el estado resumido del bebé
+ 
+**Description:** Como acompañante, quiero ver el indicador de estado del bebé, para tranquilizarme sin tener que preguntarle constantemente a mi pareja.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que existe una medición reciente,
+Cuando el acompañante accede a su pantalla principal,
+Entonces visualiza el color y el mensaje de estado, sin datos numéricos ni registros clínicos.
+ 
+**Escenario 2:**
+Dado que no existe una medición reciente,
+Cuando el acompañante consulta el estado,
+Entonces el sistema indica que aún no hay una lectura del día.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US46 | Acompañante | Media | EP11 |
+ 
+**Title:** Acceder a la guía de preparación logística
+ 
+**Description:** Como acompañante, quiero recibir información sobre trámites, el bolso de clínica y los controles médicos, para llegar preparado a cada etapa.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que el embarazo alcanza una etapa con contenido logístico asociado,
+Cuando el acompañante accede a la guía,
+Entonces visualiza las cápsulas de preparación correspondientes a esa etapa.
+ 
+**Escenario 2:**
+Dado que el acompañante consulta una cápsula de checklist,
+Cuando marca los elementos completados,
+Entonces el sistema guarda el avance de la lista.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US47 | Madre gestante | Alta | EP12 |
+ 
+**Title:** Enviar una alerta rápida "Pasa la Voz"
+ 
+**Description:** Como madre gestante, quiero avisar a mi pareja con un solo toque que tengo náuseas, un antojo o necesito descansar, para comunicarme sin tener que redactar mensajes.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que la madre tiene un acompañante vinculado,
+Cuando selecciona una alerta rápida predefinida,
+Entonces el sistema envía una notificación push inmediata al acompañante.
+ 
+**Escenario 2:**
+Dado que la madre no tiene un acompañante vinculado,
+Cuando intenta enviar una alerta rápida,
+Entonces el sistema la invita a generar un código de vinculación.
+ 
+**Escenario 3:**
+Dado que se entrega una alerta rápida,
+Cuando el acompañante la recibe,
+Entonces el mensaje se presenta como una solicitud de apoyo y nunca como una alerta médica.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US48 | Acompañante | Media | EP12 |
+ 
+**Title:** Confirmar la recepción de una alerta rápida
+ 
+**Description:** Como acompañante, quiero confirmar que vi la alerta de mi pareja, para que ella sepa que estoy atendiendo su necesidad.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que el acompañante recibe una alerta rápida,
+Cuando la confirma desde la notificación o la app,
+Entonces la madre visualiza el acuse de recibo en su pantalla.
+ 
+**Escenario 2:**
+Dado que la alerta no ha sido confirmada tras un lapso definido,
+Cuando el sistema lo detecta,
+Entonces reenvía el recordatorio al acompañante una única vez.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US49 | Usuario | Alta | EP13 |
+ 
+**Title:** Iniciar la prueba gratuita
+ 
+**Description:** Como usuario, quiero probar las funciones premium durante un periodo gratuito, para evaluar la app antes de pagar.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que el usuario no ha utilizado antes la prueba gratuita,
+Cuando la activa,
+Entonces el sistema habilita el acceso parcial al Asistente IA por el periodo definido.
+ 
+**Escenario 2:**
+Dado que la prueba gratuita expira sin conversión,
+Cuando el usuario ingresa a la app,
+Entonces el sistema degrada la cuenta al Plan Básico conservando sus registros históricos.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US50 | Usuario | Alta | EP13 |
+ 
+**Title:** Contratar un plan de suscripción
+ 
+**Description:** Como usuario, quiero contratar el Plan Básico o el Plan Cuidado Integral, para habilitar las funcionalidades que necesito.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que el usuario selecciona un plan y registra un medio de pago válido,
+Cuando confirma la transacción,
+Entonces el sistema activa la suscripción y habilita las funcionalidades correspondientes.
+ 
+**Escenario 2:**
+Dado que el pago es rechazado por la pasarela,
+Cuando el sistema recibe la respuesta,
+Entonces informa el motivo y permite reintentar con otro medio de pago.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US51 | Usuario | Media | EP13 |
+ 
+**Title:** Consultar el estado de mi suscripción
+ 
+**Description:** Como usuario, quiero ver mi plan actual y su fecha de renovación, para conocer qué beneficios tengo activos.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que el usuario tiene una suscripción activa,
+Cuando accede a la sección de suscripción,
+Entonces visualiza el nombre del plan, su estado, el costo y la fecha de renovación.
+ 
+**Escenario 2:**
+Dado que el usuario no tiene un plan contratado,
+Cuando accede a la sección,
+Entonces el sistema muestra el catálogo de planes disponibles.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US52 | Acompañante | Baja | EP13 |
+ 
+**Title:** Regalar la suscripción premium
+ 
+**Description:** Como acompañante, quiero adquirir el Plan Cuidado Integral para mi pareja, para brindarle una herramienta de apoyo durante su embarazo.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que el acompañante está vinculado a una gestante,
+Cuando selecciona la opción de regalar la suscripción y completa el pago,
+Entonces el sistema activa el plan en la cuenta de la madre y la notifica.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US53 | Usuario | Media | EP13 |
+ 
+**Title:** Cancelar la suscripción
+ 
+**Description:** Como usuario, quiero cancelar mi plan, para dejar de ser cobrado al finalizar el ciclo vigente.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que el usuario tiene una suscripción activa,
+Cuando confirma la cancelación,
+Entonces el sistema detiene la renovación automática y mantiene el acceso hasta el fin del periodo pagado.
+ 
+**Escenario 2:**
+Dado que finaliza el periodo pagado,
+Cuando el sistema procesa el vencimiento,
+Entonces degrada la cuenta al Plan Básico sin eliminar los registros de la madre.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US54 | Usuario | Media | EP14 |
+ 
+**Title:** Consultar y editar mi perfil
+ 
+**Description:** Como usuario, quiero visualizar y actualizar mis datos personales, para mantener mi información al día.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que el usuario accede a su perfil,
+Cuando consulta la información,
+Entonces visualiza su nombre, correo, teléfono y rol.
+ 
+**Escenario 2:**
+Dado que el usuario edita un campo con formato inválido,
+Cuando intenta guardar,
+Entonces el sistema muestra un mensaje de error y no persiste el cambio.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US55 | Usuario | Baja | EP14 |
+ 
+**Title:** Personalizar mi foto de perfil
+ 
+**Description:** Como usuario, quiero establecer una imagen de perfil, para personalizar mi experiencia en la app.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que el usuario selecciona una imagen desde su dispositivo,
+Cuando confirma la carga,
+Entonces el sistema actualiza el avatar en todas las pantallas.
+ 
+**Escenario 2:**
+Dado que el usuario no ha cargado una imagen,
+Cuando visualiza su perfil,
+Entonces el sistema muestra un avatar predeterminado.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US56 | Usuario | Alta | EP14 |
+ 
+**Title:** Cambiar mi contraseña
+ 
+**Description:** Como usuario, quiero actualizar mi contraseña, para mantener segura mi cuenta y mis datos de salud.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que el usuario ingresa su contraseña actual correcta y una nueva contraseña válida,
+Cuando confirma el cambio,
+Entonces el sistema la actualiza y notifica el cambio por correo.
+ 
+**Escenario 2:**
+Dado que el usuario ingresa una contraseña actual errónea,
+Cuando intenta guardar,
+Entonces el sistema rechaza la operación con un mensaje de error.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US57 | Madre gestante | Media | EP14 |
+ 
+**Title:** Exportar o eliminar mis datos
+ 
+**Description:** Como madre gestante, quiero exportar o eliminar la información que la app guarda sobre mí, para ejercer control sobre mis datos personales.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que la madre solicita la exportación de sus datos,
+Cuando confirma la acción,
+Entonces el sistema genera un archivo con toda su información y lo pone a disposición.
+ 
+**Escenario 2:**
+Dado que la madre solicita eliminar su cuenta,
+Cuando confirma la acción de forma explícita,
+Entonces el sistema elimina sus datos, revoca los vínculos existentes y cierra la sesión.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US58 | Usuario | Baja | EP15 |
+ 
+**Title:** Seleccionar el idioma de la aplicación
+ 
+**Description:** Como usuario, quiero elegir el idioma de la interfaz, para usar la app en el idioma de mi preferencia.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que el usuario selecciona un idioma disponible,
+Cuando confirma la selección,
+Entonces todo el contenido de la interfaz se muestra en ese idioma.
+ 
+**Escenario 2:**
+Dado que el usuario ya eligió un idioma previamente,
+Cuando vuelve a ingresar,
+Entonces la app se muestra en el último idioma seleccionado.
+ 
+---
+ 
+| Story ID | User | Priority | Epic |
+| --- | --- | --- | --- |
+| US59 | Usuario | Baja | EP15 |
+ 
+**Title:** Ajustar el tamaño de texto y contraste
+ 
+**Description:** Como usuario, quiero ajustar el tamaño del texto y el contraste, para leer cómodamente incluso con cansancio visual.
+ 
+**Acceptance Criteria:**
+ 
+**Escenario 1:**
+Dado que el usuario modifica el tamaño de texto en la configuración,
+Cuando guarda el cambio,
+Entonces la interfaz completa se ajusta sin romper el diseño.
+ 
+---
+
+
 # Software Architecture
 
 ## 2.5.3.1. Software Architecture Context Level Diagrams
