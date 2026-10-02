@@ -154,7 +154,7 @@ La estructura alámbrica prioriza la ergonomía digital, la sencillez de uso y l
     *   *Agrupación de Contenido:* La tarjeta del semáforo implementa agrupación accesible (`android:focusable="true"` y etiqueta de accesibilidad completa), permitiendo que los lectores de pantalla (TalkBack/VoiceOver) verbalicen de forma continua: *"Estado de salud: Normal. Frecuencia cardíaca y presión dentro del rango seguro. Sincronizado hace dos minutos."*.
     *   *Zonas de Contacto:* El botón "Pasa la Voz" posee una dimensión táctil de 56 × 56 dp con una zona libre de interferencia de 8dp a su alrededor.
 
-![Wireframe PANT-01: Panel Principal de la Madre Gestante](./assets/images/helpmom-wireframe-pant01-inicio-madre.png)
+![Wireframe PANT-01: Panel Principal de la Madre Gestante](./assets/pant01.png)
 
 ##### 2. Pantalla PANT-02: "Mi Cuerpo" - Registro Clínico y Telemetría de Salud
 *   **Distribución Estructural:**
@@ -170,7 +170,7 @@ La estructura alámbrica prioriza la ergonomía digital, la sencillez de uso y l
     *   *Bordes de Alto Contraste:* Cada bloque métrico cuenta con un borde visible de 1.5dp bajo el token `md.sys.color.outline` para usuarios con agudeza visual reducida.
     *   *Anuncios Dinámicos:* El contador de movimientos fetales usa regiones dinámicas de accesibilidad (`LiveRegion="polite"`), verbalizando el nuevo conteo de patadas sin interrumpir la lectura en curso.
 
-![Wireframe PANT-02: "Mi Cuerpo" - Registro Clínico y Telemetría](./assets/images/helpmom-wireframe-pant02-mi-cuerpo-telemetria.png)
+![Wireframe PANT-02: "Mi Cuerpo" - Registro Clínico y Telemetría](./assets/pant02.png)
 
 ##### 3. Pantalla PANT-03: Asistente IA y Modal de Interrupción por Triaje de Emergencia
 *   **Distribución Estructural:**
@@ -185,7 +185,7 @@ La estructura alámbrica prioriza la ergonomía digital, la sencillez de uso y l
     *   *Atrapamiento del Foco de Accesibilidad:* El modal de emergencia retiene por completo el foco de los lectores de pantalla, impidiendo navegar por elementos de fondo hasta atender la advertencia.
     *   *Respuesta Háptica:* El dispositivo ejecuta un patrón de vibración de alerta dual para alertar a usuarias con limitaciones visuales o auditivas.
 
-![Wireframe PANT-03: Asistente IA y Modal de Interrupción por Triaje](./assets/images/helpmom-wireframe-pant03-asistente-triaje-modal.png)
+![Wireframe PANT-03: Asistente IA y Modal de Interrupción por Triaje](./assets/pant03.png)
 
 ##### 4. Pantalla PANT-04: Panel del Acompañante ("Modo Compañero")
 *   **Distribución Estructural:**
@@ -198,7 +198,7 @@ La estructura alámbrica prioriza la ergonomía digital, la sencillez de uso y l
 *   **Diseño Inclusivo y Accesibilidad (a11y):**
     *   *Privacidad de Datos Clínicos:* Los valores médicos sensibles (como la presión exacta o registros de fluidos) permanecen ocultos para el acompañante, salvo autorización explícita de la gestante mediante los ajustes de privacidad.
 
-![Wireframe PANT-04: Panel del Acompañante - Modo Compañero](./assets/images/helpmom-wireframe-pant04-panel-acompanante.png)
+![Wireframe PANT-04: Panel del Acompañante - Modo Compañero](./assets/pant04.png)
 
 ##### 5. Pantalla PANT-05: Sincronización y Vinculación mediante Código QR
 *   **Distribución Estructural:**
@@ -207,7 +207,7 @@ La estructura alámbrica prioriza la ergonomía digital, la sencillez de uso y l
 *   **Diseño Inclusivo y Accesibilidad (a11y):**
     *   *Alternativa Accesible:* El código alfanumérico escrito brinda un camino alternativo y accesible frente a la lectura óptica por cámara para usuarias con dificultades motoras o visuales.
 
-![Wireframe PANT-05: Sincronización y Vinculación mediante Código QR](./assets/images/helpmom-wireframe-pant05-vinculacion-qr.png)
+![Wireframe PANT-05: Sincronización y Vinculación mediante Código QR](./assets/pant05.png)
 
 ---
 
