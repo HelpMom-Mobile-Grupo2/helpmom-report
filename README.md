@@ -139,12 +139,113 @@ El objetivo aquí es validar el nivel de exclusión que sienten con las herramie
 
 ### 2.2.3. Análisis de entrevistas
 
-A partir de las entrevistas realizadas, se han identificado patrones claros de comportamiento y necesidades, especialmente en el segmento de padres/acompañantes, que validan la propuesta de valor central de HelpMom:
+En esta sección se analizan las entrevistas realizadas a los dos segmentos objetivo. A diferencia del registro (2.2.2), el análisis identifica patrones comunes entre los entrevistados, cuantifica la frecuencia con la que aparece cada hallazgo y lo contrasta con estadísticas oficiales y estudios realizados en el Perú, con el fin de validar si las necesidades detectadas en la muestra reflejan una realidad más amplia.
 
-1.  **Sensación de exclusión en el mercado actual:** Se evidencia una fuerte frustración en los padres primerizos, quienes se sienten relegados a un rol de "espectadores". Las herramientas y el sistema de salud tradicional se centran exclusivamente en la madre, dejando al acompañante desorientado y sin noción clara de los cuidados necesarios.
-2.  **Validación del "Modo Compañero" y Alertas Rápidas:** Existe un entusiasmo marcado por funciones que faciliten la comunicación. Recibir sugerencias accionables diarias y alertas directas ("Pasa la Voz") se percibe como una solución clave para mejorar la dinámica de pareja, reduciendo malentendidos y evitando la fricción de tener que preguntar constantemente.
-3.  **Tranquilidad a través del Monitoreo Visual:** La propuesta de traducir datos médicos a un sistema visual sencillo (semáforo IoT) es altamente valorada, ya que proporciona la paz mental necesaria para monitorear el bienestar del bebé sin generar el estrés que provocarían los datos médicos crudos.
-4.  **Disposición de Pago (Monetización):** Los entrevistados muestran una alta disposición a adquirir una suscripción premium, reconociendo que la herramienta no solo asiste en emergencias, sino que les otorga el conocimiento y la facilidad logística para convertirse en un soporte activo y ser "buenos padres".
+#### Ficha técnica de las entrevistas
+
+| Aspecto | Detalle |
+|---|---|
+| Total de entrevistas | 5 |
+| Segmento 1: Madres gestantes | 2 (Aixa Zamalloa, Sofía Ortega) |
+| Segmento 2: Padres / acompañantes | 3 (Juan Saldaña, Manuel Milla, Gabriel Mamani) |
+| Rango de edad | 20 a 28 años |
+| Distritos | Santiago de Surco (Monterrico), Pueblo Libre, Santa Anita, Lince y Rímac (Lima Metropolitana) |
+| Duración total / promedio | 30 min 33 s / 6 min 07 s por entrevista |
+| Modalidad | Virtual, grabada con consentimiento de los participantes |
+
+#### Metodología de análisis
+
+1. **Revisión de grabaciones:** se revisó cada entrevista y se extrajeron las respuestas relevantes a cada pregunta de la guía (2.2.1).
+2. **Codificación temática:** las respuestas se agruparon en categorías comunes (incertidumbre, monitoreo, comunicación en pareja, orientación diaria, privacidad y disposición de pago).
+3. **Conteo de frecuencia:** se registró qué entrevistados mencionaron cada categoría, de forma espontánea o al responder la pregunta correspondiente.
+4. **Triangulación:** cada hallazgo se contrastó con datos estadísticos y estudios del Perú para estimar su relevancia fuera de la muestra.
+
+#### Resultados por segmento
+
+**Segmento 1: Madres gestantes (n = 2)**
+
+| Hallazgo | Aixa | Sofía | Frecuencia |
+|---|:---:|:---:|:---:|
+| Ansiedad recurrente por el bienestar del bebé | ✔ | ✔ | 2/2 |
+| Valora un monitoreo en casa que le dé tranquilidad sin datos complejos | ✔ | ✔ | 2/2 |
+| Quiere orientación inmediata en horarios sin acceso a un profesional (madrugada) | ✔ | ✔ | 2/2 |
+| Quiere avisar a su pareja sin tener que explicar o redactar | ✔ | ✔ | 2/2 |
+| Olvida síntomas al llegar al control médico | ✔ | ✔ | 2/2 |
+| Exige privacidad sobre sus registros de peso y síntomas | ✔ | ✔ | 2/2 |
+| Prefiere contenido breve (videos cortos, tips) personalizado a su semana | ✔ | ✔ | 2/2 |
+| Disposición explícita a pagar una suscripción | — | ✔ | 1/2 |
+
+**Interpretación:** las dos madres coinciden en todas las necesidades centrales, lo que indica un patrón consistente. Su preocupación principal no es la falta de controles médicos, sino lo que ocurre entre un control y otro: dudas sin resolver, síntomas que se olvidan y momentos de ansiedad en los que no hay a quién consultar. La privacidad aparece como condición para adoptar la herramienta, no como un detalle secundario.
+
+**Segmento 2: Padres / acompañantes (n = 3)**
+
+| Hallazgo | Juan | Manuel | Gabriel | Frecuencia |
+|---|:---:|:---:|:---:|:---:|
+| Se siente inexperto o desorientado frente al embarazo | ✔ | ✔ | ✔ | 3/3 |
+| Se percibe como "espectador" o excluido del proceso | — | ✔ | — | 1/3 |
+| Valora recibir consejos diarios prácticos y accionables | — | ✔ | ✔ | 2/3 |
+| Quiere enterarse a tiempo de las necesidades o emergencias de su pareja | ✔ | ✔ | — | 2/3 |
+| Valora un indicador simple del estado del bebé | — | ✔ | ✔ | 2/3 |
+| Necesita guía para trámites y preparativos (bolso, clínica) | — | — | ✔ | 1/3 |
+| Disposición explícita a pagar una suscripción | ✔ | ✔ | ✔ | 3/3 |
+
+**Interpretación:** el hallazgo unánime del segmento es la desorientación. Ninguno de los acompañantes usa herramientas especializadas y dependen de su pareja, de internet o de consultas esporádicas para entender qué ocurre. Además, todos manifestaron disposición a pagar, lo que sugiere que el acompañante también puede ser comprador de la suscripción.
+
+#### Hallazgos transversales
+
+| Hallazgo | Menciones | % de la muestra |
+|---|:---:|:---:|
+| Incertidumbre o ansiedad sobre el embarazo | 5/5 | 100 % |
+| Valora un indicador visual simple del estado del bebé | 4/5 | 80 % |
+| Necesita comunicación inmediata dentro de la pareja | 4/5 | 80 % |
+| Busca orientación diaria práctica y personalizada | 4/5 | 80 % |
+| Disposición explícita a pagar una suscripción | 4/5 | 80 % |
+
+```mermaid
+xychart-beta
+    title "Hallazgos transversales en las entrevistas (n = 5)"
+    x-axis ["Incertidumbre", "Indicador visual", "Comunicación pareja", "Orientación diaria", "Disposición de pago"]
+    y-axis "% de entrevistados" 0 --> 100
+    bar [100, 80, 80, 80, 80]
+```
+
+#### Contraste con datos estadísticos del Perú
+
+**1. La incertidumbre es generalizada en las gestantes.**
+En las entrevistas, ambas madres describieron ansiedad recurrente por el bienestar del bebé. Este hallazgo coincide con un estudio realizado en un centro de salud de San Martín de Porres (Lima), donde el 69,9 % de las gestantes presentó ansiedad prenatal y el 24,2 % ansiedad moderada a severa. La ansiedad fue mayor en el primer trimestre (72,8 %) y en el tercero (78,0 %) (Salgado-Contreras et al., 2023).
+
+**2. El problema no es el acceso al control prenatal, sino el tiempo entre controles.**
+Según la ENDES 2025, el 90,0 % de las gestantes del país recibió seis o más controles prenatales en su último embarazo (88,3 % en Lima Metropolitana), y el 81,7 % tuvo su primer control durante el primer trimestre (Instituto Nacional de Estadística e Informática [INEI], 2026b). Es decir, la mayoría sí accede a sus controles. Sin embargo, estos se distribuyen a lo largo de nueve meses, y es en los intervalos entre citas donde surgen las dudas que relataron las entrevistadas. Un estudio en 15 centros de salud de Lima encontró que las gestantes recurren a su entorno social para resolver dudas sobre el embarazo y valoran recibir información oportuna, personalizada y en un entorno cálido y seguro, incluso mediante tecnologías digitales (Pérez-Lu et al., 2018).
+
+**3. Reconocer a tiempo una emergencia es crítico.**
+Las madres valoraron un sistema que las derive a emergencias si detecta algo grave, y dos acompañantes quieren enterarse a tiempo si ocurre una urgencia. En 2024, el 31,1 % de las muertes maternas en el Perú ocurrió fuera de un establecimiento de salud: 17,6 % en el domicilio y 11,9 % en el trayecto. Además, el 29,5 % ocurrió durante el embarazo. La hemorragia obstétrica (20,4 %) y los trastornos hipertensivos (17,9 %) fueron las principales causas directas (Centro Nacional de Epidemiología, Prevención y Control de Enfermedades [CDC Perú], 2025). Estas cifras respaldan la necesidad de orientar a la familia sobre cuándo acudir a un centro de salud.
+
+**4. El celular es un canal viable para ambos segmentos.**
+Todos los entrevistados propusieron soluciones basadas en el celular. En el cuarto trimestre de 2025, el 98,4 % de los hogares de Lima Metropolitana tenía telefonía móvil y el 90,3 % de su población de 6 años a más usaba internet. A nivel nacional, el 93,6 % de las personas de 25 a 40 años usó internet, el 89,2 % de los usuarios se conectó mediante el celular y el 93,2 % lo hizo a diario. Las actividades principales fueron comunicarse (91,2 %) y obtener información (75,9 %) (INEI, 2026a).
+
+#### Conclusiones del análisis
+
+- **Incertidumbre en ambos roles:** la incertidumbre durante el embarazo afecta a la madre y al acompañante. En la madre se manifiesta como ansiedad, y en el acompañante como desorientación sobre cómo actuar.
+- **Necesidad entre controles:** la necesidad central no está en el control médico, que la mayoría ya cumple, sino entre controles, donde no existe un canal de orientación inmediata.
+- **Conocimiento del acompañante:** el acompañante quiere participar, pero no sabe cómo hacerlo. Ninguno de los tres usa herramientas pensadas para él.
+- **Privacidad:** es una condición de adopción para las madres. La información que se comparta con la pareja debe ser decidida por ella.
+- **Disposición de pago:** el 80 % de los entrevistados expresó disposición a pagar, incluidos todos los acompañantes. Esto respalda el modelo de suscripción y la modalidad de suscripción regalada.
+
+#### Limitaciones
+
+La muestra es pequeña (5 entrevistas) y se concentra en Lima Metropolitana, por lo que los porcentajes describen a los entrevistados y no son representativos de toda la población. Por ello, los hallazgos se contrastaron con fuentes estadísticas nacionales. Se recomienda ampliar la muestra en futuras iteraciones de validación.
+
+#### Referencias
+
+Centro Nacional de Epidemiología, Prevención y Control de Enfermedades. (2025). *Situación de la mortalidad materna 2025 (SE 26)* [Diapositivas]. Ministerio de Salud del Perú. https://www.dge.gob.pe/portal/docs/tools/teleconferencia/2025/SE272025/03.pdf
+
+Instituto Nacional de Estadística e Informática. (2026a). *Estadísticas de las tecnologías de información y comunicación en los hogares: IV trimestre 2025* (Informe Técnico N.° 01). https://www.inei.gob.pe/media/MenuRecursivo/boletines/boletin-tic-oct_dic2025.pdf
+
+Instituto Nacional de Estadística e Informática. (2026b). *Perú: Encuesta Demográfica y de Salud Familiar 2025. Nacional y departamental*. https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib2089/libro.pdf
+
+Pérez-Lu, J. E., Bayer, A. M., & Iguiñiz-Romero, R. (2018). Information = equity? How increased access to information can enhance equity and improve health outcomes for pregnant women in Peru. *Journal of Public Health, 40*(Suppl. 2), ii64–ii73. https://doi.org/10.1093/pubmed/fdy177
+
+Salgado-Contreras, R. M., Torres-Chauca, M. L., Salazar-Campos, R. M., Bolívar-Renón, J. L., Quispe-Alosilla, Y., & Chilipio-Chiclla, M. A. (2023). Nivel de ansiedad según el trimestre del embarazo en un establecimiento de salud de atención primaria. *Ginecología y Obstetricia de México, 91*(7), 469–478. https://doi.org/10.24245/gom.v91i7.8163
 
 ## 2.3. Needfinding
 
