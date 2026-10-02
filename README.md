@@ -294,19 +294,19 @@ El diseño visual de alta fidelidad concreta los esquemas anteriores mediante **
     *   *Jerarquía Visual:* La zona superior presenta la tarjeta de evolución gestacional en un fondo degradado suave (`#E9F0F8` a `#FBFBFC`). El texto destaca: *"Semana 24: Tu bebé tiene el tamaño de una papaya"*, acompañado por una ilustración acogedora de bordes redondeados. Debajo, la tarjeta de telemetría atrae la atención con una pastilla verde claro (`#E8F5E9`) y texto esmeralda oscuro (`#2E7D32`): *"Estado Estable: Signos vitales dentro de parámetros normales"*.
     *   *Composición de Componentes:* Tarjetas con padding interno de 16dp y respuesta táctil mediante efecto ondulante (*ripple*). El botón flotante "Pasa la Voz" resalta en azul pervinca (`#4A6FA5`) sobre la barra de navegación inferior, facilitando su accionamiento con una sola mano.
 
-![Mock-up PANT-01: Inicio de la Gestante en Estado Normal](./assets/images/helpmom-mockup-pant01-inicio-gestante-normal.png)
+![Mock-up PANT-01: Inicio de la Gestante en Estado Normal](./assets/pant01.png)
 
 *   **Mock-up 02: Modal de Triaje de Emergencia (Estado Crítico / Semáforo Rojo)**
     *   *Jerarquía Visual:* Toda la interfaz queda cubierta por una capa oscura con tinte rojizo (`#2A0808`) al 80% de opacidad. En el centro emerge un diálogo modal elevado con esquinas redondeadas de 24dp y una insignia circular roja (`#C62828`) con un icono blanco de advertencia médica.
     *   *Composición de Componentes:* Encabezado destacado en tipografía **Headline Small**: *"Atención Requerida: Posible Emergencia"*. El cuerpo de texto brinda indicaciones claras y comprensibles. El botón principal es rojo sólido (`#C62828`) con texto blanco: *"Llamar a Urgencias Médicas"* e icono de llamada directa. Debajo se sitúa un botón secundario con borde visible: *"Enviar alerta SOS a Mateo"*, y al final una acción de texto de bajo énfasis para descartar el diálogo.
 
-![Mock-up PANT-03: Modal de Interrupción por Triaje de Emergencia](./assets/images/helpmom-mockup-pant03-modal-triaje-emergencia.png)
+![Mock-up PANT-03: Modal de Interrupción por Triaje de Emergencia](./assets/pant03.png)
 
 *   **Mock-up 03: Panel del Modo Compañero (Perspectiva de Mateo)**
     *   *Jerarquía Visual:* Se distingue del panel de la madre por un friso cálido en color terracota (`#E07A5F`) en la barra superior, indicando claramente la vista **"Modo Compañero"**.
     *   *Composición de Componentes:* La tarjeta de empatía sintetiza el estado anímico y físico general de la madre sin exponer datos médicos confidenciales. El componente *"Misión de Apoyo de Hoy"* despliega una lista interactiva de tareas con casillas redondeadas. Al activarse una alerta "Pasa la Voz", la parte superior de la pantalla se transforma en un aviso dinámico con opciones de respuesta en un solo toque: *"Voy en camino (5 min)"*, *"Llamándote ahora"* y *"Ya me encargué"*.
 
-![Mock-up PANT-04: Panel del Modo Compañero](./assets/images/helpmom-mockup-pant04-panel-modo-companero.png)
+![Mock-up PANT-04: Panel del Modo Compañero](./assets/pant04.png)
 
 ---
 
