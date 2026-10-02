@@ -31,8 +31,8 @@ La identidad de marca de HelpMom comunica **protección cercana, fiabilidad clí
 
 La jerarquía tipográfica emplea **Plus Jakarta Sans** como familia tipográfica principal debido a sus proporciones geométricas modernas, generosas aperturas y excelente legibilidad en pantallas móviles de alta densidad. Como alternativa predeterminada del sistema en entornos nativos de Android, se establece la fuente **Roboto**.
 
-![Escala Tipográfica y Muestrario de Plus Jakarta Sans](./assets/tip01.png)
-![Escala Tipográfica y Muestrario de Plus Jakarta Sans](./assets/tip02.png)
+![Escala Tipográfica y Muestrario de Plus Jakarta Sans](./assets/tipo01.png)
+![Escala Tipográfica y Muestrario de Plus Jakarta Sans](./assets/tipo02.png)
 
 La escala tipográfica sigue formalmente el estándar de **Material Design 3**, asegurando una legibilidad óptima bajo distintas condiciones lumínicas (por ejemplo, consultas en la madrugada o visualización bajo luz solar directa).
 
