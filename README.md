@@ -291,11 +291,22 @@ Sin embargo, hemos observado que este objetivo no se cumple en la experiencia ac
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
-- **Creemos que** lograremos una mayor adopción inicial y retención de nuevas usuarias **si** ofrecemos una prueba gratuita de 14 días con acceso parcial al Asistente IA. Al permitir que las madres experimenten la tranquilidad de obtener respuestas inmediatas a sus dudas rutinarias, se aumentará la conversión a planes pagos.
-- **Creemos que** aumentaremos la satisfacción de los padres/acompañantes y su participación activa **si** implementamos el "Modo Compañero" con la "Guía diaria". Al recibir tips accionables y sin tecnicismos, se facilitará su involucramiento y se reducirá la fricción en la comunicación de la pareja.
-- **Creemos que** fortaleceremos la confianza de las usuarias y reduciremos el riesgo de la IA **si** implementamos el "Triage Inteligente". Al asegurar que el sistema bloquee la conversación y emita un modal de emergencia ante palabras clave críticas, demostraremos que la plataforma prioriza su seguridad física por encima de todo.
-- **Creemos que** aumentaremos la fidelidad y el uso recurrente **si** implementamos el "Sistema de Semáforos" para la lectura IoT en lugar de gráficos complejos. Al traducir la data a mensajes tranquilizadores, reduciremos la ansiedad característica del monitoreo de salud constante.
-- **Creemos que** mejoraremos el bienestar emocional de la gestante **si** activamos las "Píldoras de Autoestima" y las alertas "Pasa la Voz". Con estas microinteracciones, la plataforma pasará de ser una herramienta clínica a un verdadero soporte de acompañamiento diario.
+Las siguientes hipótesis buscan responder al problema planteado: la incertidumbre constante que viven las madres gestantes y sus acompañantes durante el embarazo. Cada hipótesis sigue la estructura *Creemos que [hacer esto] para [estas personas] logrará [este resultado]. Sabremos que esto es cierto cuando veamos [este feedback del mercado]*, e incluye indicadores cuantitativos y cualitativos para su validación.
+
+- **Creemos que** ofrecer un asistente conversacional disponible las 24 horas, con respuestas adaptadas a la semana de gestación, **para** madres gestantes primerizas, **logrará** que resuelvan sus dudas cotidianas en el momento en que surgen, sin quedarse con la incertidumbre hasta su próximo control.
+  **Sabremos que esto es cierto cuando veamos** que al menos el 70 % de las usuarias activas realiza 3 o más consultas por semana durante el primer mes, y que en las entrevistas de seguimiento manifiestan haber dejado de buscar sus síntomas en internet.
+
+- **Creemos que** mostrar el estado del bebé mediante indicadores visuales simples (verde, amarillo o rojo), en lugar de valores numéricos, **para** madres gestantes que monitorean a su bebé desde casa, **logrará** que se sientan tranquilas respecto al bienestar del bebé.
+  **Sabremos que esto es cierto cuando veamos** que el nivel de ansiedad autorreportado (escala del 1 al 5, medido al ingresar y a las 4 semanas de uso) disminuye en al menos 1 punto en el 60 % de las usuarias, y que describen la consulta del estado del bebé con términos como "tranquilidad" o "alivio".
+
+- **Creemos que** entregar un consejo diario accionable y una explicación sin tecnicismos de los cambios de cada semana **para** acompañantes primerizos **logrará** que sepan qué está ocurriendo en el embarazo y cómo apoyar a su pareja cada día.
+  **Sabremos que esto es cierto cuando veamos** que al menos el 60 % de los acompañantes vinculados marca 4 o más consejos como realizados por semana, y que en las entrevistas de seguimiento dejan de describir su rol como el de un "espectador".
+
+- **Creemos que** permitir que la madre comunique una necesidad cotidiana (náuseas, antojo, descanso) con un solo toque **para** madres gestantes y sus acompañantes **logrará** que la pareja conozca a tiempo cómo se siente la madre, sin preguntas repetitivas ni molestias soportadas en silencio.
+  **Sabremos que esto es cierto cuando veamos** que el 80 % de las alertas enviadas son confirmadas por el acompañante en menos de 15 minutos, y que las madres reportan en encuestas que expresan con mayor frecuencia sus malestares a su pareja.
+
+- **Creemos que** detectar señales de riesgo en las consultas de la madre y orientarla de inmediato hacia atención médica **para** madres gestantes **logrará** que sepan con claridad cuándo una situación requiere acudir a emergencias y cuándo es una molestia normal del embarazo.
+  **Sabremos que esto es cierto cuando veamos** que, en pruebas de usabilidad con escenarios simulados, al menos el 90 % de las participantes identifica correctamente cuándo debe acudir a un centro de salud, y que califican su confianza en la orientación recibida con un promedio de 4 o más sobre 5.
 
 ## Segmentos Objetivo
 
