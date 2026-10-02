@@ -16,7 +16,8 @@ La arquitectura visual y de interacción de **HelpMom** se fundamenta en el para
 
 La identidad de marca de HelpMom comunica **protección cercana, fiabilidad clínica y colaboración activa de la pareja**. El emblema principal integra la silueta orgánica de dos trazos continuos entrelazados que representan a la madre y al acompañante envolviendo al feto en desarrollo, enmarcados en un escudo protector abierto y acogedor.
 
-![Logotipo e Identidad Visual de HelpMom](./assets/images/helpmom-branding-logo.png)
+![Logotipo e Identidad Visual de HelpMom](./assets/logo01.png)
+![Logotipo e Identidad Visual de HelpMom](./assets/logo02.png)
 
 *   **Propuesta de Valor de la Marca:** "HelpMom: Paz mental conectada durante la gestación".
 *   **Pilares de Diseño:**
@@ -30,7 +31,8 @@ La identidad de marca de HelpMom comunica **protección cercana, fiabilidad clí
 
 La jerarquía tipográfica emplea **Plus Jakarta Sans** como familia tipográfica principal debido a sus proporciones geométricas modernas, generosas aperturas y excelente legibilidad en pantallas móviles de alta densidad. Como alternativa predeterminada del sistema en entornos nativos de Android, se establece la fuente **Roboto**.
 
-![Escala Tipográfica y Muestrario de Plus Jakarta Sans](./assets/images/helpmom-typography-scale.png)
+![Escala Tipográfica y Muestrario de Plus Jakarta Sans](./assets/tip01.png)
+![Escala Tipográfica y Muestrario de Plus Jakarta Sans](./assets/tip02.png)
 
 La escala tipográfica sigue formalmente el estándar de **Material Design 3**, asegurando una legibilidad óptima bajo distintas condiciones lumínicas (por ejemplo, consultas en la madrugada o visualización bajo luz solar directa).
 
@@ -56,7 +58,7 @@ La escala tipográfica sigue formalmente el estándar de **Material Design 3**, 
 
 La paleta cromática utiliza los esquemas tonales de Material Design 3, complementados con extensiones semánticas específicas para el **Sistema de Semáforo de Telemetría de Salud**. Todas las combinaciones de contraste entre texto y fondo cumplen estrictamente las directrices **WCAG 2.1 Nivel AA** (relación mínima de contraste de 4.5:1 para texto normal y de 3:1 para componentes de interfaz e iconografía grande), alcanzando el estándar **Nivel AAA** (7:1) en las superficies críticas de emergencia.
 
-![Paleta de Colores y Tokens Semánticos de Material Design 3](./assets/images/helpmom-color-palette.png)
+![Paleta de Colores y Tokens Semánticos de Material Design 3](./assets/colores01.png)
 
 ```
 [ Color Primario: #4A6FA5 ]      --> Azul Pervinca Calmante
@@ -90,7 +92,8 @@ La paleta cromática utiliza los esquemas tonales de Material Design 3, compleme
 
 El diseño de la app se estructura a partir de un **sistema de cuadrícula de 8 puntos**, complementado por una **sub-cuadrícula de 4dp** para el ajuste fino de iconos, alineación tipográfica y micropaddings.
 
-![Sistema de Cuadrícula de 8 Puntos y Espaciados](./assets/images/helpmom-grid-spacing.png)
+![Sistema de Cuadrícula de 8 Puntos y Espaciados](./assets/grid01.png)
+![Sistema de Cuadrícula de 8 Puntos y Espaciados](./assets/grid02.png)
 
 *   **Márgenes Laterales de Pantalla:** Fijados en `16dp` para dispositivos compactos (ancho de ventana menor a 360dp) y en `20dp` para pantallas móviles estándar (360dp a 412dp).
 *   **Sistema de Columnas:** Disposición responsiva de 4 columnas para teléfonos móviles con medianiles (*gutters*) de `16dp`.
