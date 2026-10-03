@@ -51,3 +51,13 @@ El proceso de integración y despliegue continuo (CI/CD) está automatizado para
 
 * **Despliegue Frontend (Web):** La Landing Page y las aplicaciones web están conectadas directamente a Vercel. La plataforma detecta automáticamente los cambios en el repositorio de GitHub, ejecutando el proceso de build de Next.js y generando URLs de vista previa (Preview Deployments) por cada Pull Request. Las fusiones a la rama `main` disparan automáticamente un despliegue en el dominio de producción.
 * **Despliegue Backend:** Los servicios en C#/.NET y Node.js se despliegan en instancias de la nube mediante canalizaciones automatizadas, garantizando que los Bounded Contexts operen de forma aislada y segura, respondiendo únicamente a las peticiones autorizadas (vía JWT) de las aplicaciones cliente.
+
+### 4.2.1.8. Software Deployment Evidence for Sprint Review
+
+Como parte del cierre del Sprint, se evidencia que los incrementos de software desarrollados (Landing Page interactiva) han sido desplegados exitosamente y se encuentran operativos en un entorno público. El pipeline de integración continua de Vercel completó el proceso de compilación sin errores, asignando certificados SSL para navegación segura (HTTPS).
+
+![Evidencia de Despliegue 1](./assets/evidencia_1.png) 
+
+![Evidencia de Despliegue 2](./assets/evidencia_2.png)
+
+**Link Landing-Page:** [https://help-mom-landing-page.vercel.app/](https://help-mom-landing-page.vercel.app/)
