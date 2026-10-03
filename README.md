@@ -477,6 +477,35 @@ El contenido de la landing se organiza por tópicos temáticos agrupados por afi
 *   **Madres Gestantes:** Acceso a la vista Inicio ("Tu Embarazo"), Mi Cuerpo (Salud y síntomas), Aprendizaje (Academia), Asistente IA (Chat 24/7), y emisión de Alertas Rápidas ("Pasa la Voz").
 *   **Padres / Acompañantes:** Acceso a la interfaz adaptada (Modo Compañero), recepción de Alertas Rápidas, visualización del estado resumido del bebé (Sistema de Semáforo), y Guía Diaria de microconsejos ("Tips para Papá").
 
+### 3.1.2.2. Labelling Systems
+
+El sistema de etiquetas de HelpMom prioriza la empatía, la claridad y la reducción de la ansiedad. Las etiquetas emplean un lenguaje cotidiano, cálido y tranquilizador en lugar de terminología médica compleja o datos crudos que puedan generar estrés en los futuros padres.
+
+**Ejemplos de Etiquetas**
+
+| Elemento | Etiqueta | Tipo |
+| :--- | :--- | :--- |
+| Pestaña principal de monitoreo | Inicio (Tu Embarazo) | Navegación |
+| Pestaña de registro clínico | Mi Cuerpo (Salud) | Navegación |
+| Pestaña de contenido educativo | Aprendizaje (Academia) | Navegación |
+| Pestaña de soporte conversacional | Asistente IA (Chat) | Navegación |
+| Botón de alerta al acompañante | Pasa la Voz | Acción |
+| Botón para iniciar lectura IoT | Iniciar medición | Acción |
+| Botón de alerta en Triage | Llamar a emergencias | Acción |
+| Botón para enviar necesidad física | Tengo un antojo / Necesito descansar | Acción |
+| Estado del sensor IoT sin riesgo | Estado Verde (Regular) | Estado |
+| Estado del sensor IoT dudoso | Estado Amarillo (Poco confiable) | Estado |
+| Estado del sensor IoT con riesgo | Alerta Roja (Urgente) | Estado |
+| Sección de consejos para el acompañante | Tips para Papá | Label |
+| Notificaciones de soporte emocional | Píldoras de Autoestima | Label |
+| Notificaciones de desarrollo fetal | Hitos del Bebé | Label |
+
+**Asociaciones**
+
+Las etiquetas mantienen una correspondencia estricta con los estados de salud y emocionales para evitar ambigüedad y pánico. El estado **"Verde"** siempre se asocia a mensajes de paz mental (*"Los latidos de tu bebé son regulares hoy"*), evitando mostrar ondas cardíacas complejas. El estado **"Amarillo"** nunca se presenta como un riesgo clínico, sino como una instrucción de *"reposo y reposicionamiento del sensor"*. 
+
+En la comunicación de pareja, las etiquetas de **"Pasa la Voz"** traducen necesidades físicas en botones directos (*"Tengo náuseas"*, *"Necesito un masaje"*), evitando que la madre tenga que redactar textos explicativos. Por su parte, en el Modo Compañero, las etiquetas como **"Tips para Papá"** están asociadas a acciones concretas de apoyo, traduciendo directamente los cambios hormonales de la madre en tareas realizables.
+
 
 
 
