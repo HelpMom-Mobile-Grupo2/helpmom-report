@@ -585,3 +585,23 @@ Cada marco de trabajo dentro del archivo de Figma se rotula formalmente conforme
 ### 3.1.3. Landing Page UI Design
 
 El diseño de la Landing Page de HelpMom tiene como propósito principal la captación de usuarios (madres gestantes y profesionales de la salud) y la presentación clara de la propuesta de valor del sistema. Se priorizó una estructura visual limpia, intuitiva y orientada a la conversión, facilitando el acceso rápido a los planes de suscripción y a los canales de contacto directo.
+
+#### 3.1.3.1. Landing Page Wireframe 
+
+La estructura en baja fidelidad (wireframe) define la distribución jerárquica del contenido sin distracciones visuales, enfocándose puramente en la arquitectura de la información y la usabilidad. Se determinó el siguiente esquema de navegación vertical:
+
+* **Hero Section:** Título de impacto, subtítulo explicativo y botones principales de llamado a la acción.
+* **Nosotros y Productos:** Cuadrícula estructurada para destacar funcionalidades clave (Monitoreo IoT, Triage Inteligente, Modo Compañero y Expediente Clínico).
+* **Planes:** Tablas comparativas para las diferentes opciones de suscripción.
+* **Preguntas Frecuentes (FAQ):** Sistema de acordeón para resolver dudas comunes sin saturar la pantalla.
+* **Contacto y Footer:** Formulario rápido de recolección de datos y enlaces legales.
+
+![Wireframe Hero Section](./assets/WireFrame1LP.png)
+
+![Wireframe Nosotros y Productos](./assets/WireFrame2LP.png)
+
+![Wireframe Planes](./assets/WireFrame3LP.png)
+
+![Wireframe Preguntas Frecuentes](./assets/Wireframe4LP.png)
+
+![Wireframe Contacto y Footer](./assets/WireFrame5LP.png)
