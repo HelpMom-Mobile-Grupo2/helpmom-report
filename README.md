@@ -537,7 +537,19 @@ Sistema de búsqueda implementado en:
 
 
 
+### 3.1.2.5. Navigation Systems
 
+**Landing Page:**
+*   Navegación de una sola página con una barra superior fija que contiene el logotipo, enlaces a las secciones principales (Nosotros, Productos, Planes, FAQ, Contacto) y botones de llamado a la acción para iniciar sesión o registrarse.
+*   En resolución móvil, los enlaces colapsan en un menú hamburguesa para optimizar la visualización y usabilidad.
+
+**Aplicación Móvil (Madre Gestante):**
+*   Arquitectura de navegación centralizada en una barra inferior fija (Bottom Bar) de cuatro elementos principales: Inicio (Tu Embarazo), Mi Cuerpo (Salud), Aprendizaje (Academia) y Asistente IA (Chat).
+*   Las alertas rápidas ("Pasa la Voz") se activan mediante botones de acción directa en la pantalla principal. Las situaciones de emergencia detectadas por el Triage Inteligente bloquean la navegación regular del sistema, forzando la aparición de un modal rojo a pantalla completa que requiere una acción inmediata (llamar a emergencias o al contacto de confianza).
+
+**Aplicación Móvil (Padre / Acompañante):**
+*   Barra inferior de navegación adaptada específicamente a su rol mediante el Modo Compañero.
+*   Mantiene la misma jerarquía y estructura que la vista de la madre, pero restringe el acceso al expediente clínico privado, enfocando la navegación en el estado resumido del sensor IoT, la recepción de Alertas Rápidas y la Guía Diaria ("Tips para Papá").
 
 
 ##### 2. Trazabilidad con la Arquitectura de Información
