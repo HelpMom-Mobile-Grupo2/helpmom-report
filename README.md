@@ -44,3 +44,10 @@ Los mensajes de commit se redactan en inglés, utilizando un verbo en imperativo
 
 **Formateo Automático:** 
 Uso de Prettier configurado en el guardado automático (format on save) para garantizar una indentación uniforme (2 espacios) y la estandarización de comillas y puntos y comas.
+
+### 4.1.4. Software Deployment Configuration
+
+El proceso de integración y despliegue continuo (CI/CD) está automatizado para minimizar la intervención manual y asegurar que las actualizaciones lleguen rápidamente a los usuarios.
+
+* **Despliegue Frontend (Web):** La Landing Page y las aplicaciones web están conectadas directamente a Vercel. La plataforma detecta automáticamente los cambios en el repositorio de GitHub, ejecutando el proceso de build de Next.js y generando URLs de vista previa (Preview Deployments) por cada Pull Request. Las fusiones a la rama `main` disparan automáticamente un despliegue en el dominio de producción.
+* **Despliegue Backend:** Los servicios en C#/.NET y Node.js se despliegan en instancias de la nube mediante canalizaciones automatizadas, garantizando que los Bounded Contexts operen de forma aislada y segura, respondiendo únicamente a las peticiones autorizadas (vía JWT) de las aplicaciones cliente.
