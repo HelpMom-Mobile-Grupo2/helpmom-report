@@ -506,6 +506,19 @@ Las etiquetas mantienen una correspondencia estricta con los estados de salud y 
 
 En la comunicación de pareja, las etiquetas de **"Pasa la Voz"** traducen necesidades físicas en botones directos (*"Tengo náuseas"*, *"Necesito un masaje"*), evitando que la madre tenga que redactar textos explicativos. Por su parte, en el Modo Compañero, las etiquetas como **"Tips para Papá"** están asociadas a acciones concretas de apoyo, traduciendo directamente los cambios hormonales de la madre en tareas realizables.
 
+### 3.1.2.3. SEO Tags and Meta Tags
+
+**Landing Page**
+*   **Title:** "HelpMom — Monitoreo de embarazo inteligente, Asistente IA 24/7 y Modo Compañero"
+*   **Meta description:** "Acompañamiento integral para tu embarazo. Monitorea la salud de tu bebé sin estrés mediante IoT, resuelve dudas de rutina 24/7 con Inteligencia Artificial y conecta a tu pareja de forma activa."
+*   **Keywords:** "embarazo, monitoreo fetal IoT, asistente IA embarazo, app para embarazadas, modo compañero, reducción de ansiedad prenatal, salud materno-infantil, maternidad, control gestacional, HelpMom, WebExpert"
+*   **Author:** WebExpert
+
+**Aplicación Móvil**
+*   **Title:** "HelpMom — Tu embarazo seguro y sin estrés"
+*   **Meta description:** "Vive tu embarazo con tranquilidad. Monitorea a tu bebé con nuestro semáforo visual IoT, resuelve tus dudas a cualquier hora con nuestro asistente IA y envía alertas rápidas a tu acompañante."
+
+
 
 
 
