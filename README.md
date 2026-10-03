@@ -581,3 +581,7 @@ Arquitectura de la Información de HelpMom
 ```
 
 Cada marco de trabajo dentro del archivo de Figma se rotula formalmente conforme a esta jerarquía estructural (ej. `MARCO-1.2-TELEMETRIA-NORMAL`, `MARCO-3.2-TRIAJE-MODAL-CRITICO`), garantizando una trazabilidad rigurosa entre la especificación de requisitos del software, los diagramas de arquitectura C4 y la posterior implementación en código fuente con Kotlin para Android.
+
+### 3.1.3. Landing Page UI Design
+
+El diseño de la Landing Page de HelpMom tiene como propósito principal la captación de usuarios (madres gestantes y profesionales de la salud) y la presentación clara de la propuesta de valor del sistema. Se priorizó una estructura visual limpia, intuitiva y orientada a la conversión, facilitando el acceso rápido a los planes de suscripción y a los canales de contacto directo.
