@@ -519,6 +519,23 @@ En la comunicación de pareja, las etiquetas de **"Pasa la Voz"** traducen neces
 *   **Meta description:** "Vive tu embarazo con tranquilidad. Monitorea a tu bebé con nuestro semáforo visual IoT, resuelve tus dudas a cualquier hora con nuestro asistente IA y envía alertas rápidas a tu acompañante."
 
 
+### 3.1.2.4. Searching Systems
+
+Sistema de búsqueda implementado en:
+
+**Búsqueda por texto libre:**
+*   Opera sobre la sección de "Aprendizaje", realizando búsquedas mediante palabras clave en los títulos de artículos, videos y tips diarios.
+*   Devuelve resultados por relevancia, mostrando únicamente los contenidos relacionados que ya se encuentran disponibles para la etapa gestacional actual de la usuaria. En caso de no encontrar coincidencias, el sistema sugiere derivar la duda al Asistente IA.
+
+**Filtrado por facetas:**
+*   Permite refinar el contenido educativo por categorías temáticas específicas (ej. nutrición, ejercicios prenatales, preparación para el parto).
+*   En el módulo de configuración, permite filtrar y ajustar las preferencias de notificaciones, decidiendo qué tipo de alertas recibir (hitos, píldoras de autoestima) sin bloquear nunca las alertas críticas de emergencia.
+
+**Ordenamiento:**
+*   Permite ordenar de forma cronológica (lo más reciente primero) los registros clínicos en el historial de "Mi Cuerpo", el historial de mediciones del sensor IoT y los mensajes previos en el historial de conversaciones con el Asistente IA.
+*   El feed de aprendizaje prioriza el ordenamiento por desbloqueo dinámico, destacando en la parte superior el contenido educativo y los tips correspondientes a la semana exacta de gestación en la que se encuentre la madre.
+
+
 
 
 
