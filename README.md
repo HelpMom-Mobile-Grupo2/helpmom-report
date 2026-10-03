@@ -605,3 +605,19 @@ La estructura en baja fidelidad (wireframe) define la distribución jerárquica 
 ![Wireframe Preguntas Frecuentes](./assets/Wireframe4LP.png)
 
 ![Wireframe Contacto y Footer](./assets/WireFrame5LP.png)
+
+
+#### 3.1.3.2. Landing Page Mock-up 
+
+El diseño de alta fidelidad aplica la identidad visual completa del proyecto utilizando el framework Tailwind CSS. Se emplea la paleta de colores corporativa, destacando el rosa pastel (`#FADADD`) para evocar un entorno de cuidado maternal, contrastando con el rosa vivo (`#F79AB0`) para los botones principales y llamados a la acción. Las tipografías seleccionadas, Poppins y Nunito, garantizan una legibilidad óptima y un tono amigable. El diseño es completamente responsivo, adaptándose a dispositivos de escritorio y móviles. 
+
+![Mock-up Hero Section](./assets/mockup_1.png)
+
+![Mock-up Nosotros y Productos](./assets/mockup_2.png)
+
+![Mock-up Planes](./assets/mockup_3.png)
+
+![Mock-up Preguntas Frecuentes](./assets/mockup_4.png)
+
+![Mock-up Contacto y Footer](./assets/mockup_5.png)
+
