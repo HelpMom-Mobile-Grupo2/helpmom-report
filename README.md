@@ -435,7 +435,8 @@ flowchart TD
 
 El prototipo interactivo en Figma plasma la experiencia de uso para ambos roles (Madre Gestante y Acompañante), enlazando la arquitectura de información con patrones de interacción reales.
 
-![Mapa de Navegación del Prototipo Interactivo en Figma](./assets/images/helpmom-figma-interactive-prototype-map.png)
+![Mapa de Navegación del Prototipo Interactivo en Figma](./assets/figma.png)
+[Link Figma:](https://www.figma.com/design/GdPAPqx90p8nJ1uwNE6deg/Helpmom-prototipo?node-id=0-1&t=WO5PQndDSDDRFQ3h-1)
 
 ##### 1. Criterios de Creación de Prototipos y Microinteracciones
 
