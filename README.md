@@ -451,6 +451,36 @@ El prototipo interactivo en Figma plasma la experiencia de uso para ambos roles 
     *   *Selector del Semáforo de Telemetría:* El prototipo incluye una variante de prueba interactiva: un botón de depuración oculto permite conmutar el estado del semáforo entre **Normal (Verde)**, **Precaución (Ámbar)** y **Crítico (Rojo)** para evaluar la usabilidad en cada escenario.
     *   *Botones de Respuesta Rápida del Acompañante:* Al pulsar un botón de respuesta en `PANT-04` (*"Voy en camino"*), el elemento cambia al estado de confirmación (`"Respondido ✓"`) en **150ms**, generando a su vez una notificación de confirmación en la vista de la madre.
 
+### 3.1.2. Information Architecture
+
+La arquitectura de información de HelpMom organiza el contenido tanto en la landing page como en la aplicación móvil, priorizando la reducción de estrés y el acceso rápido a funcionalidades clave.
+
+**Jerárquico (Visual Hierarchy)**
+*   La landing page aplica jerarquía visual descendente desde la propuesta de valor general hacia los detalles específicos por segmento (Monitoreo IoT, Triage IA, Modo Compañero, Expediente Clínico).
+*   En la aplicación móvil, la jerarquía visual organiza cada pantalla en tres zonas: encabezado de navegación, área de contenido principal y barra de navegación inferior fija (Bottom Bar Navigation).
+
+**Secuencial (Step-by-Step):** Implementado en:
+*   Proceso de registro unificado y redirección por rol.
+*   Configuración inicial (Ingreso de Fecha de Última Menstruación para cálculo gestacional).
+*   Vinculación del Modo Compañero (Generación y escaneo de código QR).
+*   Emparejamiento y captura de lecturas del sensor IoT.
+*   Flujo de Triage de Emergencia (Detección IA > Bloqueo > Modal Rojo > Llamada directa).
+
+**Por Tópicos**
+El contenido de la landing se organiza por tópicos temáticos agrupados por afinidad:
+*   Propuesta de valor (Hero Section).
+*   Soluciones funcionales (Monitoreo IoT, Triage Inteligente, Modo Compañero, Expediente clínico).
+*   Planes y Monetización (Básico vs. Cuidado Integral).
+*   Preguntas Frecuentes (Seguridad, confiabilidad de la IA y hardware).
+
+**Según Audiencia**
+*   **Madres Gestantes:** Acceso a la vista Inicio ("Tu Embarazo"), Mi Cuerpo (Salud y síntomas), Aprendizaje (Academia), Asistente IA (Chat 24/7), y emisión de Alertas Rápidas ("Pasa la Voz").
+*   **Padres / Acompañantes:** Acceso a la interfaz adaptada (Modo Compañero), recepción de Alertas Rápidas, visualización del estado resumido del bebé (Sistema de Semáforo), y Guía Diaria de microconsejos ("Tips para Papá").
+
+
+
+
+
 ##### 2. Trazabilidad con la Arquitectura de Información
 
 El prototipo refleja de manera directa los cinco dominios funcionales definidos en el diseño del sistema:
