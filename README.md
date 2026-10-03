@@ -25,3 +25,22 @@ El control de versiones del proyecto se gestiona íntegramente mediante Git, alo
 
 **Pull Requests (PR):** 
 Toda integración de código requiere la apertura de un Pull Request hacia la rama `develop`, exigiendo la revisión de código (Code Review) por parte de otro miembro del equipo antes del merge.
+
+### 4.1.3. Source Code Style Guide & Conventions
+
+Para mantener la coherencia semántica y facilitar la lectura y mantenibilidad del código entre los distintos desarrolladores, se aplican normativas estrictas:
+
+**Convenciones de Nomenclatura:**
+* **`PascalCase`** para el nombramiento de Clases, Interfaces, Modelos de Dominio y Componentes UI (ej. `MedicalCheckUp`, `HealthCard`).
+* **`camelCase`** para variables, funciones, métodos y propiedades (ej. `calculateGestationalWeek`, `vitalSigns`).
+* **`kebab-case`** para nombres de archivos, directorios y rutas URL (ej. `patient-profile.tsx`, `auth-controller.cs`).
+
+**Convenciones de Commits (Conventional Commits):** 
+Los mensajes de commit se redactan en inglés, utilizando un verbo en imperativo y un prefijo estandarizado:
+* **`feat:`** para nuevas funcionalidades.
+* **`fix:`** para solución de errores (bugs).
+* **`docs:`** para actualizaciones en la documentación técnica.
+* **`refactor:`** para reestructuración de código sin alterar su comportamiento externo.
+
+**Formateo Automático:** 
+Uso de Prettier configurado en el guardado automático (format on save) para garantizar una indentación uniforme (2 espacios) y la estandarización de comillas y puntos y comas.
