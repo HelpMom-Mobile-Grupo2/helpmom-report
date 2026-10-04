@@ -556,7 +556,7 @@ Sistema de búsqueda implementado en:
 
 El prototipo refleja de manera directa los cinco dominios funcionales definidos en el diseño del sistema:
 
-![Diagrama de Trazabilidad con la Arquitectura de la Información](./assets/images/helpmom-information-architecture-diagram.png)
+![Diagrama de Trazabilidad con la Arquitectura de la Información](./assets/jerarqui.png)
 
 ```
 Arquitectura de la Información de HelpMom
