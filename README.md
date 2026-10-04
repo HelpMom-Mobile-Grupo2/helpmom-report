@@ -220,7 +220,7 @@ Los siguientes wireflows describen la transición entre vistas y las decisiones 
 
 ##### 1. Objetivo de Usuario 01 (OU01): Ingesta de Telemetría IoT y Triaje Crítico de Emergencia
 
-![Diagrama de Wireflow OU01: Ingesta de Telemetría IoT y Triaje Crítico](./assets/images/helpmom-wireflow-ou01-telemetria-triaje.png)
+![Diagrama de Wireflow OU01: Ingesta de Telemetría IoT y Triaje Crítico](./assets/wire1.png)
 
 *   **Descripción Paso a Paso (OU01):**
     1.  *Origen:* El biosensor IoT transmite un paquete periódico vía Bluetooth de Baja Energía (*BLE*).
@@ -230,7 +230,7 @@ Los siguientes wireflows describen la transición entre vistas y las decisiones 
 
 ##### 2. Objetivo de Usuario 02 (OU02): Solicitud de Apoyo Inmediato ("Pasa la Voz")
 
-![Diagrama de Wireflow OU02: Solicitud de Apoyo Inmediato Pasa la Voz](./assets/images/helpmom-wireflow-ou02-pasa-la-voz.png)
+![Diagrama de Wireflow OU02: Solicitud de Apoyo Inmediato Pasa la Voz](./assets/wire2.png)
 
 *   **Descripción Paso a Paso (OU02):**
     1.  *Origen:* La gestante necesita ayuda rápida de su pareja sin redactar mensajes largos ni realizar llamadas.
@@ -241,7 +241,7 @@ Los siguientes wireflows describen la transición entre vistas y las decisiones 
 
 ##### 3. Objetivo de Usuario 03 (OU03): Vinculación de Cuentas mediante Código QR
 
-![Diagrama de Wireflow OU03: Vinculación de Cuentas mediante Código QR](./assets/images/helpmom-wireflow-ou03-vinculacion-cuentas-qr.png)
+![Diagrama de Wireflow OU03: Vinculación de Cuentas mediante Código QR](./assets/wire3.png)
 
 *   **Descripción Paso a Paso (OU03):**
     1.  *Inicio:* La madre accede a su perfil y pulsa *"Vincular Acompañante"* (`PANT-05A`), generando un código QR dinámico temporal y una clave alfanumérica de 6 dígitos.
