@@ -55,9 +55,11 @@ El proceso de integración y despliegue continuo (CI/CD) está automatizado para
 ### 4.2.1.4. Development Evidence for Sprint Review
 
 En esta sección se demuestran los commits relacionados con los principales avances en la implementación.
-Estos commits provienen del repositorio del Landing Page de la organización de GitHub.
+Estos commits provienen del repositorio del Landing Page y Backend de la organización de GitHub.
 
-🔗 Enlace al repositorio de la Landing Page: https://github.com/HelpMom-Mobile-Grupo2/HelpMom-LandingPage
+Enlace al repositorio de la Landing Page: https://github.com/HelpMom-Mobile-Grupo2/HelpMom-LandingPage
+
+Enlace al repositorio del Backend: https://github.com/HelpMom-Mobile-Grupo2/HelpMom-Backend
 
 | Repository                                 | Branch | Commit Id                                 | Commit Message                                  | Commit Message Body | Commited on (Date) |
 |------------------------------.|--------|-------------------------------------------|-------------------------------------------------|---------------------|--------------------|
@@ -69,39 +71,53 @@ Estos commits provienen del repositorio del Landing Page de la organización de 
 
 ### 4.2.1.5. Testing Suite Evidence for Sprint Review
 
-Durante el Sprint 1 se implementaron pruebas unitarias e integrales para validar el correcto funcionamiento de los componentes desarrollados. Las pruebas permitieron verificar los principales flujos de autenticación, gestión de usuarios y servicios asociados, asegurando el cumplimiento de los requerimientos funcionales definidos para el sprint.
+Durante el Sprint 1 se implementaron pruebas unitarias e integrales para validar el correcto funcionamiento de los componentes desarrollados. Se logro validar lo siguiente:
+
+* EmailAddress_Create_ReturnsNormalizedValue: verifica que la creación normaliza y guarda el email en minúsculas y sin espacios.
+* User_Create_SetsIsActiveTrue: comprueba que al crear un usuario su propiedad IsActive queda a true.
+* PregnancyRecord_GetGestationalAge_ComputesWeeks: valida que se calcula correctamente la edad gestacional (semanas) desde la fecha LMP.
+* HealthTelemetry_Semaphore_IsGreenForNormalValues: asegura que para valores normales de frecuencia y temperatura el semáforo de salud es Green.
+* TriageAssessment_Create_TrimsGuidance: confirma que la guía (guidance) se recorta (trim) al crear la evaluación de triaje.
 
 Testing Commits
 
 | Repository          | Branch | Commit ID | Commit Message               | Description                                                                                    | Committed On |
 | ------------------- | ------ | --------- | ---------------------------- | ---------------------------------------------------------------------------------------------- | ------------ |
-| helpmom-mobile      | test   | 482e481   | feat: unit and integral test | Implementación de pruebas unitarias e integrales para los componentes principales.| 2026-05-14   |
+| helpmom-mobile-backend      | test   | 482e481   | feat: added unit tests | Implementación de pruebas unitarias e integrales para los componentes principales.| 2026-10-5   |
 
 Figure 5.3.1.4.1 - GitHub commit associated with unit and integration tests.
 
-![img_6.png]()
+![img_6.png](./assets/tests4.png)
 
 Figure 5.3.1.4.2 - Test execution results.
 
-![img_6.png]()
+![img_6.png](./assets/tests3.png)
+
+Figura 5.3.1.4.3 - Tests content
+
+![img_6.png](./assets/tests1.png)
+
+![img_6.png](./assets/tests2.png)
 
 ### 4.2.1.6. Execution Evidence for Sprint Review
 
 Durante el desarrollo del sprint se lograron completar todos los puntos planteados. A continuación se muestran evidencias del landing page logrado.
 
-![img_6.png](/assets/landing1.png)
+![img_6.png](./assets/landing1.png)
 
 ### 4.2.1.7. Services Documentation Evidence for Sprint Review
 
 Se presenta la documentación técnica de la API del sistema. La imagen muestra una lista clara de todos los servicios disponibles y sus funciones, facilitando su uso y integración.
 
-![img_6.png](/assets/backend1.png)
+![img_6.png](./assets/backend1.png)
+
+![img_6.png](./assets/backend2.png)
 
 ### 4.2.1.8. Software Deployment Evidence for Sprint Review
 
 Como parte del cierre del Sprint, se evidencia que los incrementos de software desarrollados (Landing Page interactiva) han sido desplegados exitosamente y se encuentran operativos en un entorno público. El pipeline de integración continua de Vercel completó el proceso de compilación sin errores, asignando certificados SSL para navegación segura (HTTPS).
 
-![Evidencia de Despliegue 1](./assets/evidencia_1.png) 
+![Evidencia de Despliegue 1](./assets/evidencia_1.png)
 
 ![Evidencia de Despliegue 2](./assets/evidencia_2.png)
 
