@@ -2251,100 +2251,156 @@ Entonces se documenta la recomendación técnica y su proyección de costo mensu
 
 ### 2.4.2. Product Backlog
 
-El Product Backlog de **HelpMom** se presenta en un solo cuadro, organizado en **15 épicas**, con **59 User Stories**, **14 Technical Stories** y **5 Spike Stories**. Las 59 historias de usuario se distribuyen en **30 de prioridad Alta, 24 Media y 5 Baja**. Las épicas agrupan las historias y no se contabilizan como historias adicionales.
+El Product Backlog de **HelpMom** consolida las 59 User Stories, 14 Technical Stories y 5 Spike Stories definidas en la sección 2.4.1. Su orden propuesto considera los hallazgos de las entrevistas (2.2.3), las necesidades de ambos segmentos (2.3), la seguridad del triage, la privacidad de Mi Cuerpo y las dependencias de la arquitectura (2.5 y 2.6).
 
-Un **spike** es una investigación de duración limitada que resuelve una incertidumbre antes de implementar una funcionalidad. Cada spike incluye en el cuadro qué se investiga y cuál es su resultado esperado. Sus identificadores SP01–SP05 se distinguen de la unidad **SP (Story Points)** usada para estimar historias de usuario y técnicas; los spikes se estiman en horas máximas de investigación.
+Se conservan los identificadores, títulos, épicas y prioridades de la especificación original. Los criterios de aceptación de cada elemento son los establecidos en 2.4.1; esta tabla los referencia mediante el Story ID para evitar duplicarlos. El orden, las dependencias, las entregas y las estimaciones son una **propuesta inicial pendiente de refinamiento con el equipo y el Product Owner**.
 
-Los identificadores, títulos, descripciones, épicas y prioridades corresponden a la sección 2.4.1, donde se mantienen los criterios de aceptación. El orden, las dependencias, las entregas y las estimaciones son propuestas pendientes de refinamiento con el equipo y el Product Owner. Todas las historias tienen estado **Pendiente de validación**.
+#### 2.4.2.1. Criterios de priorización y estimación
 
-Las entregas propuestas son: **R0**, investigación; **R1**, acceso, privacidad y vinculación; **R2**, acompañamiento, registros y contenido; **R3**, asistente, triage y monitoreo; **R4**, planes y lanzamiento comercial; y **R5**, ampliación de la experiencia. Son agrupaciones funcionales, sin fechas ni sprints comprometidos. R2 representa el MVP de acompañamiento y R3 incorpora IA e IoT; la comercialización de funciones premium requiere su aceptación previa.
+- **Prioridad:** Alta, Media o Baja, según la especificación existente. El orden de ejecución también considera dependencias: una investigación de prioridad Media puede preceder una funcionalidad Alta que depende de sus resultados.
+- **Story Points (SP):** estimación relativa con valores 1, 2, 3, 5 y 8 para historias de usuario y técnicas. No representan horas ni compromisos de entrega.
+- **Spikes:** se propone un límite de investigación en horas, separado de los Story Points. Su resultado es una decisión documentada o prueba de concepto según los criterios existentes.
+- **Estado inicial:** todos los elementos quedan como Pendiente de validación; el informe no aporta evidencia de implementación o aceptación.
+- **Dependencias:** indican prerrequisitos principales y deben verificarse antes de iniciar cada elemento. Las historias técnicas habilitan las historias de usuario y no sustituyen su aceptación funcional.
 
-**Dep.** indica los prerrequisitos principales y **—** indica que no se identificó una dependencia previa entre las historias documentadas. Las estimaciones en Story Points son relativas y no representan horas.
+#### 2.4.2.2. Entregas propuestas
 
-| Orden | Story ID | Tipo | Épica | Historia | Descripción / investigación y resultado del spike | Prioridad | Entrega | Estimación | Dep. |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | SP04 | Spike | EP14: Perfil, configuración y privacidad | Evaluar mecanismos de cifrado para los datos de salud | Como desarrollador, quiero evaluar técnicas de cifrado en el dispositivo, en tránsito y en la base de datos, para seleccionar la implementación que proteja los registros de "Mi Cuerpo" sin afectar el rendimiento de la aplicación. **Resultado esperado: prueba de concepto de cifrado en dispositivo y base de datos, comparación de rendimiento y configuración TLS con certificate pinning.** | Media | R0 | 8 h máx. | — |
-| 2 | SP01 | Spike | EP07: Triage Inteligente y emergencias | Prototipar el pipeline de triage previo a la invocación del modelo de lenguaje | Como desarrollador, quiero construir una prueba de concepto del servicio de triage que intercepte cada mensaje antes de enviarlo al proveedor de IA, para medir la latencia que agrega a la respuesta del asistente y definir su comportamiento técnico ante fallas. **Resultado esperado: comparación de latencia entre detección por patrones y clasificación con IA, alternativa recomendada y contingencia ante fallas.** | Alta | R0 | 12 h máx. | — |
-| 3 | SP05 | Spike | EP06: Asistente IA conversacional | Comparar proveedores de modelos de lenguaje | Como desarrollador, quiero evaluar proveedores de IA generativa considerando costo por consulta, latencia y capacidad de restricción de dominio, para seleccionar el que sostenga el Asistente IA 24/7. **Resultado esperado: comparación de al menos tres proveedores por costo, latencia y control de contenido, recomendación y proyección mensual.** | Media | R0 | 8 h máx. | — |
-| 4 | SP02 | Spike | EP05: Monitoreo IoT y Sistema de Semáforo | Evaluar hardware IoT compatible | Como desarrollador, quiero comparar dispositivos de monitoreo fetal doméstico disponibles en el mercado, para seleccionar el que ofrezca mejor relación entre precisión, costo y facilidad de integración. **Resultado esperado: matriz comparativa de al menos tres dispositivos, con protocolos, SDK, costos y opción recomendada.** | Alta | R0 | 12 h máx. | — |
-| 5 | SP03 | Spike | EP05: Monitoreo IoT y Sistema de Semáforo | Definir los umbrales del Sistema de Semáforo | Como desarrollador, quiero establecer con respaldo bibliográfico y validación profesional los rangos que determinan cada color del semáforo, para que la clasificación sea clínicamente defendible. **Resultado esperado: umbrales por color documentados, fuentes clínicas y limitaciones conocidas, con validación profesional cuando sea posible según la historia original.** | Media | R0 | 8 h máx. | — |
-| 6 | TS01 | Técnica | EP02: Gestión de cuentas y acceso | Registrar usuario y emitir token | Como desarrollador, quiero exponer un endpoint de registro que persista al usuario y emita un token, para habilitar el acceso a las rutas protegidas. | Alta | R1 | 5 SP | SP04 |
-| 7 | TS02 | Técnica | EP02: Gestión de cuentas y acceso | Validar token de sesión por rol | Como desarrollador, quiero validar el token y el rol en cada solicitud, para proteger los recursos según el perfil del usuario. | Alta | R1 | 5 SP | TS01 |
-| 8 | US05 | Usuario | EP02: Gestión de cuentas y acceso | Registrarse en la plataforma | Como usuario, quiero crear una cuenta con mis datos básicos, para acceder a las funcionalidades de HelpMom. | Alta | R1 | 3 SP | TS01 |
-| 9 | US06 | Usuario | EP02: Gestión de cuentas y acceso | Seleccionar rol al registrarse | Como usuario, quiero indicar si soy madre gestante o acompañante, para acceder a la interfaz adecuada a mi rol. | Alta | R1 | 3 SP | US05 |
-| 10 | US08 | Usuario | EP02: Gestión de cuentas y acceso | Iniciar sesión con redirección por rol | Como usuario, quiero iniciar sesión con mis credenciales, para acceder directamente a la vista correspondiente a mi rol. | Alta | R1 | 3 SP | TS02, US06 |
-| 11 | US10 | Usuario | EP02: Gestión de cuentas y acceso | Cerrar sesión | Como usuario, quiero cerrar mi sesión, para proteger mi información en dispositivos compartidos. | Alta | R1 | 3 SP | US08 |
-| 12 | US56 | Usuario | EP14: Perfil, configuración y privacidad | Cambiar mi contraseña | Como usuario, quiero actualizar mi contraseña, para mantener segura mi cuenta y mis datos de salud. | Alta | R1 | 3 SP | US08 |
-| 13 | TS03 | Técnica | EP02: Gestión de cuentas y acceso | Calcular cronología gestacional | Como desarrollador, quiero exponer un servicio que calcule la semana gestacional y la fecha probable de parto a partir de la FUM, para alimentar todos los módulos dependientes del tiempo. | Alta | R1 | 5 SP | TS01 |
-| 14 | US07 | Usuario | EP02: Gestión de cuentas y acceso | Registrar la fecha de última menstruación | Como madre gestante, quiero ingresar mi FUM o mi semana gestacional actual, para que la app calcule automáticamente mi cronología de embarazo. | Alta | R1 | 5 SP | US06, TS03 |
-| 15 | US14 | Usuario | EP04: Seguimiento gestacional (Inicio) | Visualizar mi semana gestacional | Como madre gestante, quiero ver de forma destacada la semana exacta en la que me encuentro, para ubicarme en el proceso de mi embarazo. | Alta | R1 | 3 SP | US07 |
-| 16 | US16 | Usuario | EP04: Seguimiento gestacional (Inicio) | Navegar mediante la barra inferior | Como usuario, quiero desplazarme entre las secciones principales desde una barra inferior, para acceder rápidamente a cualquier módulo. | Alta | R1 | 3 SP | US08 |
-| 17 | TS04 | Técnica | EP03: Vinculación de pareja | Generar y validar código de vinculación | Como desarrollador, quiero generar códigos de vinculación con expiración y validarlos, para implementar el enlace seguro entre madre y acompañante. | Alta | R1 | 5 SP | TS02 |
-| 18 | US11 | Usuario | EP03: Vinculación de pareja | Generar código de vinculación QR | Como madre gestante, quiero generar un código QR de invitación, para enlazar la cuenta de mi acompañante a mi embarazo. | Alta | R1 | 5 SP | TS04, US07 |
-| 19 | US12 | Usuario | EP03: Vinculación de pareja | Vincularse mediante código QR | Como acompañante, quiero escanear el código QR de mi pareja, para acceder al Modo Compañero y seguir el embarazo. | Alta | R1 | 5 SP | US11, US08 |
-| 20 | US13 | Usuario | EP03: Vinculación de pareja | Revocar el vínculo con el acompañante | Como madre gestante, quiero revocar el acceso de mi acompañante en cualquier momento, para mantener el control sobre quién ve mi información. | Alta | R1 | 5 SP | US12 |
-| 21 | US34 | Usuario | EP08: Mi Cuerpo (registro clínico) | Mantener privados mis registros clínicos | Como madre gestante, quiero que mis registros de Mi Cuerpo permanezcan privados, para compartir con mi pareja solo lo que yo decida. | Alta | R1 | 5 SP | TS02, US13 |
-| 22 | US09 | Usuario | EP02: Gestión de cuentas y acceso | Recuperar contraseña | Como usuario, quiero restablecer mi contraseña, para recuperar el acceso a mi cuenta si la olvido. | Media | R1 | 3 SP | US05 |
-| 23 | US54 | Usuario | EP14: Perfil, configuración y privacidad | Consultar y editar mi perfil | Como usuario, quiero visualizar y actualizar mis datos personales, para mantener mi información al día. | Media | R1 | 3 SP | US08 |
-| 24 | TS10 | Técnica | EP08: Mi Cuerpo (registro clínico) | Gestionar los registros de Mi Cuerpo | Como desarrollador, quiero exponer endpoints CRUD para los registros de peso, síntomas y sueño, para soportar el módulo Mi Cuerpo. | Alta | R2 | 5 SP | TS02, SP04 |
-| 25 | US29 | Usuario | EP08: Mi Cuerpo (registro clínico) | Registrar mi peso | Como madre gestante, quiero registrar mi peso periódicamente, para llevar un seguimiento ordenado de mi evolución. | Alta | R2 | 3 SP | TS10, US34 |
-| 26 | US30 | Usuario | EP08: Mi Cuerpo (registro clínico) | Registrar síntomas | Como madre gestante, quiero registrar los síntomas que experimento, para no olvidarlos al momento de mi control médico. | Alta | R2 | 3 SP | TS10, US34 |
-| 27 | US31 | Usuario | EP08: Mi Cuerpo (registro clínico) | Registrar mis horas de sueño | Como madre gestante, quiero registrar cuánto dormí, para identificar patrones de descanso durante la gestación. | Media | R2 | 3 SP | TS10, US34 |
-| 28 | TS11 | Técnica | EP08: Mi Cuerpo (registro clínico) | Generar el resumen mensual en PDF | Como desarrollador, quiero generar un documento consolidado de los registros del periodo, para que la madre lo presente en su control obstétrico. | Media | R2 | 5 SP | TS10 |
-| 29 | US33 | Usuario | EP08: Mi Cuerpo (registro clínico) | Generar resumen para el control médico | Como madre gestante, quiero generar un resumen de mis registros, para presentárselo a mi obstetra en el control. | Alta | R2 | 5 SP | TS11, US29, US30 |
-| 30 | US32 | Usuario | EP08: Mi Cuerpo (registro clínico) | Visualizar mi progreso en gráficos amigables | Como madre gestante, quiero ver mi evolución en gráficos comprensibles y positivos, para entender mi progreso sin sentir presión. | Media | R2 | 5 SP | US29, US31 |
-| 31 | US35 | Usuario | EP08: Mi Cuerpo (registro clínico) | Recibir sugerencia ante síntomas recurrentes | Como madre gestante, quiero que la app me avise si un síntoma se repite con frecuencia, para mencionarlo en mi próximo control. | Media | R2 | 5 SP | US30 |
-| 32 | TS12 | Técnica | EP09: Aprendizaje y contenido educativo | Servir contenido filtrado por semana gestacional | Como desarrollador, quiero exponer un endpoint que devuelva el contenido educativo correspondiente a una semana, para implementar el desbloqueo dinámico del feed. | Alta | R2 | 5 SP | TS03 |
-| 33 | US36 | Usuario | EP09: Aprendizaje y contenido educativo | Acceder al contenido de mi semana | Como madre gestante, quiero acceder a contenido educativo correspondiente a mi semana actual, para informarme de manera pertinente y sin abrumarme. | Alta | R2 | 5 SP | TS12, US07 |
-| 34 | US43 | Usuario | EP11: Guía diaria del acompañante | Comprender los cambios de mi pareja | Como acompañante, quiero entender sin tecnicismos qué le está ocurriendo a mi pareja esta semana, para responder con empatía y no malinterpretar su estado. | Alta | R2 | 3 SP | US12, TS12 |
-| 35 | US42 | Usuario | EP11: Guía diaria del acompañante | Recibir el Tip del Día | Como acompañante, quiero recibir cada mañana un consejo accionable, para saber cómo apoyar concretamente a mi pareja ese día. | Alta | R2 | 3 SP | US43 |
-| 36 | US46 | Usuario | EP11: Guía diaria del acompañante | Acceder a la guía de preparación logística | Como acompañante, quiero recibir información sobre trámites, el bolso de clínica y los controles médicos, para llegar preparado a cada etapa. | Media | R2 | 3 SP | US43 |
-| 37 | TS13 | Técnica | EP12: Alertas rápidas "Pasa la Voz" | Enviar notificaciones push segmentadas por tipo | Como desarrollador, quiero implementar un servicio de notificaciones que distinga entre alertas críticas, alertas rápidas y contenido informativo, para respetar las preferencias del usuario sin bloquear las emergencias. | Alta | R2 | 8 SP | TS02, TS04 |
-| 38 | US47 | Usuario | EP12: Alertas rápidas "Pasa la Voz" | Enviar una alerta rápida "Pasa la Voz" | Como madre gestante, quiero avisar a mi pareja con un solo toque que tengo náuseas, un antojo o necesito descansar, para comunicarme sin tener que redactar mensajes. | Alta | R2 | 5 SP | US12, TS13 |
-| 39 | US48 | Usuario | EP12: Alertas rápidas "Pasa la Voz" | Confirmar la recepción de una alerta rápida | Como acompañante, quiero confirmar que vi la alerta de mi pareja, para que ella sepa que estoy atendiendo su necesidad. | Media | R2 | 3 SP | US47 |
-| 40 | US28 | Usuario | EP07: Triage Inteligente y emergencias | Registrar un contacto de confianza | Como madre gestante, quiero designar un contacto de confianza, para que sea avisado ante una emergencia. | Media | R2 | 3 SP | US08 |
-| 41 | US41 | Usuario | EP10: Bienestar emocional y notificaciones | Configurar la frecuencia de notificaciones | Como usuario, quiero ajustar cuántas notificaciones recibo, para que la app no resulte invasiva. | Media | R2 | 3 SP | TS13 |
-| 42 | US57 | Usuario | EP14: Perfil, configuración y privacidad | Exportar o eliminar mis datos | Como madre gestante, quiero exportar o eliminar la información que la app guarda sobre mí, para ejercer control sobre mis datos personales. | Media | R2 | 5 SP | US34, TS10 |
-| 43 | TS08 | Técnica | EP07: Triage Inteligente y emergencias | Implementar el pipeline de triage previo a la respuesta | Como desarrollador, quiero que todo mensaje entrante pase por el servicio de triage antes de ser enviado al modelo de lenguaje, para garantizar que ninguna consulta crítica reciba una respuesta conversacional. | Alta | R3 | 8 SP | SP01, SP05, TS02 |
-| 44 | TS09 | Técnica | EP07: Triage Inteligente y emergencias | Registrar episodios de emergencia | Como desarrollador, quiero persistir cada activación del triage con su marca temporal, para asegurar la trazabilidad de los eventos críticos. | Alta | R3 | 5 SP | TS08 |
-| 45 | US25 | Usuario | EP07: Triage Inteligente y emergencias | Activación del bloqueo de seguridad ante señales de riesgo | Como madre gestante, quiero que el asistente detenga la conversación si detecta un síntoma grave, para no recibir respuestas que retrasen mi atención médica. | Alta | R3 | 8 SP | TS08, TS09 |
-| 46 | US26 | Usuario | EP07: Triage Inteligente y emergencias | Llamar a emergencias desde el modal de alerta | Como madre gestante, quiero llamar a emergencias con un solo toque desde la alerta, para actuar de inmediato ante una complicación. | Alta | R3 | 3 SP | US25 |
-| 47 | US27 | Usuario | EP07: Triage Inteligente y emergencias | Recibir notificación automática de emergencia | Como acompañante, quiero ser notificado de inmediato cuando se active una alerta de emergencia, para acudir o asistir a mi pareja cuanto antes. | Alta | R3 | 5 SP | US25, US28, TS13 |
-| 48 | US22 | Usuario | EP06: Asistente IA conversacional | Consultar dudas al Asistente IA | Como madre gestante, quiero preguntar mis dudas de rutina a un asistente disponible las 24 horas, para obtener respuestas inmediatas incluso de madrugada. | Alta | R3 | 8 SP | US25, US26, US27, SP05 |
-| 49 | US23 | Usuario | EP06: Asistente IA conversacional | Consultar el historial de conversaciones | Como madre gestante, quiero revisar mis conversaciones anteriores con el asistente, para recordar recomendaciones que ya recibí. | Media | R3 | 3 SP | US22 |
-| 50 | US24 | Usuario | EP06: Asistente IA conversacional | Consultar mediante preguntas sugeridas | Como madre gestante, quiero acceder a preguntas frecuentes sugeridas según mi semana, para iniciar la conversación sin tener que redactar. | Media | R3 | 3 SP | US22, US07 |
-| 51 | TS05 | Técnica | EP05: Monitoreo IoT y Sistema de Semáforo | Ingestar lecturas del sensor IoT | Como desarrollador, quiero exponer un endpoint de ingesta de lecturas del sensor, para persistir la telemetría recibida desde el dispositivo. | Alta | R3 | 8 SP | SP02, TS02 |
-| 52 | US17 | Usuario | EP05: Monitoreo IoT y Sistema de Semáforo | Emparejar el sensor IoT | Como madre gestante, quiero vincular mi sensor a la aplicación, para comenzar a monitorear los latidos de mi bebé desde casa. | Alta | R3 | 3 SP | TS05 |
-| 53 | TS06 | Técnica | EP05: Monitoreo IoT y Sistema de Semáforo | Clasificar lecturas en el Sistema de Semáforo | Como desarrollador, quiero implementar el servicio de clasificación que traduce una lectura a un estado verde, amarillo o rojo, para alimentar la tarjeta de estado de la interfaz. | Alta | R3 | 8 SP | SP03, TS05, US25, US26, US27 |
-| 54 | US18 | Usuario | EP05: Monitoreo IoT y Sistema de Semáforo | Consultar el estado del bebé mediante semáforo | Como madre gestante, quiero ver el estado de mi bebé mediante un indicador de color y un mensaje claro, para tranquilizarme sin interpretar datos médicos. | Alta | R3 | 5 SP | US17, TS06 |
-| 55 | US19 | Usuario | EP05: Monitoreo IoT y Sistema de Semáforo | Repetir una medición | Como madre gestante, quiero repetir una medición cuando el resultado fue poco confiable, para obtener una lectura válida. | Media | R3 | 3 SP | US18 |
-| 56 | TS07 | Técnica | EP05: Monitoreo IoT y Sistema de Semáforo | Exponer el estado resumido para el acompañante | Como desarrollador, quiero exponer un endpoint que devuelva únicamente el color y el mensaje de estado, para alimentar la vista del acompañante sin filtrar datos clínicos. | Alta | R3 | 5 SP | TS06, US12, US34 |
-| 57 | US45 | Usuario | EP11: Guía diaria del acompañante | Consultar el estado resumido del bebé | Como acompañante, quiero ver el indicador de estado del bebé, para tranquilizarme sin tener que preguntarle constantemente a mi pareja. | Alta | R3 | 5 SP | TS07 |
-| 58 | US20 | Usuario | EP05: Monitoreo IoT y Sistema de Semáforo | Consultar el historial de mediciones | Como madre gestante, quiero revisar el historial de estados registrados, para observar la regularidad del bienestar de mi bebé en el tiempo. | Media | R3 | 5 SP | US18 |
-| 59 | US21 | Usuario | EP05: Monitoreo IoT y Sistema de Semáforo | Recibir aviso de batería baja del sensor | Como madre gestante, quiero ser notificada cuando la batería del sensor esté baja, para no interrumpir el monitoreo. | Media | R3 | 3 SP | US17 |
-| 60 | TS14 | Técnica | EP13: Suscripciones y pagos | Procesar transacciones y actualizar el estado de la suscripción | Como desarrollador, quiero integrar la pasarela de pagos y reflejar el resultado en el estado de la suscripción, para habilitar o degradar funcionalidades automáticamente. | Alta | R4 | 8 SP | TS02 |
-| 61 | US49 | Usuario | EP13: Suscripciones y pagos | Iniciar la prueba gratuita | Como usuario, quiero probar las funciones premium durante un periodo gratuito, para evaluar la app antes de pagar. | Alta | R4 | 5 SP | TS14 |
-| 62 | US50 | Usuario | EP13: Suscripciones y pagos | Contratar un plan de suscripción | Como usuario, quiero contratar el Plan Básico o el Plan Cuidado Integral, para habilitar las funcionalidades que necesito. | Alta | R4 | 5 SP | TS14 |
-| 63 | US51 | Usuario | EP13: Suscripciones y pagos | Consultar el estado de mi suscripción | Como usuario, quiero ver mi plan actual y su fecha de renovación, para conocer qué beneficios tengo activos. | Media | R4 | 3 SP | US50 |
-| 64 | US53 | Usuario | EP13: Suscripciones y pagos | Cancelar la suscripción | Como usuario, quiero cancelar mi plan, para dejar de ser cobrado al finalizar el ciclo vigente. | Media | R4 | 3 SP | US50 |
-| 65 | US01 | Usuario | EP01: Landing page informativa | Conocer la propuesta de valor de HelpMom | Como visitante del sitio, quiero conocer qué ofrece HelpMom, para evaluar si la aplicación resuelve mis necesidades durante el embarazo. | Alta | R4 | 3 SP | — |
-| 66 | US02 | Usuario | EP01: Landing page informativa | Comparar los planes disponibles | Como visitante del sitio, quiero comparar el Plan Básico y el Plan Cuidado Integral, para decidir cuál se ajusta a mis necesidades y presupuesto. | Alta | R4 | 3 SP | US50 |
-| 67 | US04 | Usuario | EP01: Landing page informativa | Consultar preguntas frecuentes sobre seguridad | Como visitante del sitio, quiero resolver dudas sobre la confiabilidad del asistente IA y el sensor IoT, para reducir mi desconfianza inicial hacia la tecnología. | Media | R4 | 3 SP | SP01, SP02, SP03, SP05 |
-| 68 | US15 | Usuario | EP04: Seguimiento gestacional (Inicio) | Ver la ilustración del tamaño del bebé | Como madre gestante, quiero ver una ilustración comparativa del tamaño actual de mi bebé, para conectar emocionalmente con su desarrollo. | Media | R5 | 3 SP | US14 |
-| 69 | US37 | Usuario | EP09: Aprendizaje y contenido educativo | Guardar contenido como favorito | Como usuario, quiero guardar artículos que me interesan, para volver a consultarlos cuando lo necesite. | Media | R5 | 3 SP | US36 |
-| 70 | US38 | Usuario | EP09: Aprendizaje y contenido educativo | Buscar contenido por tema | Como usuario, quiero buscar contenido por palabra clave, para resolver una duda puntual sin navegar todo el feed. | Baja | R5 | 3 SP | US36 |
-| 71 | US39 | Usuario | EP10: Bienestar emocional y notificaciones | Recibir píldoras de autoestima | Como madre gestante, quiero recibir mensajes de validación durante el día, para sentirme acompañada frente a los cambios de mi cuerpo. | Media | R5 | 3 SP | TS13, US41 |
-| 72 | US40 | Usuario | EP10: Bienestar emocional y notificaciones | Recibir notificaciones de hitos del bebé | Como usuario, quiero ser notificado cuando mi bebé alcanza un hito de desarrollo, para celebrar cada etapa del embarazo. | Media | R5 | 3 SP | US14, TS13, US41 |
-| 73 | US44 | Usuario | EP11: Guía diaria del acompañante | Marcar un tip como realizado | Como acompañante, quiero marcar los consejos que ya cumplí, para llevar registro de mi participación en el proceso. | Media | R5 | 3 SP | US42 |
-| 74 | US03 | Usuario | EP01: Landing page informativa | Consultar testimonios de otras familias | Como visitante del sitio, quiero leer testimonios de otras madres y acompañantes, para generar confianza en la plataforma. | Media | R5 | 3 SP | — |
-| 75 | US52 | Usuario | EP13: Suscripciones y pagos | Regalar la suscripción premium | Como acompañante, quiero adquirir el Plan Cuidado Integral para mi pareja, para brindarle una herramienta de apoyo durante su embarazo. | Baja | R5 | 5 SP | US50, US12 |
-| 76 | US55 | Usuario | EP14: Perfil, configuración y privacidad | Personalizar mi foto de perfil | Como usuario, quiero establecer una imagen de perfil, para personalizar mi experiencia en la app. | Baja | R5 | 3 SP | US54 |
-| 77 | US58 | Usuario | EP15: Internacionalización y accesibilidad | Seleccionar el idioma de la aplicación | Como usuario, quiero elegir el idioma de la interfaz, para usar la app en el idioma de mi preferencia. | Baja | R5 | 5 SP | US16 |
-| 78 | US59 | Usuario | EP15: Internacionalización y accesibilidad | Ajustar el tamaño de texto y contraste | Como usuario, quiero ajustar el tamaño del texto y el contraste, para leer cómodamente incluso con cansancio visual. | Baja | R5 | 3 SP | US16 |
+| Entrega | Objetivo | Condición de salida |
+| --- | --- | --- |
+| R0 | Resolver incertidumbres de privacidad, IA, triage y hardware IoT. | Resultados de los cinco spikes documentados y revisados; los umbrales deben contar con validación profesional antes de habilitar el semáforo para uso real. |
+| R1 | Habilitar acceso por rol, cronología gestacional y vinculación controlada. | Madre y acompañante acceden a sus vistas; el vínculo puede revocarse y los registros clínicos quedan protegidos por permisos. |
+| R2 | Entregar una primera versión de acompañamiento y organización del embarazo. | Registro clínico, resumen, contenido semanal, guía diaria y Pasa la Voz cumplen sus criterios de aceptación. |
+| R3 | Integrar IA, triage y monitoreo con los controles definidos. | Las consultas pasan por triage antes del modelo; los flujos críticos, la señal insuficiente y la privacidad del acompañante están verificados. |
+| R4 | Habilitar contratación y presentación comercial. | Los pagos actualizan el plan y funcionan la consulta de suscripción, cancelación y landing informativa. |
+| R5 | Ampliar personalización, bienestar y facilidad de uso. | Se aceptan las mejoras de contenido, notificaciones, idioma y accesibilidad. |
 
-El cuadro contiene **78 historias en total: 59 de usuario, 14 técnicas y 5 spikes**, con una estimación preliminar de **310 Story Points** para las historias de usuario y técnicas, y **48 horas máximas** para las investigaciones.
+Las entregas representan agrupaciones funcionales, no sprints ni fechas comprometidas. R2 es una propuesta de MVP de acompañamiento; la propuesta diferenciadora completa de IA e IoT se incorpora en R3. R4 puede avanzar en paralelo cuando sus dependencias estén resueltas, pero la disponibilidad comercial de funciones premium requiere que estas hayan sido aceptadas. La investigación de cifrado y la definición de umbrales se ejecutan temprano aunque sus prioridades originales sean Media.
 
-El Product Owner debe revisar el orden tras validar los spikes y recibir retroalimentación de gestantes y acompañantes. El equipo debe refinar las estimaciones antes de seleccionar trabajo para un sprint. Una historia se considera terminada al cumplir sus criterios de aceptación y las verificaciones de integración y permisos aplicables; los spikes requieren entregar y revisar sus resultados documentados.
+#### 2.4.2.3. Backlog priorizado
+
+En las tablas, identifica las dependencias principales y indica que no se identificó una dependencia previa entre las historias documentadas. Todas las filas tienen estado Pendiente de validación.
+
+##### R0. Investigación y decisiones habilitadoras
+
+| Orden | Story ID | Tipo | Épica | Historia | Prioridad | Estimación | Dep. |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | SP04 | Spike | EP14 | Evaluar mecanismos de cifrado para los datos de salud | Media | 8 h máx. | — |
+| 2 | SP01 | Spike | EP07 | Prototipar el pipeline de triage previo a la invocación del modelo de lenguaje | Alta | 12 h máx. | — |
+| 3 | SP05 | Spike | EP06 | Comparar proveedores de modelos de lenguaje | Media | 8 h máx. | — |
+| 4 | SP02 | Spike | EP05 | Evaluar hardware IoT compatible | Alta | 12 h máx. | — |
+| 5 | SP03 | Spike | EP05 | Definir los umbrales del Sistema de Semáforo | Media | 8 h máx. | — |
+
+##### R1. Acceso, privacidad y vinculación
+
+| Orden | Story ID | Tipo | Épica | Historia | Prioridad | Estimación | Dep. |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 6 | TS01 | Técnica | EP02 | Registrar usuario y emitir token | Alta | 5 SP | SP04 |
+| 7 | TS02 | Técnica | EP02 | Validar token de sesión por rol | Alta | 5 SP | TS01 |
+| 8 | US05 | Usuario | EP02 | Registrarse en la plataforma | Alta | 3 SP | TS01 |
+| 9 | US06 | Usuario | EP02 | Seleccionar rol al registrarse | Alta | 3 SP | US05 |
+| 10 | US08 | Usuario | EP02 | Iniciar sesión con redirección por rol | Alta | 3 SP | TS02, US06 |
+| 11 | US10 | Usuario | EP02 | Cerrar sesión | Alta | 3 SP | US08 |
+| 12 | US56 | Usuario | EP14 | Cambiar mi contraseña | Alta | 3 SP | US08 |
+| 13 | TS03 | Técnica | EP02 | Calcular cronología gestacional | Alta | 5 SP | TS01 |
+| 14 | US07 | Usuario | EP02 | Registrar la fecha de última menstruación | Alta | 5 SP | US06, TS03 |
+| 15 | US14 | Usuario | EP04 | Visualizar mi semana gestacional | Alta | 3 SP | US07 |
+| 16 | US16 | Usuario | EP04 | Navegar mediante la barra inferior | Alta | 3 SP | US08 |
+| 17 | TS04 | Técnica | EP03 | Generar y validar código de vinculación | Alta | 5 SP | TS02 |
+| 18 | US11 | Usuario | EP03 | Generar código de vinculación QR | Alta | 5 SP | TS04, US07 |
+| 19 | US12 | Usuario | EP03 | Vincularse mediante código QR | Alta | 5 SP | US11, US08 |
+| 20 | US13 | Usuario | EP03 | Revocar el vínculo con el acompañante | Alta | 5 SP | US12 |
+| 21 | US34 | Usuario | EP08 | Mantener privados mis registros clínicos | Alta | 5 SP | TS02, US13 |
+| 22 | US09 | Usuario | EP02 | Recuperar contraseña | Media | 3 SP | US05 |
+| 23 | US54 | Usuario | EP14 | Consultar y editar mi perfil | Media | 3 SP | US08 |
+
+##### R2. Acompañamiento, registros y contenido
+
+| Orden | Story ID | Tipo | Épica | Historia | Prioridad | Estimación | Dep. |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 24 | TS10 | Técnica | EP08 | Gestionar los registros de Mi Cuerpo | Alta | 5 SP | TS02, SP04 |
+| 25 | US29 | Usuario | EP08 | Registrar mi peso | Alta | 3 SP | TS10, US34 |
+| 26 | US30 | Usuario | EP08 | Registrar síntomas | Alta | 3 SP | TS10, US34 |
+| 27 | US31 | Usuario | EP08 | Registrar mis horas de sueño | Media | 3 SP | TS10, US34 |
+| 28 | TS11 | Técnica | EP08 | Generar el resumen mensual en PDF | Media | 5 SP | TS10 |
+| 29 | US33 | Usuario | EP08 | Generar resumen para el control médico | Alta | 5 SP | TS11, US29, US30 |
+| 30 | US32 | Usuario | EP08 | Visualizar mi progreso en gráficos amigables | Media | 5 SP | US29, US31 |
+| 31 | US35 | Usuario | EP08 | Recibir sugerencia ante síntomas recurrentes | Media | 5 SP | US30 |
+| 32 | TS12 | Técnica | EP09 | Servir contenido filtrado por semana gestacional | Alta | 5 SP | TS03 |
+| 33 | US36 | Usuario | EP09 | Acceder al contenido de mi semana | Alta | 5 SP | TS12, US07 |
+| 34 | US43 | Usuario | EP11 | Comprender los cambios de mi pareja | Alta | 3 SP | US12, TS12 |
+| 35 | US42 | Usuario | EP11 | Recibir el Tip del Día | Alta | 3 SP | US43 |
+| 36 | US46 | Usuario | EP11 | Acceder a la guía de preparación logística | Media | 3 SP | US43 |
+| 37 | TS13 | Técnica | EP12 | Enviar notificaciones push segmentadas por tipo | Alta | 8 SP | TS02, TS04 |
+| 38 | US47 | Usuario | EP12 | Enviar una alerta rápida "Pasa la Voz" | Alta | 5 SP | US12, TS13 |
+| 39 | US48 | Usuario | EP12 | Confirmar la recepción de una alerta rápida | Media | 3 SP | US47 |
+| 40 | US28 | Usuario | EP07 | Registrar un contacto de confianza | Media | 3 SP | US08 |
+| 41 | US41 | Usuario | EP10 | Configurar la frecuencia de notificaciones | Media | 3 SP | TS13 |
+| 42 | US57 | Usuario | EP14 | Exportar o eliminar mis datos | Media | 5 SP | US34, TS10 |
+
+##### R3. Asistente, triage y monitoreo integrado
+
+| Orden | Story ID | Tipo | Épica | Historia | Prioridad | Estimación | Dep. |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 43 | TS08 | Técnica | EP07 | Implementar el pipeline de triage previo a la respuesta | Alta | 8 SP | SP01, SP05, TS02 |
+| 44 | TS09 | Técnica | EP07 | Registrar episodios de emergencia | Alta | 5 SP | TS08 |
+| 45 | US25 | Usuario | EP07 | Activación del bloqueo de seguridad ante señales de riesgo | Alta | 8 SP | TS08, TS09 |
+| 46 | US26 | Usuario | EP07 | Llamar a emergencias desde el modal de alerta | Alta | 3 SP | US25 |
+| 47 | US27 | Usuario | EP07 | Recibir notificación automática de emergencia | Alta | 5 SP | US25, US28, TS13 |
+| 48 | US22 | Usuario | EP06 | Consultar dudas al Asistente IA | Alta | 8 SP | US25, US26, US27, SP05 |
+| 49 | US23 | Usuario | EP06 | Consultar el historial de conversaciones | Media | 3 SP | US22 |
+| 50 | US24 | Usuario | EP06 | Consultar mediante preguntas sugeridas | Media | 3 SP | US22, US07 |
+| 51 | TS05 | Técnica | EP05 | Ingestar lecturas del sensor IoT | Alta | 8 SP | SP02, TS02 |
+| 52 | US17 | Usuario | EP05 | Emparejar el sensor IoT | Alta | 3 SP | TS05 |
+| 53 | TS06 | Técnica | EP05 | Clasificar lecturas en el Sistema de Semáforo | Alta | 8 SP | SP03, TS05, US25, US26, US27 |
+| 54 | US18 | Usuario | EP05 | Consultar el estado del bebé mediante semáforo | Alta | 5 SP | US17, TS06 |
+| 55 | US19 | Usuario | EP05 | Repetir una medición | Media | 3 SP | US18 |
+| 56 | TS07 | Técnica | EP05 | Exponer el estado resumido para el acompañante | Alta | 5 SP | TS06, US12, US34 |
+| 57 | US45 | Usuario | EP11 | Consultar el estado resumido del bebé | Alta | 5 SP | TS07 |
+| 58 | US20 | Usuario | EP05 | Consultar el historial de mediciones | Media | 5 SP | US18 |
+| 59 | US21 | Usuario | EP05 | Recibir aviso de batería baja del sensor | Media | 3 SP | US17 |
+
+##### R4. Planes y lanzamiento comercial
+
+| Orden | Story ID | Tipo | Épica | Historia | Prioridad | Estimación | Dep. |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 60 | TS14 | Técnica | EP13 | Procesar transacciones y actualizar el estado de la suscripción | Alta | 8 SP | TS02 |
+| 61 | US49 | Usuario | EP13 | Iniciar la prueba gratuita | Alta | 5 SP | TS14 |
+| 62 | US50 | Usuario | EP13 | Contratar un plan de suscripción | Alta | 5 SP | TS14 |
+| 63 | US51 | Usuario | EP13 | Consultar el estado de mi suscripción | Media | 3 SP | US50 |
+| 64 | US53 | Usuario | EP13 | Cancelar la suscripción | Media | 3 SP | US50 |
+| 65 | US01 | Usuario | EP01 | Conocer la propuesta de valor de HelpMom | Alta | 3 SP | — |
+| 66 | US02 | Usuario | EP01 | Comparar los planes disponibles | Alta | 3 SP | US50 |
+| 67 | US04 | Usuario | EP01 | Consultar preguntas frecuentes sobre seguridad | Media | 3 SP | SP01, SP02, SP03, SP05 |
+
+##### R5. Ampliación de la experiencia
+
+| Orden | Story ID | Tipo | Épica | Historia | Prioridad | Estimación | Dep. |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 68 | US15 | Usuario | EP04 | Ver la ilustración del tamaño del bebé | Media | 3 SP | US14 |
+| 69 | US37 | Usuario | EP09 | Guardar contenido como favorito | Media | 3 SP | US36 |
+| 70 | US38 | Usuario | EP09 | Buscar contenido por tema | Baja | 3 SP | US36 |
+| 71 | US39 | Usuario | EP10 | Recibir píldoras de autoestima | Media | 3 SP | TS13, US41 |
+| 72 | US40 | Usuario | EP10 | Recibir notificaciones de hitos del bebé | Media | 3 SP | US14, TS13, US41 |
+| 73 | US44 | Usuario | EP11 | Marcar un tip como realizado | Media | 3 SP | US42 |
+| 74 | US03 | Usuario | EP01 | Consultar testimonios de otras familias | Media | 3 SP | — |
+| 75 | US52 | Usuario | EP13 | Regalar la suscripción premium | Baja | 5 SP | US50, US12 |
+| 76 | US55 | Usuario | EP14 | Personalizar mi foto de perfil | Baja | 3 SP | US54 |
+| 77 | US58 | Usuario | EP15 | Seleccionar el idioma de la aplicación | Baja | 5 SP | US16 |
+| 78 | US59 | Usuario | EP15 | Ajustar el tamaño de texto y contraste | Baja | 3 SP | US16 |
+
+#### 2.4.2.4. Resumen y mantenimiento
+
+| Entrega | Historias de usuario | Historias técnicas | Spikes | Story Points propuestos | Tiempo máximo de investigación |
+| --- | --- | --- | --- | --- | --- |
+| R0 | 0 | 0 | 5 | 0 | 48 h |
+| R1 | 14 | 4 | 0 | 72 | 0 h |
+| R2 | 15 | 4 | 0 | 80 | 0 h |
+| R3 | 12 | 5 | 0 | 88 | 0 h |
+| R4 | 7 | 1 | 0 | 33 | 0 h |
+| R5 | 11 | 0 | 0 | 37 | 0 h |
+| **Total** | **59** | **14** | **5** | **310** | **48 h** |
+
+El Product Owner debe revisar el orden tras validar los spikes y recibir retroalimentación de las gestantes y acompañantes. El equipo debe refinar las estimaciones antes de seleccionar trabajo para un sprint. Un elemento se considera terminado cuando cumple sus criterios de aceptación, sus dependencias y las verificaciones de integración y permisos aplicables; los spikes requieren entregar y revisar los resultados documentados.
 
 # Software Architecture
 ## 2.5.1.3 Bounded Context Canvases
