@@ -52,22 +52,22 @@ El proceso de integración y despliegue continuo (CI/CD) está automatizado para
 * **Despliegue Frontend (Web):** La Landing Page y las aplicaciones web están conectadas directamente a Vercel. La plataforma detecta automáticamente los cambios en el repositorio de GitHub, ejecutando el proceso de build de Next.js y generando URLs de vista previa (Preview Deployments) por cada Pull Request. Las fusiones a la rama `main` disparan automáticamente un despliegue en el dominio de producción.
 * **Despliegue Backend:** Los servicios en C#/.NET y Node.js se despliegan en instancias de la nube mediante canalizaciones automatizadas, garantizando que los Bounded Contexts operen de forma aislada y segura, respondiendo únicamente a las peticiones autorizadas (vía JWT) de las aplicaciones cliente.
 
-### 4.2.1.4. Development Evidence for Sprint Review
+#### 4.2.1.4. Development Evidence for Sprint Review
 
-En esta sección se demuestran los commits relacionados con los principales avances en la implementación.
-Estos commits provienen del repositorio del Landing Page y Backend de la organización de GitHub.
+En esta sección se demuestran los commits relacionados con los principales avances en la implementación inicial de la Landing Page y Backend.
 
-Enlace al repositorio de la Landing Page: https://github.com/HelpMom-Mobile-Grupo2/HelpMom-LandingPage
+* Enlace al repositorio de la Landing Page: https://github.com/HelpMom-Mobile-Grupo2/HelpMom-LandingPage
+* Enlace al repositorio del Backend: https://github.com/HelpMom-Mobile-Grupo2/HelpMom-Backend
 
-Enlace al repositorio del Backend: https://github.com/HelpMom-Mobile-Grupo2/HelpMom-Backend
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :--- | :---: | :--- | :--- | :--- | :---: |
+| HelpMom-Mobile-Grupo2/HelpMom-LandingPage | main | `d822c44` | `feat: added pricing plans.` | | 20/09/2026 |
+| HelpMom-Mobile-Grupo2/HelpMom-LandingPage | main | `2db6b4c` | `feat: added products, logo, fonts, banner image` | | 20/09/2026 |
+| HelpMom-Mobile-Grupo2/HelpMom-LandingPage | main | `50756f6` | `feat: add contact.` | | 20/09/2026 |
+| HelpMom-Mobile-Grupo2/HelpMom-LandingPage | main | `e44f89b` | `feat: added about us section with images` | | 20/09/2026 |
+| HelpMom-Mobile-Grupo2/HelpMom-LandingPage | main | `a2d38d2` | `feat: add FAQ.` | | 20/09/2026 |
+| HelpMom-Mobile-Grupo2/HelpMom-LandingPage | main | `6522da0` | `feat: implement HelpMom landing page UI` | Consolidación visual UI | 03/10/2026 |
 
-| Repository                                 | Branch | Commit Id                                 | Commit Message                                  | Commit Message Body | Commited on (Date) |
-|------------------------------.|--------|-------------------------------------------|-------------------------------------------------|---------------------|--------------------|
-| HelpMom-Mobile-Grupo2/HelpMom-LandingPage  | main   | d822c4402e13fc950c43f25a2915f0f30c59cde3  | feat: added pricing plans.                      |                     | 20/09/2026         |
-| HelpMom-Mobile-Grupo2/HelpMom-LandingPage  | main   | 2db6b4c16b4cf4efe120070ad03a8cb6a181377c  | feat: added products, logo, fonts, banner image |                     | 20/09/2026         |
-| HelpMom-Mobile-Grupo2/HelpMom-LandingPage  | main   | 50756f6abfdd6d3649061387d2c5281548dda5fe  | feat: add contact.                              |                     | 20/09/2026         |
-| HelpMom-Mobile-Grupo2/HelpMom-LandingPage  | main   | e44f89b6f219466c6b48796457b9a890b4b7a777  | feat: added about us section with images        |                     | 20/09/2026         |
-| HelpMom-Mobile-Grupo2/HelpMom-LandingPage  | main   | a2d38d2dacd1732a2e1a48d8b888e2f2a1cf9eaf  | feat: add FAQ.                                  |                     | 20/09/2026         |
 
 ### 4.2.1.5. Testing Suite Evidence for Sprint Review
 
