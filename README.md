@@ -311,9 +311,28 @@ Las siguientes hipótesis buscan responder al problema planteado: la incertidumb
 - **Creemos que** detectar señales de riesgo en las consultas de la madre y orientarla de inmediato hacia atención médica **para** madres gestantes **logrará** que sepan con claridad cuándo una situación requiere acudir a emergencias y cuándo es una molestia normal del embarazo.
   **Sabremos que esto es cierto cuando veamos** que, en pruebas de usabilidad con escenarios simulados, al menos el 90 % de las participantes identifica correctamente cuándo debe acudir a un centro de salud, y que califican su confianza en la orientación recibida con un promedio de 4 o más sobre 5.
 
-## Segmentos Objetivo
+#### 1.2.2.4. Lean UX Canvas
 
-### Segmento objetivo #1: Madres gestantes peruanas de entre 18 a 35 años de edad
+El **Lean UX Canvas** sintetiza en un marco colaborativo de ocho bloques (metodología de Jeff Gothelf) la problemática detectada, los resultados esperados para el negocio y las familias, los segmentos objetivo, las funcionalidades propuestas, las hipótesis validadoras, los supuestos de mayor riesgo y los experimentos mínimos necesarios para reducir la incertidumbre antes de escalar el producto.
+
+![Lean UX Canvas - HelpMom](assets/lean-ux-canvas.png)
+
+*Figura 1.1: Lean UX Canvas de HelpMom (FetuSmart).*
+
+| # | Bloque del Lean UX Canvas | Desarrollo aplicado a HelpMom |
+| :-: | :--- | :--- |
+| **1** | **Business Problem** *(Problema de negocio)* | Las madres gestantes primerizas viven el embarazo con incertidumbre y ansiedad recurrente fuera de horario médico, recurriendo a búsquedas alarmistas en internet o interpretando métricas clínicas con estrés; paralelamente, los padres/acompañantes se perciben como "espectadores" al carecer de guía práctica diaria. Las aplicaciones tradicionales se limitan a datos informativos sin contención IA 24/7, lectura IoT amigable ni sincronización activa en pareja. |
+| **2** | **Business Outcomes** *(Resultados de negocio)* | • Conversión de prueba gratuita/básica a **Plan Cuidado Integral** de al menos **35 %**.<br>• Retención mensual superior al **60 %** a lo largo de los 9 meses de gestación.<br>• Recomendación orgánica (boca a boca) en al menos **80 %** de parejas usuarias.<br>• Alianzas comerciales con proveedores de hardware IoT en los primeros 6 meses. |
+| **3** | **Users & Customers** *(Usuarios y clientes)* | • **Segmento 1 — Madres gestantes (18–35 años, Lima y Callao, NSE B y C):** Especialmente primerizas, que buscan respuestas inmediatas 24/7 y monitoreo libre de ansiedad.<br>• **Segmento 2 — Padres y acompañantes (18–40 años, Lima y Callao, NSE B y C):** Parejas o familiares cercanos que desean apoyar de forma concreta y diaria sin invadir la privacidad clínica de la madre. |
+| **4** | **User Outcomes & Benefits** *(Beneficios del usuario)* | • **Paz mental 24/7:** Resolución inmediata de dudas rutinarias sin recurrir a búsquedas alarmistas.<br>• **Claridad sin pánico:** Comprensión visual instantánea del bienestar fetal mediante indicadores amigables.<br>• **Seguridad clínica:** Derivación temprana y clara ante señales de alarma reales.<br>• **Conexión en pareja:** Comunicación fluida de malestares y apoyo proactivo diario del acompañante. |
+| **5** | **Solution Ideas** *(Ideas de solución)* | • **Asistente IA 24/7 + Triage Inteligente:** Chatbot adaptado a la semana gestacional con bloqueo por modal rojo de emergencia ante palabras clave de riesgo.<br>• **Monitoreo IoT con Sistema de Semáforo:** Traducción de signos vitales a tarjetas visuales (Verde, Amarillo, Rojo).<br>• **Modo Compañero (Sincronización QR):** Vista espejo para el acompañante con *"Tips para Papá"* accionables y alertas rápidas de un toque **"Pasa la Voz"**.<br>• **Mi Cuerpo & Aprendizaje:** Registro de síntomas, expediente clínico, hitos del bebé y píldoras de autoestima.<br>• **Suscripción escalonada:** *Plan Básico* ($9.99/mes) y *Plan Cuidado Integral* ($19.99/mes). |
+| **6** | **Hypotheses** *(Hipótesis)* | • **H1 (Chat IA):** ≥70 % de usuarias activas realiza ≥3 consultas/semana y deja de buscar síntomas en internet.<br>• **H2 (Semáforo IoT):** El nivel de ansiedad autorreportado (1–5) disminuye ≥1 punto en ≥60 % de usuarias a las 4 semanas.<br>• **H3 (Guía diaria):** ≥60 % de acompañantes marca ≥4 tips/semana como realizados y abandona el rol de "espectador".<br>• **H4 (Pasa la Voz):** ≥80 % de alertas rápidas enviadas por la madre son confirmadas por su pareja en menos de 15 minutos.<br>• **H5 (Triage):** ≥90 % de participantes identifica cuándo acudir a urgencias en escenarios simulados con confianza ≥4/5. |
+| **7** | **What's the most important thing we need to learn first?** *(Supuestos críticos)* | • **Confianza clínica en IA y Triage:** Validar si las gestantes confían en la orientación automatizada sin percibirla como reemplazo médico.<br>• **Efecto real del Semáforo IoT:** Confirmar si ocultar valores numéricos crudos detrás de colores reduce la ansiedad o genera necesidad de detalle técnico.<br>• **Adopción del acompañante y disposición de pago:** Comprobar recurrencia semanal en padres y aceptación de los planes de suscripción. |
+| **8** | **What's the least amount of work to learn the next most important thing?** *(Experimentos & MVP)* | • **Entrevistas cualitativas iniciales** con madres gestantes y padres en Lima (Capítulo II).<br>• **Landing Page Smoke Test & Heurísticas** ([help-mom-landing-page.vercel.app](https://help-mom-landing-page.vercel.app/)) para medir comprensión de la propuesta y planes.<br>• **Prototipo interactivo + Pruebas de escenarios simulados** (Bottom Bar, semáforo, escaneo QR y modal rojo de Triage).<br>• **MVP incremental (Sprints 1–2):** App móvil + Backend con autenticación por rol, chat con triage, telemetría de estado y notificaciones de pareja en piloto controlado. |
+
+## 1.3. Segmentos Objetivo
+
+### 1.3.1. Segmento objetivo #1: Madres gestantes peruanas de entre 18 a 35 años de edad
 
 - **Descripción:** Este segmento objetivo está compuesto por mujeres embarazadas, especialmente primerizas, que buscan apoyo inmediato, reducción de estrés y un seguimiento amigable de su gestación a través de su smartphone, sin sentirse abrumadas por datos médicos complejos.
 - **Aspectos demográficos:** Sexo: Femenino. Edades: Mayormente entre 18 y 35 años. Nivel socioeconómico: Clases B y C (media-alta y media).
@@ -323,7 +342,7 @@ Las siguientes hipótesis buscan responder al problema planteado: la incertidumb
 - **Requisitos:** Buscan una plataforma móvil confiable, estéticamente tranquilizadora, que filtre lo urgente de lo normal y que centralice sus registros, lecturas de sensores y conexión con su pareja.
 - **Objetivo:** Vivir un embarazo seguro, validado emocionalmente y con la menor incertidumbre posible, apoyándose en la IA y en la participación activa de su pareja.
 
-### Segmento objetivo #2: Padres y acompañantes peruanos de entre 18 a 40 años de edad
+### 1.3.2. Segmento objetivo #2: Padres y acompañantes peruanos de entre 18 a 40 años de edad
 
 - **Descripción:** Este segmento objetivo está compuesto por las parejas o acompañantes directos de las gestantes, quienes desean involucrarse de forma proactiva en el proceso del embarazo, pero a menudo carecen de conocimientos técnicos, médicos o guía práctica sobre cómo ser de utilidad en el día a día.
 - **Aspectos demográficos:** Sexo: Mayormente masculino (padres), aunque incluye a cualquier acompañante de confianza. Edades: Mayormente entre 18 y 40 años. Nivel socioeconómico: Clases B y C.
@@ -332,3 +351,5 @@ Las siguientes hipótesis buscan responder al problema planteado: la incertidumb
 - **Necesidades:** Entender el desarrollo del bebé y los síntomas de su pareja semana a semana, recibir sugerencias concretas de cómo ayudar (hacer la cena, dar un masaje, preparar el bolso), y mantener una comunicación rápida para atender las necesidades de la madre.
 - **Requisitos:** Buscan una interfaz adaptada a su rol (Modo Compañero) que no invada la privacidad clínica de la madre, pero que les envíe alertas, tips diarios en notificaciones push y un resumen visual del estado del bebé.
 - **Objetivo:** Convertirse en un soporte activo, informado y empático, fortaleciendo el vínculo de pareja, aliviando la carga de la madre y preparándose adecuadamente para la llegada del bebé.
+
+---
