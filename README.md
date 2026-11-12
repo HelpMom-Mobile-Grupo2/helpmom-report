@@ -265,6 +265,96 @@ A continuación se documenta el funcionamiento de las **5 funcionalidades core**
 
 > *Nota para la presentación:* Las vistas visuales correspondientes en móvil están diseñadas en el Capítulo III (`PANT-01`–`PANT-05`) y el flujo integral del backend se valida mediante [`docs/prueba_manual.http`](https://github.com/HelpMom-Mobile-Grupo2/HelpMom-Backend/blob/main/docs/prueba_manual.http). Cuando el equipo levante las apps en emulador local, se recomienda adjuntar aquí las capturas directas de Android Studio / Flutter conectadas a `http://10.0.2.2:61614/`.
 
+##### 4.2.2.6.2. Evidencias de Ejecución — Aplicación Móvil Madre Gestante (Android / Kotlin)
+
+Las siguientes **18 capturas únicas** documentan el flujo continuo ejecutado por la usuaria gestante (**Carla**, `Semana 10 · Día 0`) desde la aceptación de términos hasta el disparo de protocolos de seguridad y alertas bidireccionales *(consolidando las vistas funcionales sin duplicar capturas repetidas de espera)*:
+
+**Flujo 1 — Onboarding legal, Autenticación (`Ingresar` / `Crear cuenta`) y Configuración de Embarazo (FUM / FPP):**
+
+<table>
+  <tr>
+    <td align="center"><img src="./assets/capturasdelapp/cap1mom.jpeg" width="165" alt="Términos y Condiciones Madre"/><br/><sub><b>1. Términos y Condiciones</b></sub></td>
+    <td align="center"><img src="./assets/capturasdelapp/cap2mom.jpeg" width="165" alt="Ingresar Madre"/><br/><sub><b>2. Ingresar (Login)</b></sub></td>
+    <td align="center"><img src="./assets/capturasdelapp/cap3mom.jpeg" width="165" alt="Crear cuenta Madre"/><br/><sub><b>3. Crear cuenta</b></sub></td>
+    <td align="center"><img src="./assets/capturasdelapp/cap4mom.jpeg" width="165" alt="Configurar embarazo FUM y FPP"/><br/><sub><b>4. Configurar embarazo</b></sub></td>
+    <td align="center"><img src="./assets/capturasdelapp/cap5mom.jpeg" width="165" alt="Selector de fecha FPP"/><br/><sub><b>5. Selector fecha FPP</b></sub></td>
+  </tr>
+</table>
+
+**Flujo 2 — Vinculación Familiar QR / Código `HM-4245`, Panel `Inicio`, `Mi perfil` y `Guía y aprendizaje`:**
+
+<table>
+  <tr>
+    <td align="center"><img src="./assets/capturasdelapp/cap6mom.jpeg" width="190" alt="Vincular acompañante QR HM-4245"/><br/><sub><b>6. Vincular QR y HM-4245</b></sub></td>
+    <td align="center"><img src="./assets/capturasdelapp/cap7mom.jpeg" width="190" alt="Inicio Madre Semana 10"/><br/><sub><b>7. Inicio (Semana 10 · Día 0)</b></sub></td>
+    <td align="center"><img src="./assets/capturasdelapp/cap8mom.jpeg" width="190" alt="Mi perfil Madre"/><br/><sub><b>8. Mi perfil (Vinculada a Jose)</b></sub></td>
+    <td align="center"><img src="./assets/capturasdelapp/cap11mom.jpeg" width="190" alt="Guía y aprendizaje"/><br/><sub><b>9. Guía y aprendizaje</b></sub></td>
+  </tr>
+</table>
+
+**Flujo 3 — `Mi Cuerpo y Telemetría`, Registro de Síntomas, `Medición simulada` y Evaluación Crítica (Semáforo Rojo):**
+
+<table>
+  <tr>
+    <td align="center"><img src="./assets/capturasdelapp/cap9mom.jpeg" width="190" alt="Mi Cuerpo sin mediciones"/><br/><sub><b>10. Mi Cuerpo (Estado inicial)</b></sub></td>
+    <td align="center"><img src="./assets/capturasdelapp/cap10mom.jpeg" width="190" alt="Registrar Síntoma"/><br/><sub><b>11. Registrar Síntoma</b></sub></td>
+    <td align="center"><img src="./assets/capturasdelapp/cap16mom.jpeg" width="190" alt="Diálogo Medición simulada"/><br/><sub><b>12. Medición simulada (Sliders)</b></sub></td>
+    <td align="center"><img src="./assets/capturasdelapp/cap20mom.jpeg" width="190" alt="Telemetría Semáforo Rojo"/><br/><sub><b>13. Semáforo Rojo (83 lpm / 34.3 °C)</b></sub></td>
+  </tr>
+</table>
+
+**Flujo 4 — Alertas Rápidas `"Pasa la Voz"` y Sincronización Bidireccional + `Asistente prenatal HelpMom` y `PROTOCOLO DE SEGURIDAD` (SOS):**
+
+<table>
+  <tr>
+    <td align="center"><img src="./assets/capturasdelapp/cap12mom.jpeg" width="165" alt="Modal Pasa la Voz"/><br/><sub><b>14. Pasa la Voz (Presets)</b></sub></td>
+    <td align="center"><img src="./assets/capturasdelapp/cap13mom.jpeg" width="165" alt="Confirmación en vivo de Jose"/><br/><sub><b>15. Banner: "Jose: Voy en camino"</b></sub></td>
+    <td align="center"><img src="./assets/capturasdelapp/cap17mom.jpeg" width="165" alt="Asistente prenatal IA"/><br/><sub><b>16. Asistente prenatal IA</b></sub></td>
+    <td align="center"><img src="./assets/capturasdelapp/cap18mom.jpeg" width="165" alt="Protocolo de Seguridad SOS"/><br/><sub><b>17. PROTOCOLO DE SEGURIDAD</b></sub></td>
+    <td align="center"><img src="./assets/capturasdelapp/cap19mom.jpeg" width="165" alt="Historial Asistente Emergencia"/><br/><sub><b>18. Historial (Emergencia)</b></sub></td>
+  </tr>
+</table>
+
+##### 4.2.2.6.3. Evidencias de Ejecución — Aplicación Móvil Padre / Acompañante (Flutter)
+
+Las siguientes **13 capturas** muestran la ejecución integrada del cliente **Modo Compañero** (**Jose** acompañado a **Carla**), validando en tiempo real el enlace familiar, la respuesta a alertas, el protocolo SOS y la privacidad clínica estricta:
+
+**Flujo 1 — Términos Educativos, Autenticación (`Soy acompañante`), Vinculación y Confirmación:**
+
+<table>
+  <tr>
+    <td align="center"><img src="./assets/capturasdelapp/cap01-dad.png" width="165" alt="Términos Compañero"/><br/><sub><b>1. Términos y condiciones</b></sub></td>
+    <td align="center"><img src="./assets/capturasdelapp/cap02-dad.png" width="165" alt="Ingresar Compañero"/><br/><sub><b>2. Ingresar (Acompañante)</b></sub></td>
+    <td align="center"><img src="./assets/capturasdelapp/cap03-dad.png" width="165" alt="Crear cuenta Compañero"/><br/><sub><b>3. Crear cuenta</b></sub></td>
+    <td align="center"><img src="./assets/capturasdelapp/cap04-dad.png" width="165" alt="Vincular con pareja HM-XXXX y QR"/><br/><sub><b>4. Vincular clave / QR</b></sub></td>
+    <td align="center"><img src="./assets/capturasdelapp/cap05-dad.png" width="165" alt="Confirmación vinculación a Carla"/><br/><sub><b>5. Vinculado con Carla</b></sub></td>
+  </tr>
+</table>
+
+**Flujo 2 — Inicio Inicial, Alerta `"Pasa la Voz"` y Confirmación de Respuesta:**
+
+<table>
+  <tr>
+    <td align="center"><img src="./assets/capturasdelapp/cap06-dad.png" width="210" alt="Inicio Compañero sin mediciones"/><br/><sub><b>6. Inicio (Estado inicial)</b></sub></td>
+    <td align="center"><img src="./assets/capturasdelapp/cap07-dad.png" width="210" alt="Alerta Pasa la Voz recibida"/><br/><sub><b>7. Alerta "un helado" recibida</b></sub></td>
+    <td align="center"><img src="./assets/capturasdelapp/cap08-dad.png" width="210" alt="Solicitud confirmada Respondido"/><br/><sub><b>8. Confirmación: Respondido ✓</b></sub></td>
+  </tr>
+</table>
+
+**Flujo 3 — Alerta Crítica SOS (`sangrado abundante`), Acceso a 106 SAMU y Estados del Semáforo (Privacidad Clínica Sin Crudos):**
+
+<table>
+  <tr>
+    <td align="center"><img src="./assets/capturasdelapp/cap09-dad.png" width="165" alt="Pantalla crítica SOS roja"/><br/><sub><b>9. Alerta SOS (106 SAMU)</b></sub></td>
+    <td align="center"><img src="./assets/capturasdelapp/cap10-dad.png" width="165" alt="Confirmación SOS Respondido"/><br/><sub><b>10. Confirmación respuesta SOS</b></sub></td>
+    <td align="center"><img src="./assets/capturasdelapp/cap11-dad.png" width="165" alt="Semáforo rojo Urgente"/><br/><sub><b>11. Semáforo rojo (Urgente)</b></sub></td>
+    <td align="center"><img src="./assets/capturasdelapp/cap12-dad.png" width="165" alt="Semáforo verde Estable"/><br/><sub><b>12. Semáforo verde (Estable)</b></sub></td>
+    <td align="center"><img src="./assets/capturasdelapp/cap13-dad.png" width="165" alt="Semáforo amarillo Atención"/><br/><sub><b>13. Semáforo amarillo (Atención)</b></sub></td>
+  </tr>
+</table>
+
+> *Resumen de verificación integrada:* Con estas capturas se comprueban las **5 funcionalidades core** en flujo extremo a extremo real: Web productiva en Vercel + Backend REST (`docs/prueba_manual.http`) + **App Madre (Android)** + **App Compañero (Flutter)** operando con la misma sesión sincronizada (*Carla* y *Jose*: vinculación `HM-4245`, respuesta *"Voy en camino"*, disparo SOS automático tras *"sangrado abundante"* y ocultamiento estricto de FCF/temperatura en el Semáforo del acompañante).
+
 #### 4.2.2.7. Services Documentation Evidence for Sprint Review
 
 Durante el Sprint 2, el Backend REST (`HelpMom-Backend`) consolidó **26 endpoints** documentados en **Swagger/OpenAPI** (`/swagger`) con etiquetas por módulo y respuestas tipadas en formato `application/problem+json` para errores (`400`, `401`, `403`, `404`, `409`). El contrato oficial reside en [`docs/00_contrato_api_backend.md`](https://github.com/HelpMom-Mobile-Grupo2/HelpMom-Backend/blob/main/docs/00_contrato_api_backend.md):
